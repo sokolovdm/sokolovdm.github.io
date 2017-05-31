@@ -240,8 +240,7 @@ form {
   border: none;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 4px;
-  padding-bottom: 6px;
+  padding: 3px 4px 6px 4px;
   border-bottom: 2px solid #afafaf;
   text-transform: uppercase;
   font-family: 'DIN';
@@ -253,8 +252,7 @@ form {
   border: none;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 4px;
-  padding-bottom: 6px;
+  padding: 3px 4px 6px 4px;
   border-bottom: 2px solid #afafaf;
   text-transform: uppercase;
   font-family: 'DIN';
