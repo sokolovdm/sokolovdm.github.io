@@ -30,7 +30,7 @@ input:focus {
   min-height: 438px; }
 
 .wrapper {
-  width: 970px;
+  max-width: 970px;
   margin: 0 auto; }
 
 .text-right {
@@ -127,7 +127,8 @@ form {
           transform: rotate(360deg); }
 
 .header-menu {
-  position: relative; }
+  position: relative;
+  min-width: 1000px; }
 
 .menu {
   background-color: #bdee39;
