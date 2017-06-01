@@ -195,14 +195,22 @@ input:focus {
   padding: 0; }
   .menu-hide ul li {
     display: inline-block;
-    margin-left: 73px; }
+    margin-left: 77px; }
 
 .menu-hide li:nth-child(1) {
   padding-left: 0;
   margin-left: 0; }
+  .menu-hide li:nth-child(1) h2 {
+    margin-left: 8px; }
+
+.menu-hide li:nth-child(2) h2 {
+  margin-left: 10px; }
+
+.menu-hide li:nth-child(3) {
+  margin-left: 73px; }
 
 .menu-hide li:nth-child(4) {
-  margin-left: 62px; }
+  margin-left: 66px; }
 
 .menu-hide h2 {
   display: inline-block;
