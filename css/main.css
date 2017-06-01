@@ -38,6 +38,7 @@ input:focus {
 
 .logo {
   display: inline-block;
+  margin-bottom: 15px;
   margin-top: 40px;
   margin-right: 84px; }
 
@@ -46,7 +47,6 @@ input:focus {
   width: 300px;
   margin-left: auto;
   background-color: #404040;
-  margin-top: 15px;
   padding: 0 0 31px 0; }
 
 .phone {
@@ -58,7 +58,7 @@ input:focus {
   padding-bottom: 6px;
   display: block;
   width: 235px;
-  margin: 0 auto;
+  margin: 0 auto 2px auto;
   padding-top: 11px; }
 
 .call-back {
@@ -68,7 +68,7 @@ input:focus {
   font-weight: normal;
   border-bottom: 2px dotted #bdee39;
   width: 130px;
-  margin: 2px auto 0 auto;
+  margin: 0 auto 14px auto;
   position: relative; }
   .call-back:after {
     content: '';
@@ -82,9 +82,6 @@ input:focus {
     -o-transition: all 0.4s;
     transition: all 0.4s; }
 
-form {
-  margin-top: 14px; }
-
 .form-text {
   text-align: center;
   font-family: 'DIN';
@@ -94,7 +91,7 @@ form {
   display: block;
   width: 234px;
   border: none;
-  margin: 0 auto;
+  margin: 0 auto 2px auto;
   vertical-align: middle; }
 
 .form-btn {
@@ -108,7 +105,7 @@ form {
   padding: 4px 0px 5px 0px;
   font-family: 'DIN';
   display: block;
-  margin: 2px auto 0 auto; }
+  margin: 0 auto; }
   .form-btn:hover {
     background-color: #a9d03f;
     cursor: pointer; }
