@@ -153,7 +153,7 @@ input:focus {
   color: #ff4200; }
 
 .menu li:nth-child(2) {
-  position: relative; }
+  padding-right: 21px; }
 
 .menu li:nth-child(2) a::after {
   content: '';
@@ -165,8 +165,9 @@ input:focus {
   -webkit-transition: all 0.4s;
   -o-transition: all 0.4s;
   transition: all 0.4s;
-  display: block;
-  position: absolute; }
+  display: inline-block;
+  margin-left: 4px;
+  margin-bottom: 1px; }
 
 .lense {
   background: url(../img/header/sprite.png) 0px 0px;
