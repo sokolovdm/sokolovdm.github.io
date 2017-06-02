@@ -1,9 +1,4 @@
-@import url("../libs/css/font-awesome.min.css");
-@import url("https://fonts.googleapis.com/css?family=Crimson+Text|Montserrat:400,900");
-@font-face {
-  font-family: "fontawesome";
-  src: url(../fonts/fontawesome-webfont.ttf); }
-
+@import url(../css/fonts.css);
 /* Base setting */
 html, body {
   font-family: sans-serif;
@@ -11,140 +6,25 @@ html, body {
   padding: 0;
   font-size: 14px;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box; }
+          box-sizing: border-box;
+  text-align: center; }
 
-a, a:hover, a:focus, a:visited {
-  text-decoration: none;
-  outline: none; }
+h1 {
+  font-family: 'Arvo';
+  font-size: 30px;
+  color: #3b3f6a;
+  margin: 80px auto; }
 
-ul {
-  padding: 0;
-  margin: 0; }
+h2 {
+  font-family: 'Arvo';
+  font-size: 22px;
+  color: #3b3f6a; }
 
-/*  ================ HEADER ==================    */
-.header {
-  border-bottom: 2px solid #e3e8f0;
-  background-color: #fff;
-  padding: 20px 0; }
+p {
+  font-family: 'Noto Sans';
+  font-size: 20px;
+  color: #686c8a;
+  margin: 20px auto; }
 
-.logo {
-  margin-top: 7px; }
-
-.menu {
-  text-align: justify;
-  -moz-text-align-last: justify;
-       text-align-last: justify;
-  line-height: 38px; }
-  .menu__listItem {
-    display: inline-block; }
-  .menu__item {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    color: #343e5c;
-    font-size: 14px; }
-
-.rightBox__text {
-  display: inline-block;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
-  color: #343e5c;
-  font-size: 11px;
-  text-transform: uppercase;
-  margin-left: 8px; }
-
-.rightBox__total {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
-  color: #343e5c;
-  font-size: 11px;
-  background-color: #e3e8f0;
-  width: 24px;
-  height: 24px;
-  -webkit-border-radius: 50%;
-          border-radius: 50%;
-  display: inline-block;
-  text-align: center;
-  line-height: 22px;
-  margin-left: 7px; }
-
-.rightBox__btn {
-  display: inline-block;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
-  color: #343e5c;
-  font-size: 11px;
-  border: 2px solid #e3e8f0;
-  padding: 8px 20px;
-  -webkit-border-radius: 40px;
-          border-radius: 40px;
-  text-transform: uppercase;
-  margin-left: 29px; }
-
-/*  ============----------==== TABS =======------------===========    */
-.tabs {
-  padding: 15px 0; }
-  .tabs__menu {
-    text-align: justify;
-    -moz-text-align-last: justify;
-         text-align-last: justify; }
-  .tabs__Item {
-    display: inline-block; }
-  .tabs__menuItem {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    color: #b9bed1;
-    font-size: 11px;
-    text-transform: uppercase; }
-    .tabs__menuItem:hover {
-      color: #343e5c; }
-  .tabs__sup {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    color: #b9bed1;
-    font-size: 11px;
-    text-transform: uppercase; }
-  .tabs__search {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    color: #b9bed1;
-    font-size: 11px;
-    background: url(../img/tabs/lense.png) no-repeat left center;
-    border: none;
-    padding-left: 20px;
-    margin-left: 54px; }
-
-/*  =========-----------======= CONTENT =========--------=========    */
-.content {
-  background-color: #1c1e23; }
-  .content__descr {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 900;
-    color: #fff;
-    font-size: 42px;
-    margin-top: 105px;
-    margin-bottom: 35px; }
-  .content__text {
-    font-family: 'Crimson Text', sans-serif;
-    font-weight: normal;
-    color: #fff;
-    font-size: 16px;
-    margin-bottom: 65px; }
-  .content__btn {
-    background-color: #2754eb;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    color: #fff;
-    font-size: 12px;
-    text-transform: uppercase;
-    padding: 15px 50px;
-    -webkit-border-radius: 50px;
-            border-radius: 50px;
-    -webkit-box-sizing: content-box;
-            box-sizing: content-box; }
-    .content__btn:hover {
-      color: #2754eb;
-      background-color: #fff; }
-  .content__img {
-    background: url(../img/content/iphone.png) no-repeat center -65px;
-    width: 300px;
-    height: 503px; }
+span {
+  display: block; }
