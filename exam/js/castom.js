@@ -3,7 +3,7 @@ new WOW().init();
 
 //Плавный скрол
 $(document).ready(function(){
-		$("a.header__btn").on("click", function (event) {
+		$(".slider-btn").on("click", function (event) {
 			event.preventDefault();
 			var id  = $(this).attr('href'),
 			top = $(id).offset().top;
