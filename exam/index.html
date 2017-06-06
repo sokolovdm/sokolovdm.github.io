@@ -9,6 +9,7 @@
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link href="libs/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="libs/css/animate.css">
     <link href="libs/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="libs/css/owl.carousel.min.css">
     <link rel="stylesheet" href="libs/css/owl.theme.default.min.css">
@@ -20,21 +21,65 @@
 </head>
 
 <body>
+    <!-- FIXED MENU -->
+    <div class="fixed-header">
+        <div class="container">
+            <div class="col-md-4 col-sm-3 col-xs-6 logo-box wow slideInDown " data-wow-duration="2s">
+                <a href="#" class="logo">Fapor</a>
+            </div>
+            <div class="col-md-8 col-sm-9 col-xs-6 text-right">
+                <ul class="menu">
+                    <li class="menu-item"><a class="menu-a" href="#">Home</a></li>
+                    <li class="menu-item"><a class="menu-a" href="#">Service</a></li>
+                    <li class="menu-item"><a class="menu-a" href="#">About</a></li>
+                    <li class="menu-item"><a class="menu-a" href="#">Works</a></li>
+                    <li class="menu-item"><a class="menu-a" href="#">Our Team</a></li>
+                    <li class="menu-item"><a class="menu-a" href="#">Contact</a></li>
+                </ul>
+                <a id="hamburger-icon" href="#" title="Menu" class="ham-2">
+                    <span class="line line-1"></span>
+                    <span class="line line-2"></span>
+                    <span class="line line-3"></span>
+                </a>
+                <ul class="hide-menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Service</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Works</a></li>
+                    <li><a href="#">Our team</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
     <!-- ======================= Header ========================= -->
     <header>
         <nav>
             <div class="container">
-                <div class="col-md-3 logo-box">
+                <div class="col-md-4 col-sm-3 col-xs-6 logo-box wow slideInDown " data-wow-duration="2s">
                     <a href="#" class="logo">Fapor</a>
                 </div>
-                <div class="col-md-7 col-md-offset-2">
+                <div class="col-md-8 col-sm-9 col-xs-6 text-right">
                     <ul class="menu">
-                        <li class="menu-item"><a href="#">Home</a></li>
-                        <li class="menu-item"><a href="#">Service</a></li>
-                        <li class="menu-item"><a href="#">About</a></li>
-                        <li class="menu-item"><a href="#">Works</a></li>
-                        <li class="menu-item"><a href="#">Our Team</a></li>
-                        <li class="menu-item"><a href="#">Contact</a></li>
+                        <li class="menu-item"><a class="menu-a" href="#">Home</a></li>
+                        <li class="menu-item"><a class="menu-a" href="#">Service</a></li>
+                        <li class="menu-item"><a class="menu-a" href="#">About</a></li>
+                        <li class="menu-item"><a class="menu-a" href="#">Works</a></li>
+                        <li class="menu-item"><a class="menu-a" href="#">Our Team</a></li>
+                        <li class="menu-item"><a class="menu-a" href="#">Contact</a></li>
+                    </ul>
+                    <a id="hamburger-icon" href="#" title="Menu" class="ham-2">
+                        <span class="line line-1"></span>
+                        <span class="line line-2"></span>
+                        <span class="line line-3"></span>
+                    </a>
+                    <ul class="hide-menu">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Service</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Works</a></li>
+                        <li><a href="#">Our team</a></li>
+                        <li><a href="#">Contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -66,17 +111,17 @@
                 </div>
             </div>
             <div class="row text-center">
-                <div class="col-md-4">
+                <div class="col-md-4 col-sm-offset-0 col-xs-8 col-xs-offset-2 wow fadeInLeft" data-wow-duration="1s">
                     <img src="img/manage/clock.png" alt="1">
                     <h3>Retina ready</h3>
                     <p>Whether you need to create a brand from scratch, including marketing materials and a beautiful and functional.</p>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 col-sm-offset-0 col-xs-8 col-xs-offset-2 wow fadeInLeft" data-wow-duration="1.5s">
                     <img src="img/manage/gear.png" alt="2">
                     <h3>User friendly</h3>
                     <p>Website or whether you are looking for a design refresh we are confident you will be pleased with the results.</p>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 col-sm-offset-0 col-xs-8 col-xs-offset-2 wow fadeInLeft" data-wow-duration="2s">
                     <img src="img/manage/hearth.png" alt="3">
                     <h3>Customixible</h3>
                     <p>Whether you need to create a brand from scratch, including marketing materials and a beautiful and functional.</p>
@@ -86,7 +131,7 @@
     </section>
     <!-- ==================== WHO WE ARE =========================== -->
     <section class="who">
-        <div class="container shadow">
+        <div class="container shadow wow lightSpeedIn" data-wow-duration="2s">
             <div class="col-md-6 col-xs-12  img-box"><img src="img/who/people.jpg" alt="" class="people"></div>
             <div class="col-md-6 col-xs-12">
                 <div class="who-box">
@@ -110,12 +155,12 @@
             <div class="row">
                 <div class="col-xs-12 text-center">
                     <ul role="tablist">
-                        <li role="presentation" class="active"><a href="#all" aria-controls="all" role="tab" data-toggle="tab">All</a></li>
-                        <li role="presentation"><a href="#web" aria-controls="web" role="tab" data-toggle="tab">Web</a></li>
-                        <li role="presentation"><a href="#creative" aria-controls="creative" role="tab" data-toggle="tab">Creative</a></li>
-                        <li role="presentation"><a href="#print" aria-controls="print" role="tab" data-toggle="tab">Print</a></li>
-                        <li role="presentation"><a href="#media" aria-controls="media" role="tab" data-toggle="tab">Media</a></li>
-                        <li role="presentation"><a href="#crafts" aria-controls="crafts" role="tab" data-toggle="tab">Crafts</a></li>
+                        <li role="presentation" class="zoomIn wow active"><a href="#all" aria-controls="all" role="tab" data-toggle="tab">All</a></li>
+                        <li role="presentation" class="zoomIn wow "><a href="#web" aria-controls="web" role="tab" data-toggle="tab">Web</a></li>
+                        <li role="presentation" class="zoomIn wow "><a href="#creative" aria-controls="creative" role="tab" data-toggle="tab">Creative</a></li>
+                        <li role="presentation" class="zoomIn wow "><a href="#print" aria-controls="print" role="tab" data-toggle="tab">Print</a></li>
+                        <li role="presentation" class="zoomIn wow "><a href="#media" aria-controls="media" role="tab" data-toggle="tab">Media</a></li>
+                        <li role="presentation" class="zoomIn wow "><a href="#crafts" aria-controls="crafts" role="tab" data-toggle="tab">Crafts</a></li>
                     </ul>
                 </div>
             </div>
@@ -339,17 +384,260 @@
             </div>
         </div>
         <div class="container">
-        	<div class="row">
-        		<div class="col-xs-12 text-center"><a href="#" class="show-btn">Show all</a></div>
-        	</div>
+            <div class="row">
+                <div class="col-xs-12 text-center"><a href="#" class="show-btn">Show all</a></div>
+            </div>
         </div>
     </section>
+    <!-- ================== HOW WE WORKS ====================== -->
+    <section class="how">
+        <div class="container">
+            <div class="col-md-6 col-xs-12 text-right wow slideInLeft" data-wow-duration="2s">
+                <img src="img/how/imac.png" alt="iMac">
+            </div>
+            <div class="col-md-6 col-xs-12">
+                <div class="how-box">
+                    <h2>How we work</h2>
+                    <div class="red-line"></div>
+                    <p>We are a fairly small, flexible design studio that designs for print and web.<span>We work flexibly with clients to fulfil their design needs. Whether you need to create a brand from scratch.</span>
+                    </p>
+                    <div class="FAQ">
+                        <div class="FAQ-item slideInRight wow" data-wow-duration="1s">
+                            <div class="quest">
+                                <p class="FAQ-descr"><span>01</span>Sed ut perspiciatis unde omnis iste natus error sit</p>
+                                <a href="#FAQ-1" class="FAQ-a-1" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="collapseExample"><img src="img/how/plus.png" alt="" class="plus-1"><img src="img/how/minus.png" alt="" class="minus-1"></a>
+                            </div>
+                            <p id="FAQ-1" class="collapse">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus rerum magnam fugiat quam, esse aliquam voluptatibus velit ratione explicabo cupiditate.</p>
+                        </div>
+                        <div class="FAQ-item slideInRight wow" data-wow-duration="1.5s">
+                            <div class="quest">
+                                <p class="FAQ-descr"><span>02</span>Nemo enim ipsam voluptatem quia voluptas sit aut </p>
+                                <a href="#FAQ-2" class="FAQ-a-2" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="collapseExample"><img src="img/how/plus.png" alt="" class="plus-2"><img src="img/how/minus.png" alt="" class="minus-2"></a>
+                            </div>
+                            <p id="FAQ-2" class="collapse">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis nihil, debitis! Ex, voluptate, sunt! Eligendi dolores illum expedita placeat nisi!</p>
+                        </div>
+                        <div class="FAQ-item slideInRight wow" data-wow-duration="2s">
+                            <div class="quest">
+                                <p class="FAQ-descr"><span>03</span>Beque porro quisquam est, qui dolorem ipsum quia</p>
+                                <a href="#FAQ-3" class="FAQ-a-3" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="collapseExample"><img src="img/how/plus.png" alt="" class="plus-3"><img src="img/how/minus.png" alt="" class="minus-3"></a>
+                            </div>
+                            <p id="FAQ-3" class="collapse">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, delectus modi dolorum nostrum illo magnam error commodi consectetur recusandae. Eaque.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ================== STATISTIC ====================== -->
+    <section class="statis">
+        <div class="container text-center">
+            <div class="col-md-4 col-sm-offset-0 col-xs-8 col-xs-offset-2 wow fadeInLeft">
+                <span>150</span>
+                <h4>clients</h4>
+                <div class="red-line"></div>
+                <p>Whether you need to create a brand from scratch, including marketing materials and a beautiful and functional.</p>
+            </div>
+            <div class="col-md-4 col-sm-offset-0 col-xs-8 col-xs-offset-2 wow zoomIn">
+                <span>550</span>
+                <h4>projects done</h4>
+                <div class="red-line"></div>
+                <p>Website or whether you are looking for a design refresh we are confident you will be pleased with the results.</p>
+            </div>
+            <div class="col-md-4 col-sm-offset-0 col-xs-8 col-xs-offset-2 wow fadeInRight">
+                <span>7640</span>
+                <h4>hours of work</h4>
+                <div class="red-line"></div>
+                <p>Whether you need to create a brand from scratch, including marketing materials and a beautiful and functional.</p>
+            </div>
+        </div>
+    </section>
+    <!-- ================== TEAM ====================== -->
+    <section class="team">
+        <div class="container">
+            <div class="row text-center">
+                <h2>Meet our team</h2>
+                <div class="red-line"></div>
+            </div>
+            <div class="row team-box">
+                <div class="col-md-6 col-xs-12 team-item wow zoomIn" data-wow-duration="0.5s">
+                    <div class="col-xs-4">
+                        <img src="img/team/1.png" alt="1">
+                    </div>
+                    <div class="col-xs-8">
+                        <span>Joshep Willian</span>
+                        <p>Creative Director</p>
+                        <p>Website or whether you are looking for a design refresh we are confident you will be pleased.</p>
+                        <div class="social">
+                            <a href="#">&#xf09a;</a>
+                            <a href="#">&#xf099;</a>
+                            <a href="#">&#xf0e1;</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xs-12 team-item wow zoomIn" data-wow-duration="1s">
+                    <div class="col-xs-4">
+                        <img src="img/team/2.png" alt="2">
+                    </div>
+                    <div class="col-xs-8">
+                        <span>Liam Aiken</span>
+                        <p>Web Developer</p>
+                        <p>Website or whether you are looking for a design refresh we are confident you will be pleased.</p>
+                        <div class="social">
+                            <a href="#">&#xf09a;</a>
+                            <a href="#">&#xf099;</a>
+                            <a href="#">&#xf0e1;</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xs-12 team-item wow zoomIn" data-wow-duration="1.5s">
+                    <div class="col-xs-4">
+                        <img src="img/team/3.png" alt="3">
+                    </div>
+                    <div class="col-xs-8">
+                        <span>Franklyn Ajaye</span>
+                        <p>UX/UI Designer</p>
+                        <p>Website or whether you are looking for a design refresh we are confident you will be pleased.</p>
+                        <div class="social">
+                            <a href="#">&#xf09a;</a>
+                            <a href="#">&#xf099;</a>
+                            <a href="#">&#xf0e1;</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xs-12 team-item wow zoomIn" data-wow-duration="2s">
+                    <div class="col-xs-4">
+                        <img src="img/team/4.png" alt="4">
+                    </div>
+                    <div class="col-xs-8">
+                        <span>Devon Alan</span>
+                        <p>Marketing</p>
+                        <p>Website or whether you are looking for a design refresh we are confident you will be pleased.</p>
+                        <div class="social">
+                            <a href="#">&#xf09a;</a>
+                            <a href="#">&#xf099;</a>
+                            <a href="#">&#xf0e1;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ================== OUR FEATURES ====================== -->
+    <section class="features">
+        <div class="container">
+            <div class="row text-center first-row">
+                <h2>Our features</h2>
+                <div class="red-line"></div>
+                <p>We are a fairly small, flexible design studio that designs for print and web. We work flexibly with clients to fulfil their design needs. Whether you need to create a brand from scratch, including marketing materials and a beautiful.</p>
+            </div>
+            <div class="row second-row">
+                <div class="col-md-6 col-xs-12">
+                    <div class="row features-item wow fadeInDown">
+                        <div class="col-xs-2"><img src="img/features/clock.png" alt="1"></div>
+                        <div class="col-xs-8">
+                            <p>Whether you need to create a brand from scratch, including marketing materials and a beautiful and functional.</p>
+                        </div>
+                    </div>
+                    <div class="row features-item wow fadeInDown">
+                        <div class="col-xs-2"><img src="img/features/lamp.png" alt="2"></div>
+                        <div class="col-xs-8">
+                            <p>Website or whether you are looking for a design refresh we are confident you will be pleased with the results.</p>
+                        </div>
+                    </div>
+                    <div class="row features-item wow fadeInDown">
+                        <div class="col-xs-2"><img src="img/features/photo.png" alt="3"></div>
+                        <div class="col-xs-8">
+                            <p>Whether you need to create a brand from scratch, including marketing materials and a beautiful and functional.</p>
+                        </div>
+                    </div>
+                    <div class="row features-item wow fadeInDown">
+                        <div class="col-xs-2"><img src="img/features/seconder.png" alt="4"></div>
+                        <div class="col-xs-8">
+                            <p>Website or whether you are looking for a design refresh we are confident you will be pleased with the results.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xs-12">
+                    <div class="row features-item wow fadeInDown">
+                        <div class="col-xs-2"><img src="img/features/plane.png" alt="1"></div>
+                        <div class="col-xs-8">
+                            <p>Whether you need to create a brand from scratch, including marketing materials and a beautiful and functional.</p>
+                        </div>
+                    </div>
+                    <div class="row features-item wow fadeInDown">
+                        <div class="col-xs-2"><img src="img/features/world.png" alt="2"></div>
+                        <div class="col-xs-8">
+                            <p>Website or whether you are looking for a design refresh we are confident you will be pleased with the results.</p>
+                        </div>
+                    </div>
+                    <div class="row features-item wow fadeInDown">
+                        <div class="col-xs-2"><img src="img/features/hearth.png" alt="3"></div>
+                        <div class="col-xs-8">
+                            <p>Whether you need to create a brand from scratch, including marketing materials and a beautiful and functional.</p>
+                        </div>
+                    </div>
+                    <div class="row features-item wow fadeInDown">
+                        <div class="col-xs-2"><img src="img/features/gear.png" alt="4"></div>
+                        <div class="col-xs-8">
+                            <p>Website or whether you are looking for a design refresh we are confident you will be pleased with the results.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row text-center btn-row">
+                <a href="#" class="show-btn">Learn more</a>
+            </div>
+            <div class="row last-row">
+                <img src="img/features/forbes.png" alt="1">
+                <img src="img/features/fast.png" alt="2">
+                <img src="img/features/tech.png" alt="3">
+                <img src="img/features/wired.png" alt="4">
+                <img src="img/features/web.png" alt="5"></div>
+        </div>
+    </section>
+    <!-- ================== Footer ====================== -->
+    <footer>
+        <div class="footer-top">
+            <div class="container">
+                <div class="col-md-4">
+                    <span>About fapor</span>
+                    <p>We are a fairly small, flexible design studio that designs for print and web. We work flexibly with clients to fulfil their design needs. Whether you need to create a brand from scratch, including marketing materials and a beautiful.</p>
+                </div>
+                <div class="col-md-3 col-md-offset-1">
+                    <span>Contact INFO</span>
+                    <p>PO Box 17122 Nollins Street
+                        <br> 5034 Los Angelos</p>
+                    <p>Phone: 1800555.0658
+                        <br> Email: support@fapor.com
+                        <br> Web: fapor.com</p>
+                </div>
+                <div class="col-md-4">
+                    <span>Subscribe to our newsletter</span>
+                    <form action="">
+                        <input type="text" placeholder="Enter your email address" class="input-text">
+                        <input type="submit" value="Subcribe now" class="input-btn">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bot">
+            <div class="container">
+                <div class="col-md-3 col-xs-6">
+                    <p>© 2016 Fapor by Respotheme</p>
+                </div>
+                <div class="col-md-2 col-md-offset-7 text-right col-xs-6">
+                    <a href="#">&#xf09a;</a>
+                    <a href="#">&#xf099;</a>
+                    <a href="#">&#xf0d5;</a>
+                    <a href="#">&#xf17d;</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <a href="#" class="totop">&#xf106;</a>
     <script src="libs/js/jquery-3.2.1.min.js"></script>
     <script src="libs/js/bootstrap.min.js"></script>
     <script src="libs/js/wow.min.js"></script>
     <script src="libs/js/owl.carousel.min.js"></script>
     <script src="js/castom.js"></script>
 </body>
-
-	
-	
