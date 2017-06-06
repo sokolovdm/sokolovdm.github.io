@@ -1,60 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Document</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>lesson</title>
+    <!-- Bootstrap -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,600,700" rel="stylesheet">
+    <link href="libs/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
 
 <body>
-    <div class="sidebar">
-        <div class="logo">
-            <img src="img/logo.png" alt="">
-        </div>
-        <div class="items">
-            <div class="item item-1">
-                <picture>
-                    <source type="image/svg+xml" srcset="img/home.svg">
-                    <img src="img/home.png" alt="Логотип">
-                </picture>
-            </div>
-            <div class="item item-2">
-                <picture>
-                    <source type="image/svg+xml" srcset="img/basket.svg">
-                    <img src="img/basket.png" alt="Логотип">
-                </picture>
-            </div>
-            <div class="item item-3">
-                <picture>
-                    <source type="image/svg+xml" srcset="img/search.svg">
-                    <img src="img/search.png" alt="Логотип">
-                </picture>
-            </div>
-        </div>
-        <div class="in">
-            <a href="#">
-                <picture>
-                    <source type="image/svg+xml" srcset="img/in.svg">
-                    <img src="img/in.png" alt="in">
-                </picture>
-            </a>
-        </div>
-    </div>
-    <a class="hamburger" href="#">
-        <span></span>
-        <span></span>
-        <span></span>
-    </a>
 
-    <div class="main">
-        <div class="main-item main-item_1">
-            <h2>Olios</h2>
-            <h3>Newest furniture shop template</h3>
-            <span>Newest</span>
-            <button class="main-btn">View more</button>
-        </div>
-    </div>
+	<header>
+		<div class="header-top-block">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-2">
+						<div class="header-logo">
+							<img class="header-logo_img" src="img/logo.png" alt="logo">
+							<span class="header-logo_text">Maguwo<strong>Host</strong></span>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<ul class="header-nav">
+							<li class="nav-item item-active"><a href="#">Home</a></li>
+							<li class="nav-item"><a href="#">About</a></li>
+							<li class="nav-item"><a href="#">Pricing</a></li>
+							<li class="nav-item"><a href="#">Domain</a></li>
+							<li class="nav-item"><a href="#">Hosting</a></li>
+						</ul>
+					</div>
+					<div class="col-md-4">
+						<div class="header-callback">
+							<div class="header-callback_text">
+								<p>Do you need help ? Just Email, Live chat or Call us</p>
+							</div>
+							<a href="#" class="header-callback_btn">Live Chat</a>
+							<a href="#" class="header-callback_phone">6284-6534</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="header-main">
+			<div class="container">
+				<div class="header-text-block">
+					<h1>Just a Proffesional Web Hosting Services</h1>
+					<p>modern  -  fast  -  reliable</p>
+					<picture>
+						<source type="image/svg+xml" srcset="img/shape.svg">
+						<img class="header-main-img" src="img/shape.png" alt="shape">
+					</picture>
+				</div>
+				<div class="main-form-block">
+					<form action="#">
+						<input type="text" class="main-form-input" placeholder="Your Domain Name ...">
+						<span class="input-addon">.com</span>
+						<button type="submit" class="main-form-btn">Check Availability</button> 
+					</form>
+				</div>
+			</div>
+		</div>
+	</header>
+
 </body>
 
 </html>
