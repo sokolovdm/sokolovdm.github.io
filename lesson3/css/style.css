@@ -124,9 +124,9 @@ body {
 
 /* MENU */
 .menu {
-  -webkit-transform: translatex(100%);
-      -ms-transform: translatex(100%);
-          transform: translatex(100%);
+  -webkit-transform: translatex(0);
+      -ms-transform: translatex(0);
+          transform: translatex(0);
   position: fixed;
   top: 0;
   right: 0;
