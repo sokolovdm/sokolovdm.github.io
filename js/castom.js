@@ -64,3 +64,49 @@ $(document).click(function(event) {
     $('.search').slideUp(300);
     event.stopPropagation();
 });
+
+//PROJECTS MENU
+
+$(function(){
+  $('.projects-menu a').on('click',function(){
+    $('.projects-menu a').removeClass('active-menu');
+    $(this).addClass('active-menu');
+  })
+})
+
+//SLIDER CONTENT
+
+
+$(function(){
+  $('.itemHouse').on('click',function(){
+    $('.projects-content').hide();
+    $('#home').fadeIn(300);
+  })
+  $('.itemBath').on('click',function(){
+    $('.projects-content').hide();
+    $('#bath').fadeIn(300);
+  })
+   $('.itemFound').on('click',function(){
+    $('.projects-content').hide();
+    $('#found').fadeIn(300);
+  })
+   $('.itemKitchen').on('click',function(){
+    $('.projects-content').hide();
+    $('#kitchen').fadeIn(300);
+  })
+})
+
+
+
+$(document).ready(function(){
+  $(".owl-carousel").owlCarousel({
+    items: 2,
+    singleItem: false,
+    autoplay: 5000,
+    nav: true,
+    dots: false,
+    dotsEach: true,
+    loop: true,
+    navText:""
+  });
+});
