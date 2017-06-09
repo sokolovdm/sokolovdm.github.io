@@ -139,7 +139,9 @@ body {
   .menu:target {
     -webkit-transform: translateX(0);
         -ms-transform: translateX(0);
-            transform: translateX(0); }
+            transform: translateX(0);
+    -webkit-box-shadow: 0 0 3rem rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 3rem rgba(0, 0, 0, 0.1); }
 
 .navigation {
   text-align: right;
@@ -214,6 +216,105 @@ body {
     -webkit-transform: translateX(-50%) translateY(-50%) rotate(-45deg);
         -ms-transform: translateX(-50%) translateY(-50%) rotate(-45deg);
             transform: translateX(-50%) translateY(-50%) rotate(-45deg); }
+
+/* PRODUCTS */
+.container {
+  width: 960px;
+  margin: 0 auto; }
+
+.categories {
+  background-color: #f0f0f0;
+  min-height: 100vh; }
+
+.categories-header h2 {
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 4rem;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0; }
+
+.categories-header span {
+  display: inline-block;
+  vertical-align: top;
+  float: right;
+  font-size: 2rem;
+  color: #c1c1c1;
+  text-transform: uppercase;
+  line-height: 48px; }
+  .categories-header span img {
+    width: 4rem;
+    vertical-align: middle;
+    display: inline;
+    margin-left: 2rem; }
+
+.categories {
+  padding-top: 4rem;
+  padding-bottom: 4rem; }
+
+.products-cards {
+  margin-top: 4rem; }
+
+.card {
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #FFF;
+  text-decoration: none;
+  color: #a8a8a8;
+  line-height: 2rem;
+  padding: 1rem;
+  margin-top: 2rem;
+  height: 30rem; }
+  .card h3 {
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    color: #000;
+    margin: 0; }
+  .card-price {
+    color: #0023ff;
+    font-weight: 900;
+    font-size: 1.6rem;
+    margin-top: 1rem;
+    display: inline-block; }
+  .card p {
+    margin: 0;
+    font-size: 1.3rem; }
+
+.card img {
+  display: inline-block;
+  vertical-align: middle;
+  height: 20rem; }
+
+.card-text {
+  display: inline-block;
+  margin-left: 3rem;
+  vertical-align: middle; }
+
+.card:nth-child(1), .card:nth-child(3) {
+  width: 25%;
+  margin-right: 2rem; }
+
+.card:nth-child(2) {
+  padding-top: 6rem;
+  line-height: 3rem;
+  width: 70%; }
+  .card:nth-child(2) h3 {
+    font-size: 3rem; }
+
+.card:nth-child(4) {
+  padding-top: 6rem;
+  line-height: 3rem;
+  margin-right: 2rem;
+  width: 44.8%; }
+
+.show-more-link {
+  text-align: center;
+  margin-top: 4rem; }
+  .show-more-link a {
+    text-transform: uppercase;
+    color: #0023ff;
+    font-size: 1.5rem;
+    text-decoration: none; }
 
 /* MEDIA */
 @media (max-width: 1024px) {
