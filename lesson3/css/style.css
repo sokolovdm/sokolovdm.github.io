@@ -13,6 +13,9 @@ body, html {
 body {
   position: relative; }
 
+a:focus, button:focus, input:focus {
+  outline: none; }
+
 .sidebar {
   text-align: center;
   background-color: white;
@@ -315,6 +318,184 @@ body {
     color: #0023ff;
     font-size: 1.5rem;
     text-decoration: none; }
+
+.card-product {
+  margin-left: 10rem;
+  background-color: #f0f0f0; }
+
+.rating {
+  text-align: right; }
+  .rating img {
+    width: 2rem;
+    vertical-align: middle; }
+  .rating span {
+    vertical-align: middle;
+    font-size: 1.5rem; }
+
+.photo-block {
+  width: 50rem;
+  padding: 3rem;
+  padding-top: 5rem;
+  -webkit-box-shadow: 0px 0px 25px 0px rgba(219, 219, 219, 0.45);
+          box-shadow: 0px 0px 25px 0px rgba(219, 219, 219, 0.45);
+  min-height: 100vh;
+  position: relative;
+  background-color: #FFF;
+  display: inline-block;
+  z-index: 4; }
+
+.photo-product {
+  text-align: center;
+  padding-top: 15%; }
+  .photo-product img {
+    max-width: 40rem;
+    width: 70%; }
+
+.zoom {
+  display: inline-block;
+  width: 30%;
+  vertical-align: middle;
+  padding-top: 0.5rem; }
+  .zoom img {
+    width: 2rem;
+    margin-right: 1rem; }
+
+.search {
+  width: 30%;
+  display: inline-block;
+  vertical-align: middle;
+  float: right; }
+
+.pin-icon {
+  width: 2rem;
+  margin-right: 2rem; }
+
+.search-icon {
+  width: 2.5rem; }
+
+.card-panel {
+  position: absolute;
+  width: 100%;
+  bottom: 4rem; }
+
+.card-header {
+  display: inline-block;
+  vertical-align: top;
+  padding-top: 4rem;
+  padding-left: 4rem;
+  width: 50%; }
+
+.offer-text h3 {
+  text-transform: uppercase;
+  font-size: 5rem;
+  margin-top: 10rem;
+  margin-bottom: 2rem;
+  font-weight: 400; }
+  .offer-text h3 span {
+    color: #0023ff; }
+
+.offer-text p {
+  font-size: 1.5rem;
+  line-height: 2;
+  color: #a8a8a8;
+  margin-bottom: 3rem; }
+
+.cost {
+  display: inline-block;
+  width: 35%; }
+  .cost span s {
+    vertical-align: middle;
+    font-size: 1.5rem;
+    margin-left: 1rem;
+    font-weight: 900; }
+
+.cost-head {
+  text-transform: uppercase;
+  display: block;
+  font-size: 1.4rem;
+  margin-bottom: 2rem; }
+
+.product-price {
+  font-size: 3rem;
+  font-weight: 400;
+  color: #0023ff;
+  vertical-align: middle; }
+
+.product-settings {
+  margin-top: 6rem; }
+
+.quanity {
+  display: inline-block;
+  vertical-align: top; }
+
+.quanity-head {
+  display: block;
+  text-transform: uppercase;
+  display: block;
+  font-size: 1.4rem;
+  margin-bottom: 2rem; }
+
+.quanity-number {
+  display: block;
+  width: 6rem;
+  padding: 1rem;
+  -webkit-border-radius: 3rem;
+          border-radius: 3rem;
+  border: none;
+  font-weight: 900; }
+
+.card-btn {
+  display: inline-block;
+  margin-left: 2rem; }
+
+.add-btn {
+  padding: 1.3rem 4rem;
+  -webkit-border-radius: 50px;
+          border-radius: 50px;
+  border: none;
+  background-color: #0023ff;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 900; }
+
+.recomended {
+  width: 58.4%;
+  background-color: #FFF;
+  height: 20rem;
+  position: absolute;
+  bottom: 0;
+  margin-left: -3%;
+  z-index: 1; }
+
+.recomended-head {
+  -webkit-transform: translateY(-50%) translateX(-10%) rotate(-90deg);
+      -ms-transform: translateY(-50%) translateX(-10%) rotate(-90deg);
+          transform: translateY(-50%) translateX(-10%) rotate(-90deg);
+  position: absolute;
+  top: 50%;
+  font-size: 2rem;
+  text-transform: uppercase;
+  -webkit-transform-origin: 50%;
+      -ms-transform-origin: 50%;
+          transform-origin: 50%;
+  color: rgba(0, 0, 0, 0.2); }
+
+.recomended-good {
+  height: 100%;
+  margin-left: 6rem;
+  padding: 1rem;
+  padding-left: 3rem;
+  display: inline-block;
+  width: 25%; }
+  .recomended-good img {
+    width: 17rem;
+    display: inline-block;
+    margin: 0 auto; }
+  .recomended-good h4 {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    line-height: 1;
+    margin: 0; }
 
 /* MEDIA */
 @media (max-width: 1024px) {
