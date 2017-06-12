@@ -1,118 +1,94 @@
-@font-face {
-  font-family: 'FontAwesome';
-  src: url('../fonts/fontawesome.eot');
-  src: url('../fonts/fontawesome.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/fontawesome.woff2') format('woff2'),
-    url('../fonts/fontawesome.woff') format('woff'),
-    url('../fonts/fontawesome.ttf') format('truetype'),
-    url('../fonts/fontawesome.svg#fontawesome') format('svg');
-  font-weight: 600;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Open Sans';
-  src: url('../fonts/OpenSans.eot');
-  src: url('../fonts/OpenSans.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/OpenSans.woff2') format('woff2'),
-    url('../fonts/OpenSans.woff') format('woff'),
-    url('../fonts/OpenSans.ttf') format('truetype'),
-    url('../fonts/OpenSans.svg#OpenSans') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Open Sans';
-  src: url('../fonts/OpenSans-Semibold.eot');
-  src: url('../fonts/OpenSans-Semibold.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/OpenSans-Semibold.woff2') format('woff2'),
-    url('../fonts/OpenSans-Semibold.woff') format('woff'),
-    url('../fonts/OpenSans-Semibold.ttf') format('truetype'),
-    url('../fonts/OpenSans-Semibold.svg#OpenSans-Semibold') format('svg');
-  font-weight: 600;
-  font-style: normal;
-}
-
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
 
-body {
-  font-family: 'Open Sans';
-  font-weight: normal; }
+body, html {
+  font-family: 'Bad Script', cursive;
+  margin: 0;
+  padding: 0; }
 
-.work {
-  padding-top: 90px;
-  padding-bottom: 90px; }
+.container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh; }
 
 h1 {
-  font-size: 50px;
-  margin-bottom: 20px; 
-  font-weight: 600;
-}
-  h1 span {
-    color: #fc6744; }
-
-.descr {
-  margin-bottom: 100px; }
-
-.icon {
-  font-family: 'FontAwesome';
-  font-size: 50px;
-  color: #fff;
-  margin-bottom: 20px; }
-
-.work .container > div:last-child > div:nth-child(1) {
-  background-color: #4eb2f7; }
-
-.work .container > div:last-child > div:nth-child(2) {
-  background-color: #c049f8; }
-
-.work .container > div:last-child > div:nth-child(3) {
-  background-color: #817eff; }
-
-.work .container > div:last-child > div:nth-child(4) {
-  background-color: #f74770; }
-
-.work .container > div:last-child > div {
-  width: 260px;
-  margin-left: 15px;
-  margin-right: 15px;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  position: relative; }
-  .work .container > div:last-child > div p {
-    color: #fff;
-    font-size: 16px; }
-  .work .container > div:last-child > div a {
-    text-decoration: none;
-    color: #000;
-    font-size: 16px;
-    background-color: #FFF;
-    padding: 8px 25px;
-    -webkit-border-radius: 50px;
-            border-radius: 50px;
-    -webkit-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
-    margin-top: 50px;
-    position: absolute;
-    left: 50%;
-    bottom: -26px;
-    right: -30%;
-    -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-            transform: translateX(-50%); }
-    .work .container > div:last-child > div a:hover {
-      -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-              box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); }
-    .work .container > div:last-child > div a span {
-      font-size: 30px;
-      vertical-align: middle;
-      margin-right: 10px; }
-
-h2 {
-  font-size: 20px;
-  color: #fff;
   margin: 0;
-  margin-bottom: 20px; }
+  padding: 0;
+  color: #fff;
+  font-size: 72px;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
+
+.box {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s; }
+  .box:hover {
+    -webkit-box-flex: 5;
+    -webkit-flex-grow: 5;
+        -ms-flex-positive: 5;
+            flex-grow: 5; }
+
+.box-1 {
+  background: url(../img/1.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+          background-size: cover; }
+
+.box-2 {
+  background: url(../img/2.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+          background-size: cover; }
+
+.box-3 {
+  background: rgba(0, 0, 0, 0.4) url(../img/3.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+          background-size: cover; }
+
+.box-4 {
+  background: rgba(0, 0, 0, 0.4) url(../img/4.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+          background-size: cover; }
+
+@media (max-width: 991px) {
+  .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+  .box {
+    width: 100%;
+    -webkit-flex-basis: 25%;
+        -ms-flex-preferred-size: 25%;
+            flex-basis: 25%; }
+    .box:hover {
+      -webkit-flex-basis: 83%;
+          -ms-flex-preferred-size: 83%;
+              flex-basis: 83%; } }
