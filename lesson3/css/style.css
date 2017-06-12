@@ -515,7 +515,11 @@ a:focus, button:focus, input:focus {
     margin: 0; }
 
 /* SEARCH BLOCK */
+.search-block {
+  display: none; }
+
 .search-block:target {
+  display: block;
   padding-left: 20rem;
   padding-top: 20rem;
   z-index: 4;
