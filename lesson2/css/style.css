@@ -56,7 +56,16 @@ a, a:hover, a:focus, a:visited {
   -webkit-background-size: cover;
           background-size: cover;
   padding-top: 50px;
-  padding-bottom: 50px; }
+  padding-bottom: 50px;
+  position: relative; }
+
+.money {
+  position: absolute;
+  left: 50%;
+  bottom: -10%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%); }
 
 .logo-text {
   display: inline-block;
@@ -209,6 +218,10 @@ section {
   section img {
     margin-bottom: 30px; }
 
+@media (min-width: 991px) {
+  .money {
+    bottom: -16%; } }
+
 @media (min-width: 768px) and (max-width: 991px) {
   .logo-text h2 {
     font-size: 16px; }
@@ -242,7 +255,10 @@ section {
       margin-bottom: 15px; }
   section {
     padding-top: 50px;
-    padding-bottom: 50px; } }
+    padding-bottom: 50px; }
+  .money {
+    max-width: 200px;
+    bottom: -9.8%; } }
 
 @media (min-width: 481px) and (max-width: 767px) {
   .logo-text h2 {
@@ -288,7 +304,10 @@ section {
       margin-bottom: 15px; }
   section {
     padding-top: 50px;
-    padding-bottom: 50px; } }
+    padding-bottom: 50px; }
+  .money {
+    max-width: 180px;
+    bottom: -9.8%; } }
 
 @media (max-width: 480px) {
   .logo-text h2 {
@@ -331,4 +350,7 @@ section {
       margin-bottom: 10px; }
   section {
     padding-top: 30px;
-    padding-bottom: 30px; } }
+    padding-bottom: 30px; }
+  .money {
+    max-width: 140px;
+    bottom: -6%; } }
