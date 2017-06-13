@@ -62,7 +62,7 @@ a, a:hover, a:focus, a:visited {
 .money {
   position: absolute;
   left: 50%;
-  bottom: -10%;
+  bottom: -7%;
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
           transform: translateX(-50%); }
@@ -218,9 +218,9 @@ section {
   section img {
     margin-bottom: 30px; }
 
-@media (min-width: 991px) {
+@media (min-width: 992px) and (max-width: 1199px) {
   .money {
-    bottom: -16%; } }
+    bottom: -11%; } }
 
 @media (min-width: 768px) and (max-width: 991px) {
   .logo-text h2 {
@@ -257,8 +257,8 @@ section {
     padding-top: 50px;
     padding-bottom: 50px; }
   .money {
-    max-width: 200px;
-    bottom: -9.8%; } }
+    max-width: 220px;
+    bottom: -8%; } }
 
 @media (min-width: 481px) and (max-width: 767px) {
   .logo-text h2 {
@@ -306,8 +306,8 @@ section {
     padding-top: 50px;
     padding-bottom: 50px; }
   .money {
-    max-width: 180px;
-    bottom: -9.8%; } }
+    max-width: 200px;
+    bottom: -8%; } }
 
 @media (max-width: 480px) {
   .logo-text h2 {
@@ -352,5 +352,5 @@ section {
     padding-top: 30px;
     padding-bottom: 30px; }
   .money {
-    max-width: 140px;
-    bottom: -6%; } }
+    max-width: 150px;
+    bottom: -5%; } }
