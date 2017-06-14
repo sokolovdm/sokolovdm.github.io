@@ -8,6 +8,7 @@ $(document).ready(function(){								//Проверка документа на 
 	})
 	$('.menu a').click(function(){							//Событие при клике на пункт меню
 		menu.removeClass('menu_active');					//Удаляем класс .menu_active у блока .menu
+		link.toggleClass('menu-link_active');
 		event.preventDefault();								//отменяем стандартную обработку нажатия по ссылке
 		var id  = $(this).attr('href'),        				//забираем идентификатор бока с атрибута href
 		top = $(id).offset().top;							//узнаем высоту от начала страницы до блока на который ссылается якорь
