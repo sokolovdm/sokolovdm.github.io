@@ -1,0 +1,84 @@
+@font-face {
+  font-family: 'Open Sans';
+  src: url("../fonts/OpenSans.eot");
+  src: url("../fonts/OpenSans.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans.woff2") format("woff2"), url("../fonts/OpenSans.woff") format("woff"), url("../fonts/OpenSans.ttf") format("truetype"), url("../fonts/OpenSans.svg#OpenSans") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px; }
+
+a {
+  text-decoration: none; }
+
+h1 {
+  margin: 0;
+  padding: 0; }
+
+p {
+  margin: 0;
+  padding: 0; }
+
+section {
+  background: url(../img/pattern.png) repeat;
+  height: 100vh;
+  text-align: center;
+  padding-top: 10%; }
+
+.text-box {
+  margin-bottom: 30px; }
+  .text-box h1 {
+    font-size: 36px;
+    color: #0bbaf0;
+    text-transform: uppercase; }
+  .text-box p {
+    font-size: 24px;
+    color: #0bbaf0;
+    text-transform: uppercase;
+    margin-bottom: 18px; }
+
+.FAQ {
+  width: 50%;
+  margin: 0 auto; }
+
+.tab {
+  background-color: #0bbaf0; }
+
+.tab-box {
+  margin-bottom: 5px; }
+
+a {
+  font-size: 22px;
+  color: #fff;
+  display: inline-block;
+  width: 100%;
+  padding: 10px 5px; }
+
+.content {
+  width: 97%;
+  margin: 0 auto;
+  background-color: #FFF;
+  border: 4px solid #dcdcdc;
+  border-top: none;
+  padding: 10px 5px;
+  -webkit-border-bottom-left-radius: 10px;
+          border-bottom-left-radius: 10px;
+  -webkit-border-bottom-right-radius: 10px;
+          border-bottom-right-radius: 10px;
+  display: none; }
+  .content p {
+    font-size: 22px; }
+
+span {
+  width: 6%;
+  height: 1px;
+  background-color: #999999;
+  opacity: 0.5;
+  display: inline-block; }
