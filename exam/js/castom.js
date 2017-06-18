@@ -1,4 +1,7 @@
 //Анимация WOW+CSS
+var wow = new WOW({
+  mobile: false,
+});
 new WOW().init(); 
 
 //Плавный скрол
