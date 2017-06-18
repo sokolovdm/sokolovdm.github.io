@@ -1,97 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
+	<meta charset="UTF-8">
+	<title>Модальные окна</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-    <div class="sidebar">
-        <div class="logo">
-            <img src="img/logo.png" alt="">
-        </div>
-        <div class="items">
-            <a href="#" class="item item-1">
-               
-            </a href="#">
-            <a href="#" class="item item-2">
-                
-            </a href="#">
-            <a href="#search-block" class="item item-3">
-                
-            </a href="#">
-        </div>
-        <div class="in">
-            <a href="#">
-                <picture>
-                    <source type="image/svg+xml" srcset="img/in.svg">
-                    <img src="img/in.png" alt="in">
-                </picture>
-            </a>
-        </div>
-    </div>
-    <div class="main">
-        <div class="main-item main-item_1">
-            <h2>Olios</h2>
-            <h3>Newest furniture shop template</h3>
-            <span>Newest</span>
-            <button class="main-btn">View more</button>
-        </div>
-    </div>
-    <div class="menu" id="main-menu">
-        <a class="hamburger" id="close-menu" href="#close">
-            <span></span>
-            <span></span>
-        </a>
-        <ul class="navigation">
-            <li><a href="products.html">
-            Living room
-            <img src="img/menu/living-room.png" alt="living-room">
-            </a></li>
-            <li><a href="#">Office
-            <img src="img/menu/office.png" alt="1">
-            </a></li>
-            <li><a href="#">For kids
-            <img src="img/menu/for-kids.png" alt="2">
-            </a></li>
-            <li><a href="#">Kitchen
-            <img src="img/menu/kitchen.png" alt="3">
-            </a></li>
-            <li><a href="#">Accesories
-            <img src="img/menu/accesories.png" alt="">
-            </a></li>
-        </ul>
-        <div class="categories-link">
-            <a href="#">Show all categories</a>
-            <span class="link-line"></span>
-        </div>
-    </div>
-    <a class="hamburger" href="#main-menu">
-        <span></span>
-        <span></span>
-        <span></span>
-    </a>
-   
-    <div  id="search-block" class="search-block">
-        <form action="#">
-            <input type="text" class="input-search" value="red seat">
-            <a href="#close" class="search-close">&times</a>
-            <p class="help-text">Type product that you are looking for</p>
-        </form>
-        <div class="search-result">
-            <div class="result-product">
-                <img src="img/products/red-seat.png" alt="1">
-                <span>red seat</span>
-            </div>
-            <div class="result-product">
-                <img src="img/products/blue-seat.png" alt="1">
-                <span>blue seat</span>
-            </div>
-        </div>
-    </div>
+	<section>
+		<div class="btn-box">
+			<a href="#form" class="form-btn">Регистрация</a>
+			<a href="#0" class="text_btn" id="modal-trigger" data-type="cd-modal-trigger">Читать статью</a>
+		</div>
+	</section>
+	<div class="modal-form">
+		<form action="#">
+			<h2>Регистрация</h2>
+			<input type="text" placeholder="Ваш email">
+			<input type="password" placeholder="Придумайте пароль">
+			<input type="password" placeholder="Повторите пароль">
+			<p>Я согласен с <a href="#">правилами сайта</a></p><input type="checkbox">
+			<button>Зарегистрироваться</button>
+			<a href="#close" class="close">&times;</a>
+		</form>
+	</div>
+		<div class="cd-modal" data-modal="modal-trigger">
+		<div class="cd-svg-bg" 
+		data-step1="M-59.9,540.5l-0.9-1.4c-0.1-0.1,0-0.3,0.1-0.3L864.8-41c0.1-0.1,0.3,0,0.3,0.1l0.9,1.4c0.1,0.1,0,0.3-0.1,0.3L-59.5,540.6 C-59.6,540.7-59.8,540.7-59.9,540.5z" 
+		data-step2="M33.8,690l-188.2-300.3c-0.1-0.1,0-0.3,0.1-0.3l925.4-579.8c0.1-0.1,0.3,0,0.3,0.1L959.6,110c0.1,0.1,0,0.3-0.1,0.3 L34.1,690.1C34,690.2,33.9,690.1,33.8,690z" 
+		data-step3="M-465.1,287.5l-0.9-1.4c-0.1-0.1,0-0.3,0.1-0.3L459.5-294c0.1-0.1,0.3,0,0.3,0.1l0.9,1.4c0.1,0.1,0,0.3-0.1,0.3 l-925.4,579.8C-464.9,287.7-465,287.7-465.1,287.5z" 
+		data-step4="M-329.3,504.3l-272.5-435c-0.1-0.1,0-0.3,0.1-0.3l925.4-579.8c0.1-0.1,0.3,0,0.3,0.1l272.5,435c0.1,0.1,0,0.3-0.1,0.3 l-925.4,579.8C-329,504.5-329.2,504.5-329.3,504.3z" 
+		data-step5="M341.1,797.5l-0.9-1.4c-0.1-0.1,0-0.3,0.1-0.3L1265.8,216c0.1-0.1,0.3,0,0.3,0.1l0.9,1.4c0.1,0.1,0,0.3-0.1,0.3L341.5,797.6 C341.4,797.7,341.2,797.7,341.1,797.5z" 
+		data-step6="M476.4,1013.4L205,580.3c-0.1-0.1,0-0.3,0.1-0.3L1130.5,0.2c0.1-0.1,0.3,0,0.3,0.1l271.4,433.1c0.1,0.1,0,0.3-0.1,0.3 l-925.4,579.8C476.6,1013.6,476.5,1013.5,476.4,1013.4z">
+			<svg height="100%" width="100%" preserveAspectRatio="none" viewBox="0 0 800 500">
+				<title>SVG Modal background</title>
+				<path id="cd-changing-path-1" d="M-59.9,540.5l-0.9-1.4c-0.1-0.1,0-0.3,0.1-0.3L864.8-41c0.1-0.1,0.3,0,0.3,0.1l0.9,1.4c0.1,0.1,0,0.3-0.1,0.3L-59.5,540.6 C-59.6,540.7-59.8,540.7-59.9,540.5z"/>
+				<path id="cd-changing-path-2" d="M-465.1,287.5l-0.9-1.4c-0.1-0.1,0-0.3,0.1-0.3L459.5-294c0.1-0.1,0.3,0,0.3,0.1l0.9,1.4c0.1,0.1,0,0.3-0.1,0.3 l-925.4,579.8C-464.9,287.7-465,287.7-465.1,287.5z"/>
+				<path id="cd-changing-path-3" d="M341.1,797.5l-0.9-1.4c-0.1-0.1,0-0.3,0.1-0.3L1265.8,216c0.1-0.1,0.3,0,0.3,0.1l0.9,1.4c0.1,0.1,0,0.3-0.1,0.3L341.5,797.6 C341.4,797.7,341.2,797.7,341.1,797.5z"/>
+			</svg>
+		</div>
 
+		<div class="cd-modal-content">
+			<h3>Заголовок статьи</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, tempore iste molestiae dicta, animi iure sunt voluptatum dignissimos, aspernatur vitae quaerat ratione! Aliquam, laudantium, velit. Quod atque velit ea, reprehenderit at quia consequatur dolorum nihil sit nostrum vitae, architecto facilis? Sint deserunt ratione ab provident accusamus commodi fuga, doloremque et impedit dolor tenetur ut, unde doloribus quibusdam dolorum, autem, aliquam saepe est! Nemo nulla id modi, voluptatum totam. Sed, quas, ut. Unde enim quas in fugiat voluptate itaque, amet veritatis. Labore quibusdam dolorum explicabo eius, fugit suscipit dolor hic magnam sapiente laboriosam iste ratione voluptatem magni maiores, numquam dolore pariatur. Accusantium, eligendi, velit. Pariatur doloribus aperiam, adipisci recusandae, ea dolorem optio temporibus voluptate eos eaque enim cum dolore tenetur corporis, cupiditate, vero facere dolores accusamus dolor deserunt quaerat? Ex ab facere alias qui velit totam impedit aperiam distinctio cum possimus aspernatur est, eaque, id voluptatum laborum perspiciatis expedita quasi provident, dignissimos amet mollitia? Quam perferendis tenetur corporis, vitae fugit cum officiis consectetur neque tempore a libero voluptates accusamus excepturi nostrum reprehenderit deleniti soluta at. Sunt aut labore inventore mollitia iure nostrum commodi, dolor exercitationem repellat doloribus nulla expedita praesentium deleniti assumenda esse repellendus, perferendis totam quasi veritatis. Architecto repudiandae molestias perspiciatis consequatur, ea, earum sint totam odio eligendi adipisci ab dicta deleniti pariatur dolorem, beatae recusandae necessitatibus! Ad animi soluta enim? Sunt beatae eligendi voluptatibus porro fuga alias nisi in, ad autem hic architecto dignissimos molestias ullam nemo distinctio iusto sit doloremque esse neque consequuntur minima laboriosam. Architecto cupiditate magnam debitis, cumque cum maxime hic amet officiis, molestiae ipsa commodi suscipit officia totam asperiores accusamus eligendi atque eveniet. Quam voluptatibus autem provident accusantium temporibus alias cumque assumenda illo id tenetur nemo omnis rerum iure, quas dolor itaque harum facilis sequi ab animi aut molestias ipsam quae vitae, tempore. Ducimus similique rem ex enim, necessitatibus voluptatibus omnis accusamus unde magnam molestias laudantium nulla incidunt, illo id. Illo commodi quos minus repellat mollitia est officia quasi ipsa, animi repellendus odio numquam obcaecati necessitatibus architecto, molestiae beatae earum in tenetur reiciendis pariatur itaque atque ut. Harum, tenetur, distinctio? Illo ipsa velit officia, dolore maiores ratione, ipsum vitae voluptatibus similique nobis soluta eius placeat voluptate eaque aut provident eum quidem suscipit magnam alias id qui unde quas sequi. Atque, vitae, perferendis! Placeat, adipisci! Maiores iusto modi unde quos at nulla, nihil, dignissimos debitis asperiores eius, ipsam! Soluta, laboriosam autem cumque ea, modi adipisci illo a, incidunt eum aperiam, id voluptatibus provident animi. Modi incidunt dolores, odio molestias voluptatibus veritatis, eos temporibus! Laborum, facilis cupiditate numquam ullam eum commodi voluptatem quam enim dignissimos officia, ipsam neque reiciendis provident? Ipsam laborum illo molestias modi optio ducimus aperiam totam officia. Tempora magnam molestias cum esse dolorum necessitatibus consequuntur illum eum nostrum! Debitis est nihil dolorem provident saepe consectetur at harum esse eos doloremque, corrupti omnis repudiandae laboriosam iusto quod earum. Tenetur rem dolor minima error ab tempora ipsam eos ducimus? Vel itaque quam corporis reiciendis ratione deleniti deserunt vero, id. Cum dolore, incidunt corrupti quia itaque officia.</p>
+		</div> <!-- cd-modal-content -->
+
+		<a href="#0" class="modal-close">Close</a>
+	</div> <!-- cd-modal -->
+
+	<script src="js/jquery-1.12.4.min.js"></script>
+	<script src="js/snap.svg-min.js"></script>
+	<script src="js/main.js"></script>
+	<script>
+		$(document).ready(function(){
+			var modal_form = $('.modal-form'),
+				form = $('form'),
+				form_btn = $('.form-btn'),
+				close_btn = $('.close');
+			form_btn.click(function(){
+				modal_form.fadeIn();
+				form.addClass('active');
+			});
+			close_btn.click(function(){
+				modal_form.fadeOut();
+				form.removeClass('active');
+			});
+			modal_form.click(function(){
+				modal_form.fadeOut();
+				form.removeClass('active');
+			});
+		});
+	</script>
 </body>
-
 </html>
