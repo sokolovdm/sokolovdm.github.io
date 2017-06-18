@@ -13,9 +13,10 @@ section {
   height: 100vh;
   background: url(../img/pt.png) repeat;
   padding: 100px 0; }
-  section a {
+  section .form-btn {
     text-decoration: none;
-    display: inline-block;
+    display: block;
+    width: 25%;
     margin: 0 auto;
     background-color: #ffc800;
     padding: 15px 30px;
@@ -24,10 +25,18 @@ section {
     -o-transition: all 0.4s;
     transition: all 0.4s;
     -webkit-border-radius: 7px;
-            border-radius: 7px; }
-    section a:hover {
+            border-radius: 7px;
+    margin-bottom: 50px; }
+    section .form-btn:hover {
       background-color: #000;
       color: #ffc800; }
+
+.text-btn {
+  width: 100px;
+  height: 100px;
+  display: inline-block; }
+  .text-btn img {
+    width: 100%; }
 
 .btn-box {
   width: 50%;
