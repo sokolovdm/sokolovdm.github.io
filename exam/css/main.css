@@ -595,7 +595,7 @@ h2 {
     line-height: 94px; }
   .fixed-header .menu a {
     color: #24282f; }
-  .fixed-header #hamburger-icon span {
+  .fixed-header .ham-2 span {
     background: #24282f; }
   .fixed-header .hide-menu {
     background-color: #fff;
@@ -605,7 +605,7 @@ h2 {
       color: #24282f; }
 
 /* HAMBURGER MENU */
-#hamburger-icon {
+.ham-2 {
   width: 30px;
   height: 16px;
   position: relative;
@@ -613,7 +613,7 @@ h2 {
   line-height: 94px;
   vertical-align: middle;
   margin-top: 36px; }
-  #hamburger-icon .line {
+  .ham-2 .line {
     display: block;
     background: #ecf0f1;
     width: 30px;
@@ -626,35 +626,35 @@ h2 {
     transition: all 0.4s;
     -webkit-transition: all 0.4s;
     -moz-transition: all 0.4s; }
-  #hamburger-icon .line-1 {
+  .ham-2 .line-1 {
     top: 0; }
-  #hamburger-icon .line-2 {
+  .ham-2 .line-2 {
     top: 50%; }
-  #hamburger-icon .line-3 {
+  .ham-2 .line-3 {
     top: 100%; }
 
-#hamburger-icon:hover .line-1, #hamburger-icon:focus .line-1 {
+.ham-2:hover .line-1, .ham-2:focus .line-1 {
   -ms-transform: translateY(-2px);
       transform: translateY(-2px);
   -webkit-transform: translateY(-2px);
   -moz-transform: translateY(-2px); }
 
-#hamburger-icon:hover .line-3, #hamburger-icon:focus .line-3 {
+.ham-2:hover .line-3, .ham-2:focus .line-3 {
   -ms-transform: translateY(2px);
       transform: translateY(2px);
   -webkit-transform: translateY(2px);
   -moz-transform: translateY(2px); }
 
-#hamburger-icon.active .line-1 {
+.ham-2.active .line-1 {
   -ms-transform: translateY(8px) translateX(0) rotate(45deg);
       transform: translateY(8px) translateX(0) rotate(45deg);
   -webkit-transform: translateY(8px) translateX(0) rotate(45deg);
   -moz-transform: translateY(8px) translateX(0) rotate(45deg); }
 
-#hamburger-icon.active .line-2 {
+.ham-2.active .line-2 {
   opacity: 0; }
 
-#hamburger-icon.active .line-3 {
+.ham-2.active .line-3 {
   -ms-transform: translateY(-8px) translateX(0) rotate(-45deg);
       transform: translateY(-8px) translateX(0) rotate(-45deg);
   -webkit-transform: translateY(-8px) translateX(0) rotate(-45deg);
@@ -824,7 +824,7 @@ h2 {
     display: none; } }
 
 @media (min-width: 768px) {
-  #hamburger-icon, .hide-menu {
+  .ham-2, .hide-menu {
     display: none; } }
 
 @media (min-width: 320px) and (max-width: 480px) {
@@ -839,4 +839,5 @@ h2 {
       background: url(../img/header/icon-logo_small.png) no-repeat 0px 0px; }
   .FAQ-descr {
     display: inline-block;
-    width: 90%; } }
+    width: 90%;
+    margin-bottom: 0; } }
