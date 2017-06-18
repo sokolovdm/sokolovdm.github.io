@@ -42,7 +42,7 @@ nav {
   .logo:before {
     content: '';
     width: 25px;
-    height: 25px;
+    height: 23px;
     background: url(../img/header/icon-logo.png) no-repeat center center;
     display: inline-block;
     margin-right: 30px; }
@@ -826,3 +826,17 @@ h2 {
 @media (min-width: 768px) {
   #hamburger-icon, .hide-menu {
     display: none; } }
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .logo {
+    font-size: 1.7rem;
+    vertical-align: middle;
+    display: inline-block; }
+    .logo::before {
+      margin-right: 10px;
+      width: 20px;
+      height: 20px;
+      background: url(../img/header/icon-logo_small.png) no-repeat 0px 0px; }
+  .FAQ-descr {
+    display: inline-block;
+    width: 90%; } }
