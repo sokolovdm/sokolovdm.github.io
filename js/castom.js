@@ -1,107 +1,91 @@
-//Анимация WOW+CSS
-
-if (screen.width > 480) document.write(
-    new WOW().init()
-);
-
-
-//Плавный скрол
 $(document).ready(function() {
-    $(".slider-btn").on("click", function(event) {
-        event.preventDefault();
-        var id = $(this).attr('href'),
-            top = $(id).offset().top;
-        $('body,html').animate({ scrollTop: top }, 1000);
-    });
-});
 
-//Кнопка ToTop и меню
-$(function() {
-    $(window).scroll(function() {
-        if ($(this).scrollTop() > $(window).height()) {
-            $('.totop').fadeIn();
-            $('.fixed-header').fadeIn();
-        } else {
-            $('.totop').fadeOut();
-            $('.fixed-header').fadeOut();
-        }
-    });
-    $('.totop').click(function() {
-        $('body,html').animate({ scrollTop: 0 }, 800);
-    });
-});
+    $(function() {
 
+        $('.call-back').on('click', function() {            //При клике на ссылку .call-back
+            $('.call-back').toggleClass('rotate');          //Дать/забрать .rotate
+        });
 
-$(document).ready(function() {
-    $("#carousel").owlCarousel({
-        items: 1,
-        singleItem: true,
-        autoplay: 5000,
-        nav: true,
-        dots: true,
-        dotsEach: true,
-        loop: true,
-        navText: ""
-    });
-});
+        $('.call-back').on('click', function() {			//При клике на ссылку .call-back
+            $('.form-box').slideToggle(300, function() {	//Элемент .form-box развернуть/свернуть
+                console.log($(this).css('display'))			//В консоли вывести прежнее значение свойства display
+            });
+        });
 
-$(document).ready(function() {
-    $(".FAQ-a-1").on("click", function(event) {
-        if ($('.minus-1').css('display') == 'none') {
-            $('.plus-1').hide(300);
-            $('.minus-1').show(300);
-        } else {
-            $('.plus-1').show(300);
-            $('.minus-1').hide(300);
-        }
-    });
-});
-
-$(document).ready(function() {
-    $(".FAQ-a-2").on("click", function(event) {
-        if ($('.minus-2').css('display') == 'none') {
-            $('.plus-2').hide(300);
-            $('.minus-2').show(300);
-        } else {
-            $('.plus-2').show(300);
-            $('.minus-2').hide(300);
-        }
-    });
-});
-
-$(document).ready(function() {
-    $(".FAQ-a-3").on("click", function(event) {
-        if ($('.minus-3').css('display') == 'none') {
-            $('.plus-3').hide(300);
-            $('.minus-3').show(300);
-        } else {
-            $('.plus-3').show(300);
-            $('.minus-3').hide(300);
-        }
-    });
-});
-
-
-// HABMURGER + HIDE MENU
-
-$(document).ready(function() {
-    var hamburger = $('.ham-1');
-    hamburger.click(function() {
-        hamburger.toggleClass('active');
-        $('.hide-menu').slideToggle(300, function() {
-            console.log($(this).css('display'));
+        $('.slide').on('click', function() {				//При клике на ссылку .slide
+            $('.slide').toggleClass('rotate');				//Дать/забрать .rotate
         })
-        return false;
+
+        $('.slide').on('click', function() {				//При клике на ссылку .slide
+            $('.menu-hide').slideToggle(300, function() {	//Элемент .menu-hide развернуть/свернуть
+                console.log($(this).css('display'))			//В консоли вывести прежнее значение свойства display
+            });
+        });
+
+        $('.lense').on('click', function() {				//При клике на ссылку .lense
+            $('.lense').toggleClass('rotate360');			//Дать/забрать .rotate360
+        })
+
+        $('.lense').on('click', function() {				//При клике на ссылку .lense
+            $('.search').slideToggle(300, function() {		//Элемент .search развернуть/свернуть
+                console.log($(this).css('display'))			//В консоли вывести прежнее значение свойства display
+            });
+        });
+
+        //PROJECTS MENU
+        var tab = $('.projects-menu a');					//Создаём переменную tab
+
+        $(tab).on('click', function() {						//При клике на tab
+            $(tab).removeClass('active-menu');				//У всех элементов с tab удаляем класс active-menu
+            $(this).addClass('active-menu');				//Всем элементам с tab добавляем класс active-menu
+        })
+
+        //SLIDER CONTENT
+
+
+        
+        tab.click(function() {								//При клике на tab
+            var target = $(this).attr('href');				//Создаём переменную target, в которую запишем id
+            $('.projects-content').hide();					//Скрыть все элементы с классом .projects-content
+            $(target).show();								//Показать элемент с id = target
+        })
+
+        //CAROUSEL
+
+        $(".owl-carousel").owlCarousel({
+            items: 2,
+            singleItem: false,
+            autoplay: false,
+            nav: true,
+            dots: false,
+            dotsEach: true,
+            loop: true,
+            navText: ""
+        });
+
     });
 });
 
-$(document).ready(function() {
-    var hamburger = $('.ham-2');
-    hamburger.click(function() {
-        hamburger.toggleClass('active');
-        $('.hide-menu').slideToggle(300, function() {
-            console.log($(this).css('display'));
-        })
-        return false;
-    });
+$(document).click(function(event) {
+    if ($(event.target).closest(".form-box").length || $(event.target).closest(".call-back").length) return; //Условие, что бы .form-box сворачивались при нажатии в любое место и забрать класс rotate у .call-back
+    $('.form-box').slideUp(300) && $('.call-back').removeClass('rotate');
+
+
+    if ($(event.target).closest(".menu-hide").length || $(event.target).closest(".slide").length) return;    //Условие, что бы .menu-hide сворачивались при нажатии в любое место и забрать класс rotate у .slide
+    $('.menu-hide').slideUp(300) && $('.slide').removeClass('rotate');
+
+    if ($(event.target).closest(".search").length || $(event.target).closest(".lense").length) return;		//Условие, что бы .search сворачивались при нажатии в любое место	
+    $('.search').slideUp(300);
+
+    event.stopPropagation();																				//Остановить событие
 });
+
+
+
+
+
+
+
+
+
+
