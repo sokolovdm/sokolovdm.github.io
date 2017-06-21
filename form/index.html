@@ -49,23 +49,51 @@
             form_btn = $('.form-btn'),
             close_btn = $('.close');
 
-        $("#form").submit(function() {
-            $.ajax({
-                type: "POST",
-                url: "mail.php",
-                data: $(this).serialize()
-            }).done(function() {
-                $(this).find("input").val("");
-                modal_form.fadeIn();
-                form.addClass('active');
-                $("#form").trigger("reset");
+        $('#form').validate({
+            rules: {
+                name: {
+                    required: true
+                },
+                mail: {
+                    required: true,
+                    email: true
+                },
+                password: {
+                    required: true
+                },
+            },
+            messages: {
+                name: {
+                    required: 'Это поле обязательно для заполнения'
+                },
+                mail: {
+                    required: 'Это поле обязательно для заполнения',
+                    email: 'Введите корректный e-mail'
+                },
+                password: {
+                    required: 'Это поле обязательно для заполнения'
+                }
+            }
+            $("#form").submit(function() {
+                $.ajax({
+                    type: "POST",
+                    url: "mail.php",
+                    data: $(this).serialize()
+                }).done(function() {
+                    $(this).find("input").val("");
+                    modal_form.fadeIn();
+                    form.addClass('active');
+                    $("#form").trigger("reset");
+                });
+                return false;
             });
-            return false;
+            close_btn.click(function() {
+                modal_form.fadeOut();
+                form.removeClass('active');
+            });
         });
-        close_btn.click(function() {
-            modal_form.fadeOut();
-            form.removeClass('active');
-        });
+
+
     });
     </script>
 </body>
