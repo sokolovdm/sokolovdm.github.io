@@ -48,27 +48,24 @@
             form = $('.thanks'),
             form_btn = $('.form-btn'),
             close_btn = $('.close');
-        
-            $("#form").submit(function() {
-                $.ajax({
-                    type: "POST",
-                    url: "mail.php",
-                    data: $(this).serialize()
-                }).done(function() {
-                    $(this).find("input").val("");
-                    modal_form.fadeIn();
-                    form.addClass('active');
-                    $("#form").trigger("reset");
-                });
-                return false;
+
+        $("#form").submit(function() {
+            $.ajax({
+                type: "POST",
+                url: "mail.php",
+                data: $(this).serialize()
+            }).done(function() {
+                $(this).find("input").val("");
+                modal_form.fadeIn();
+                form.addClass('active');
+                $("#form").trigger("reset");
             });
-            close_btn.click(function() {
-                modal_form.fadeOut();
-                form.removeClass('active');
-            });
+            return false;
         });
-
-
+        close_btn.click(function() {
+            modal_form.fadeOut();
+            form.removeClass('active');
+        });
     });
     </script>
 </body>
