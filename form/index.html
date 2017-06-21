@@ -78,7 +78,7 @@
             var modal_form = $('.modal-form'),
                 form = $('.thanks'),
                 form_btn = $('.form-btn'),
-                close_btn = $('.close');
+                
             $.ajax({
                 type: "POST",
                 url: "mail.php",
@@ -91,6 +91,8 @@
             });
             return false;
         });
+
+        var close_btn = $('.close');
         close_btn.click(function() {
             modal_form.fadeOut();
             form.removeClass('active');
