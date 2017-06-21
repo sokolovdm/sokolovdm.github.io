@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Форма</title>
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,500" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <section>
         <div class="wrapper">
@@ -17,7 +19,8 @@
                     <p>Получи бесплатно неограниченное количество форм, вопросов и ответов.</p>
                 </div>
                 <div class="form-box">
-                    <form action="get" id="form">
+                    <form action="#" id="form">
+                        <input type="hidden" name="what" value="Главная форма">
                         <input class="form-name text-form" type="text" placeholder="Имя или никнейм" id="input-name" name="name">
                         <input class="form-post text-form" type="text" placeholder="Email" id="input-mail" name="mail">
                         <input class="form-pas text-form" type="password" placeholder="Пароль" id="input-password" name="password">
@@ -29,37 +32,68 @@
             <img src="img/bubblesBottom.png" alt="top" class="bubble-bottom bubble">
         </div>
     </section>
+    <div class="modal-form">
+        <div class="thanks">
+            <h3>Спасибо за регистрацию!</h3>
+            <p>Теперь мы можем начать работать!</p>
+            <img src="img/575fa4976dc231554d9aef9a.png" alt="1">
+            <button class="close">Закрыть</button>
+        </div>
+    </div>
     <script src="js/jquery-1.12.4.min.js"></script>
     <script src="js/jquery.validate.min.js"></script>
     <script>
-        $(document).ready(function(){
-            $('#form').validate({
-                rules: {
-                    name: {
-                        required: true
-                    },
-                    mail: {
-                        required: true,
-                        email: true
-                    },
-                    password: {
-                        required: true
-                    },
+    $(document).ready(function() {
+        $('#form').validate({
+            rules: {
+                name: {
+                    required: true
                 },
-                messages: {
-                    name: {
-                        required:'Это поле обязательно для заполнения'
-                    },
-                     mail: {
-                        required:'Это поле обязательно для заполнения',
-                        email:'Введите корректный e-mail'
-                    },
-                     password: {
-                        required:'Это поле обязательно для заполнения'
-                    }
+                mail: {
+                    required: true,
+                    email: true
+                },
+                password: {
+                    required: true
+                },
+            },
+            messages: {
+                name: {
+                    required: 'Это поле обязательно для заполнения'
+                },
+                mail: {
+                    required: 'Это поле обязательно для заполнения',
+                    email: 'Введите корректный e-mail'
+                },
+                password: {
+                    required: 'Это поле обязательно для заполнения'
                 }
+            }
+        });
+        var modal_form = $('.modal-form'),
+            form = $('.thanks'),
+            form_btn = $('.form-btn'),
+            close_btn = $('.close');
+
+        $("#form").submit(function() {
+            $.ajax({
+                type: "POST",
+                url: "mail.php",
+                data: $(this).serialize()
+            }).done(function() {
+                $(this).find("input").val("");
+                modal_form.fadeIn();
+                form.addClass('active');
+                $("#form").trigger("reset");
             });
-        });        
+            return false;
+        });
+        close_btn.click(function() {
+            modal_form.fadeOut();
+            form.removeClass('active');
+        });
+    });
     </script>
 </body>
+
 </html>
