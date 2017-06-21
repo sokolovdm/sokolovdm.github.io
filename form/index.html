@@ -75,24 +75,23 @@
         });
 
         $("#form").submit(function() {
-            var modal_form = $('.modal-form'),
-                form = $('.thanks'),
-                form_btn = $('.form-btn'),
-                
+
+
             $.ajax({
                 type: "POST",
                 url: "mail.php",
                 data: $(this).serialize()
             }).done(function() {
                 $(this).find("input").val("");
-                modal_form.fadeIn();
-                form.addClass('active');
+                alert('ОК');
                 $("#form").trigger("reset");
             });
             return false;
         });
-
-        var close_btn = $('.close');
+        var modal_form = $('.modal-form'),
+            form = $('.thanks'),
+            form_btn = $('.form-btn'),
+            close_btn = $('.close');
         close_btn.click(function() {
             modal_form.fadeOut();
             form.removeClass('active');
