@@ -44,6 +44,11 @@
     <script src="js/jquery.validate.min.js"></script>
     <script>
     $(document).ready(function() {
+        var modal_form = $('.modal-form'),
+            form = $('.thanks'),
+            form_btn = $('.form-btn'),
+            close_btn = $('.close');
+
         $('#form').validate({
             rules: {
                 name: {
@@ -69,29 +74,26 @@
                     required: 'Это поле обязательно для заполнения'
                 }
             }
-        });
-        var modal_form = $('.modal-form'),
-            form = $('.thanks'),
-            form_btn = $('.form-btn'),
-            close_btn = $('.close');
-
-        $("#form").submit(function() {
-            $.ajax({
-                type: "POST",
-                url: "mail.php",
-                data: $(this).serialize()
-            }).done(function() {
-                $(this).find("input").val("");
-                modal_form.fadeIn();
-                form.addClass('active');
-                $("#form").trigger("reset");
+            $("#form").submit(function() {
+                $.ajax({
+                    type: "POST",
+                    url: "mail.php",
+                    data: $(this).serialize()
+                }).done(function() {
+                    $(this).find("input").val("");
+                    modal_form.fadeIn();
+                    form.addClass('active');
+                    $("#form").trigger("reset");
+                });
+                return false;
             });
-            return false;
+            close_btn.click(function() {
+                modal_form.fadeOut();
+                form.removeClass('active');
+            });
         });
-        close_btn.click(function() {
-            modal_form.fadeOut();
-            form.removeClass('active');
-        });
+
+
     });
     </script>
 </body>
