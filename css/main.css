@@ -11,8 +11,8 @@
   font-style: normal; }
 
 @font-face {
-  font-family: 'rubl', sans-serif;
-  src: url("../fonts/alsrubl-arial-regular.ttf") format("truetype");
+  font-family: 'ruble';
+  src: url("../fonts/ALSRubl.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
@@ -288,11 +288,10 @@ html {
   font-size: 18px;
   background-color: #c1c1c1; }
 
-/* BEST PROJECTS */
 .best-projects {
   background: url(../img/projects/pattern.jpg) repeat;
   padding-top: 25px;
-  padding-bottom: 40px; }
+  padding-bottom: 38px; }
   .best-projects h1 {
     text-align: center;
     font-size: 40px;
@@ -333,17 +332,23 @@ html {
   color: #fff !important;
   background-color: #404040; }
 
-.projects-slider, .slider-content {
+.projects-slider {
+  height: 393px;
   overflow: hidden; }
 
 .projects-content {
-  display: none;
-  overflow: hidden; }
+  display: block;
+  margin-bottom: 32px; }
   .projects-content .item {
     display: block;
     width: 99.9%;
     position: relative;
     vertical-align: top; }
+    .projects-content .item .item-img-box {
+      -webkit-background-size: cover;
+              background-size: cover;
+      width: 484px;
+      height: 316px; }
     .projects-content .item .project-name {
       position: absolute;
       top: -1px;
@@ -354,8 +359,7 @@ html {
       margin: 0; }
     .projects-content .item .project-descr {
       background-color: #fff;
-      margin-top: -4px;
-      padding: 9px 0; }
+      padding: 6px 0 9px 0; }
       .projects-content .item .project-descr p {
         display: inline-block;
         margin-top: 0;
@@ -396,7 +400,9 @@ html {
       margin-left: 5px; }
     .projects-content .item-sale .price sup {
       position: relative;
-      font-size: 16px; }
+      font-size: 16px;
+      color: #404040;
+      background: url(../img/projects/line.png) no-repeat center center; }
     .projects-content .item-sale .price .price-line {
       background-color: #404040;
       display: inline-block;
@@ -409,7 +415,8 @@ html {
           -ms-transform: rotate(-9deg);
               transform: rotate(-9deg); }
   .projects-content .item-sale .sale-price {
-    position: relative; }
+    position: relative;
+    margin-left: 4px; }
     .projects-content .item-sale .sale-price .sale-bage {
       position: absolute;
       display: inline-block;
@@ -427,11 +434,23 @@ html {
       color: #404040;
       font-size: 24px; }
 
+#home .item-img-box {
+  background: url(../img/projects/house.jpg) no-repeat center center; }
+
+#bath .item-img-box {
+  background: url(../img/projects/bath.jpg) no-repeat center center; }
+
+#kitchen .item-img-box {
+  background: url(../img/projects/kitchen.jpg) no-repeat center center; }
+
+#found .item-img-box {
+  background: url(../img/projects/found.jpg) no-repeat center center; }
+
 .ruble {
   color: #404040;
   font-size: 24px;
   display: inline-block;
-  font-family: 'rubl'; }
+  font-family: 'ruble'; }
 
 .item > a {
   width: 100%; }
@@ -468,9 +487,8 @@ html {
     width: 36px;
     height: 36px;
     background: url(../img/header/sprite.png) no-repeat -44px -19px; }
-
-.box-effect:hover {
-  opacity: 1; }
+  .box-effect:hover {
+    opacity: 1; }
 
 /* CORUSEL */
 .owl-prev, .owl-next {
@@ -483,17 +501,175 @@ html {
     opacity: 1; }
 
 .owl-prev {
-  bottom: -31px;
-  right: 39px;
   width: 24px;
   height: 16px;
   display: block;
   background: url(../img/header/sprite.png) no-repeat -80px -2px; }
 
 .owl-next {
-  bottom: -30px;
-  right: 0px;
   width: 24px;
   height: 16px;
   display: block;
   background: url(../img/header/sprite.png) no-repeat -80px -19px; }
+
+.projects-slider .owl-prev, .slider-articles .owl-prev, .slider-works .owl-prev {
+  bottom: -31px;
+  right: 39px; }
+
+.projects-slider .owl-next, .slider-articles .owl-next, .slider-works .owl-next {
+  bottom: -30px;
+  right: 0px; }
+
+/* MAIN */
+.main {
+  padding-top: 40px; }
+  .main-content {
+    width: 699px;
+    display: inline-block; }
+    .main-content h2 {
+      font-weight: 500;
+      text-transform: uppercase;
+      color: #404040;
+      font-size: 30px;
+      margin: 38px 0 24px 15px;
+      padding: 0; }
+    .main-content p {
+      font-family: 'Verdana', sans-serif;
+      font-size: 14px;
+      color: #858585;
+      padding: 0;
+      margin: 0 0 28px 15px;
+      text-align: justify;
+      line-height: 1.714; }
+      .main-content p a {
+        color: #404040;
+        text-decoration: underline; }
+  .main .advantage {
+    margin: 0 0 17px 15px; }
+    .main .advantage span {
+      font-weight: 500;
+      font-size: 24px;
+      color: #404040;
+      margin-bottom: 20px;
+      display: inline-block; }
+    .main .advantage-item {
+      margin-bottom: 24px; }
+      .main .advantage-item-text {
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 16px;
+        width: 623px; }
+        .main .advantage-item-text span {
+          vertical-align: top;
+          margin: 0;
+          line-height: 0.7;
+          font-size: 18px;
+          margin-bottom: 12px; }
+        .main .advantage-item-text p {
+          margin: 0;
+          width: 100%; }
+      .main .advantage-item:last-child {
+        margin-bottom: 0; }
+  .main-side {
+    display: inline-block;
+    padding-left: 26px;
+    vertical-align: top;
+    width: 241px; }
+    .main-side img {
+      display: block;
+      margin-bottom: 12px; }
+    .main-side span {
+      font-size: 34px;
+      border-bottom: 2px solid #404040;
+      display: block;
+      margin-bottom: 12px; }
+
+.side-list {
+  margin-bottom: 14px; }
+  .side-list a {
+    display: inline-block;
+    font-size: 14px;
+    font-family: 'Verdana', sans-serif;
+    text-decoration: underline;
+    color: #404040;
+    margin-bottom: 12px; }
+  .side-list img {
+    display: inline-block;
+    margin-right: 5px;
+    margin-bottom: 0; }
+
+.slider-articles {
+  margin-bottom: 12px; }
+  .slider-articles .article-box {
+    position: relative;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box; }
+  .slider-articles .article-img {
+    -webkit-background-size: cover;
+            background-size: cover;
+    width: 241px;
+    height: 175px; }
+  .slider-articles .article-decript {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(64, 64, 64, 0.8);
+    width: 100%;
+    padding: 0 14px 8px 14px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box; }
+    .slider-articles .article-decript a {
+      font-size: 18px;
+      color: #fff;
+      text-decoration: underline; }
+  .slider-articles div:nth-child(1) .article-img {
+    background: url(../img/main/house.jpg) no-repeat center center; }
+  .slider-articles .outside {
+    font-family: 'Verdana', sans-serif;
+    font-size: 14px;
+    color: #404040;
+    text-decoration: underline;
+    margin-left: 5px; }
+  .slider-articles-content {
+    margin-bottom: 12px; }
+
+.slider-works span {
+  margin-bottom: 16px; }
+
+.slider-works .works-box {
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+.slider-works .works-img {
+  -webkit-background-size: cover;
+          background-size: cover;
+  width: 241px;
+  height: 175px; }
+
+.slider-works .works-decript {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(64, 64, 64, 0.8);
+  width: 100%;
+  padding: 0 14px 8px 14px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+  .slider-works .works-decript a {
+    font-size: 18px;
+    color: #fff;
+    text-decoration: underline; }
+
+.slider-works div:nth-child(1) .works-img {
+  background: url(../img/main/bath.jpg) no-repeat center center; }
+
+.slider-works .outside {
+  font-family: 'Verdana', sans-serif;
+  font-size: 14px;
+  color: #404040;
+  text-decoration: underline;
+  margin-left: 5px; }
+
+.slider-works-content {
+  margin-bottom: 12px; }

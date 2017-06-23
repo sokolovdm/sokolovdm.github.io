@@ -14,7 +14,7 @@ $(document).ready(function() {
 
         $('.slide').on('click', function() {				//При клике на ссылку .slide
             $('.slide').toggleClass('rotate');				//Дать/забрать .rotate
-        })
+        });
 
         $('.slide').on('click', function() {				//При клике на ссылку .slide
             $('.menu-hide').slideToggle(300, function() {	//Элемент .menu-hide развернуть/свернуть
@@ -24,7 +24,7 @@ $(document).ready(function() {
 
         $('.lense').on('click', function() {				//При клике на ссылку .lense
             $('.lense').toggleClass('rotate360');			//Дать/забрать .rotate360
-        })
+        });
 
         $('.lense').on('click', function() {				//При клике на ссылку .lense
             $('.search').slideToggle(300, function() {		//Элемент .search развернуть/свернуть
@@ -38,7 +38,8 @@ $(document).ready(function() {
         $(tab).on('click', function() {						//При клике на tab
             $(tab).removeClass('active-menu');				//У всех элементов с tab удаляем класс active-menu
             $(this).addClass('active-menu');				//Всем элементам с tab добавляем класс active-menu
-        })
+            event.preventDefault();
+        });
 
         //SLIDER CONTENT
 
@@ -48,13 +49,32 @@ $(document).ready(function() {
             var target = $(this).attr('href');				//Создаём переменную target, в которую запишем id
             $('.projects-content').hide();					//Скрыть все элементы с классом .projects-content
             $(target).show();								//Показать элемент с id = target
-        })
+            event.preventDefault();
+        });
 
         //CAROUSEL
 
-        $(".owl-carousel").owlCarousel({
+        $(".projects-slider .owl-carousel").owlCarousel({
             items: 2,
             singleItem: false,
+            autoplay: false,
+            nav: true,
+            dots: false,
+            dotsEach: true,
+            loop: true,
+            navText: ""
+        });
+        $(".slider-articles-content").owlCarousel({
+            items: 1,
+            autoplay: false,
+            nav: true,
+            dots: false,
+            dotsEach: true,
+            loop: true,
+            navText: ""
+        });
+         $(".slider-works-content").owlCarousel({
+            items: 1,
             autoplay: false,
             nav: true,
             dots: false,
