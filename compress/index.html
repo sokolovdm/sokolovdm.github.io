@@ -686,10 +686,10 @@ html{background:url(../img/header/bg.jpg) no-repeat top center;}
     <script>
     	$(document).ready(function(){$(function(){$('.call-back').on('click',function(){$('.call-back').toggleClass('rotate');});$('.call-back').on('click',function(){$('.form-box').slideToggle(300,function(){console.log($(this).css('display'))});});$('.slide').on('click',function(){$('.slide').toggleClass('rotate');});$('.slide').on('click',function(){$('.menu-hide').slideToggle(300,function(){console.log($(this).css('display'))});});$('.lense').on('click',function(){$('.lense').toggleClass('rotate360');});$('.lense').on('click',function(){$('.search').slideToggle(300,function(){console.log($(this).css('display'))});});var tab=$('.projects-menu a');$(tab).on('click',function(){$(tab).removeClass('active-menu');$(this).addClass('active-menu');event.preventDefault();});tab.click(function(){var target=$(this).attr('href');$('.projects-content').hide();$(target).show();event.preventDefault();});$(".projects-slider .owl-carousel").owlCarousel({items:2,singleItem:false,autoplay:false,nav:true,dots:false,dotsEach:true,loop:true,navText:""});$(".slider-articles-content").owlCarousel({items:1,autoplay:false,nav:true,dots:false,dotsEach:true,loop:true,navText:""});$(".slider-works-content").owlCarousel({items:1,autoplay:false,nav:true,dots:false,dotsEach:true,loop:true,navText:""});});});$(document).click(function(event){if($(event.target).closest(".form-box").length||$(event.target).closest(".call-back").length)return;$('.form-box').slideUp(300)&&$('.call-back').removeClass('rotate');if($(event.target).closest(".menu-hide").length||$(event.target).closest(".slide").length)return;$('.menu-hide').slideUp(300)&&$('.slide').removeClass('rotate');if($(event.target).closest(".search").length||$(event.target).closest(".lense").length)return;$('.search').slideUp(300);event.stopPropagation();});
     </script>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="libs/css/owl.carousel.min.css">
+	<link href="css/main.css" rel="stylesheet">
 </body>
 
 </html>
-<link rel="icon" href="/favicon.ico" type="image/x-icon">
-<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-<link rel="stylesheet" href="libs/css/owl.carousel.min.css">
-<link href="css/main.css" rel="stylesheet">
