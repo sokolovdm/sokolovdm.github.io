@@ -2,32 +2,38 @@ $(document).ready(function() {
 
     $('.call-back').on('click', function() { //При клике на ссылку .call-back
         $('.call-back').toggleClass('rotate'); //Дать/забрать .rotate
+        event.preventDefault();
     });
 
     $('.call-back').on('click', function() { //При клике на ссылку .call-back
         $('.form-box').slideToggle(300, function() { //Элемент .form-box развернуть/свернуть
             console.log($(this).css('display')) //В консоли вывести прежнее значение свойства display
         });
+        event.preventDefault();
     });
 
     $('.slide').on('click', function() { //При клике на ссылку .slide
         $('.slide').toggleClass('rotate'); //Дать/забрать .rotate
+        event.preventDefault();
     });
 
     $('.slide').on('click', function() { //При клике на ссылку .slide
         $('.menu-hide').slideToggle(300, function() { //Элемент .menu-hide развернуть/свернуть
             console.log($(this).css('display')) //В консоли вывести прежнее значение свойства display
         });
+        event.preventDefault();
     });
 
     $('.lense').on('click', function() { //При клике на ссылку .lense
         $('.lense').toggleClass('rotate360'); //Дать/забрать .rotate360
+        event.preventDefault();
     });
 
     $('.lense').on('click', function() { //При клике на ссылку .lense
         $('.search').slideToggle(300, function() { //Элемент .search развернуть/свернуть
             console.log($(this).css('display')) //В консоли вывести прежнее значение свойства display
         });
+        event.preventDefault();
     });
 
     //PROJECTS MENU
@@ -97,38 +103,7 @@ $(document).ready(function() {
         event.stopPropagation(); //Остановить событие
     });
 
-    $('.article-img').on({                  //Устаналиваем обработчик на .artilce-img
-        mouseenter: function() {            //При попадании курсора мышки на .article-img
-            $('.article-decript').animate({ //Анимировать свойство padding-bottom у .article-decript за 100 мс
-                paddingBottom: 128
-            }, 200)
-        },
-    });
-
-    $('.article-decript').on({              //Устаналиваем обработчик на .artilce-desript             
-        mouseleave: function() {            //При уходе курсора мышки с .article-decript
-            $('.article-decript').animate({ //Анимировать свойство padding-bottom у .article-decript за 100 мс
-                paddingBottom: 8
-            }, 200)
-        },
-
-    });
-    $('.works-img').on({                  //Устаналиваем обработчик на .artilce-img
-        mouseenter: function() {            //При попадании курсора мышки на .article-img
-            $('.works-decript').animate({ //Анимировать свойство padding-bottom у .article-decript за 100 мс
-                paddingBottom: 152
-            }, 200)
-        },
-    });
-
-    $('.works-decript').on({              //Устаналиваем обработчик на .artilce-desript             
-        mouseleave: function() {            //При уходе курсора мышки с .article-decript
-            $('.works-decript').animate({ //Анимировать свойство padding-bottom у .article-decript за 100 мс
-                paddingBottom: 8
-            }, 200)
-        },
-
-    });
+    
 
 
 });
