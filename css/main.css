@@ -619,7 +619,8 @@ html {
     -webkit-background-size: cover;
             background-size: cover;
     width: 241px;
-    height: 175px; }
+    height: 175px;
+    cursor: pointer; }
   .slider-articles .article-decript {
     position: absolute;
     top: 0;
@@ -658,7 +659,8 @@ html {
   -webkit-background-size: cover;
           background-size: cover;
   width: 241px;
-  height: 175px; }
+  height: 175px;
+  cursor: pointer; }
 
 .slider-works .works-decript {
   position: absolute;
