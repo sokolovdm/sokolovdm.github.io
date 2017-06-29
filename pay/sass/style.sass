@@ -1,0 +1,181 @@
+
+@font-face 
+	font-family: 'Bliss Pro'
+	src: url('../fonts/BlissPro-Medium.eot')
+	src: url('../fonts/BlissPro-Medium.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/BlissPro-Medium.woff2') format('woff2'),
+	url('../fonts/BlissPro-Medium.woff') format('woff'),
+	url('../fonts/BlissPro-Medium.ttf') format('truetype'),
+	url('../fonts/BlissPro-Medium.svg#BlissPro-Medium') format('svg')
+	font-weight: 500
+	font-style: normal
+
+
+@font-face 
+	font-family: 'Bliss Pro'
+	src: url('../fonts/BlissPro-ExtraLight.eot')
+	src: url('../fonts/BlissPro-ExtraLight.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/BlissPro-ExtraLight.woff2') format('woff2'),
+	url('../fonts/BlissPro-ExtraLight.woff') format('woff'),
+	url('../fonts/BlissPro-ExtraLight.ttf') format('truetype'),
+	url('../fonts/BlissPro-ExtraLight.svg#BlissPro-ExtraLight') format('svg')
+	font-weight: 200
+	font-style: normal
+
+
+@font-face 
+	font-family: 'Bliss Pro'
+	src: url('../fonts/BlissPro.eot')
+	src: url('../fonts/BlissPro.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/BlissPro.woff2') format('woff2'),
+	url('../fonts/BlissPro.woff') format('woff'),
+	url('../fonts/BlissPro.ttf') format('truetype'),
+	url('../fonts/BlissPro.svg#BlissPro') format('svg')
+	font-weight: normal
+	font-style: normal
+
+@font-face 
+	font-family: 'Font awesome'
+	src: url('../fonts/fontawesome.eot')
+	src: url('../fonts/fontawesome.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/fontawesome.woff2') format('woff2'),
+	url('../fonts/fontawesome.woff') format('woff'),
+	url('../fonts/fontawesome.ttf') format('truetype'),
+	url('../fonts/fontawesome.svg#fontawesome') format('svg')
+	font-weight: normal
+	font-style: normal
+
+
+
+
+*
+	box-sizing: border-box
+
+body, html
+	padding: 0
+	margin: 0
+	font-family: 'Bliss Pro'
+body
+	background-color: #aeaeae
+	padding: 5%
+	background-image: url("../img/bg.jpg")
+	background-size: cover	
+.wrapper
+	width: 60%
+	margin: 0 auto
+	background-color: #FFF
+	border-radius: 5px
+	box-shadow: 0 0 10px rgba(0,0,0,.4)
+	padding: 50px
+	position: relative
+.img-box, .text-box
+	width: 50%
+	display: inline-block
+.text-box
+	margin-left: -4px
+	vertical-align: top
+.counter	
+	a
+		text-decoration: none
+		border: 1px solid #5c5c5c
+		width: 40px
+		height: 40px
+		display: inline-block
+		border-radius: 50%
+		text-align: center
+		line-height: 1.4
+		font-size: 24px
+		font-weight: 500
+		color: #5c5c5c
+		transition: all 0.4s
+		&:hover
+			background-color: #5c5c5c
+			color: #fff
+.img-box img
+	width: 100%		
+h1,h2,p
+	margin: 0
+	padding: 0
+
+
+h1
+	font-size: 30px
+	font-weight: 500
+	margin-bottom: 5px
+h2
+	font-size: 15px
+	color: #5c5c5c					
+	text-transform: uppercase
+	margin-bottom: 30px
+.price
+	font-size: 41px
+	color: #f5bf2e
+	font-weight: 200
+	display: inline-block
+.rating	
+	display: inline-block
+	font-family: 'Font awesome'
+	color: #f5bf2e
+	font-size: 15px
+	margin-left: 40px
+	line-height: 45px
+	vertical-align: top
+	span
+		font-family: 'Bliss Pro'
+		font-weight: 200	
+		margin-left: 7px
+.price-rating
+	margin-bottom: 30px
+
+.text
+	color: #5c5c5c
+	font-size: 15px
+	margin-bottom: 30px
+
+
+.counter
+	margin-bottom: 45px
+a.pay 
+	border: none
+	background-color: #f4c13b
+	padding: 16px 62px
+	border-radius: 50px			
+	font-size: 18px
+	color: #fff
+	font-family: 'Bliss Pro'
+	font-weight: 500
+	transition: all 0.4s
+	text-decoration: none
+	&:hover
+		box-shadow: 0 0 10px rgba(0,0,0,.4)
+	&:focus
+		outline: none
+
+
+input
+	width: 30px
+	font-size: 40px
+	font-family: 'Bliss Pro'
+	font-weight: 200
+	color: #333
+	border: none
+	text-align: center
+	line-height: 0.6
+	vertical-align: bottom
+	height: 30px
+	vertical-align: middle
+	margin: 0 5px 0 5px
+	&:focus
+		outline: none
+input::-webkit-input-placeholder
+	color: #333 			
+.close
+	position: absolute
+	top: -13px
+	right: 16px
+	font-size: 70px
+	color: #333
+	text-decoration: none
+	font-family: 'Bliss Pro'
+	font-weight: 200
+	transform: rotate(45deg)		
