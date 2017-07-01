@@ -3,6 +3,7 @@ $(document).ready(function() {
     $('.call-back').on('click', function() { //При клике на ссылку .call-back
         $('.call-back').toggleClass('rotate'); //Дать/забрать .rotate
         event.preventDefault();
+        event.stopPropagation();
     });
 
     $('.call-back').on('click', function() { //При клике на ссылку .call-back
@@ -10,11 +11,13 @@ $(document).ready(function() {
             console.log($(this).css('display')) //В консоли вывести прежнее значение свойства display
         });
         event.preventDefault();
+        event.stopPropagation();
     });
 
     $('.slide').on('click', function() { //При клике на ссылку .slide
         $('.slide').toggleClass('rotate'); //Дать/забрать .rotate
         event.preventDefault();
+        event.stopPropagation();
     });
 
     $('.slide').on('click', function() { //При клике на ссылку .slide
@@ -22,11 +25,13 @@ $(document).ready(function() {
             console.log($(this).css('display')) //В консоли вывести прежнее значение свойства display
         });
         event.preventDefault();
+        event.stopPropagation();
     });
 
     $('.lense').on('click', function() { //При клике на ссылку .lense
         $('.lense').toggleClass('rotate360'); //Дать/забрать .rotate360
         event.preventDefault();
+        event.stopPropagation();
     });
 
     $('.lense').on('click', function() { //При клике на ссылку .lense
@@ -34,6 +39,7 @@ $(document).ready(function() {
             console.log($(this).css('display')) //В консоли вывести прежнее значение свойства display
         });
         event.preventDefault();
+        event.stopPropagation();
     });
 
     //PROJECTS MENU
@@ -86,24 +92,56 @@ $(document).ready(function() {
         navText: ""
     });
 
-
-
-
     $(document).click(function(event) {
-        if ($(event.target).closest(".form-box").length || $(event.target).closest(".call-back").length) return; //Условие, что бы .form-box сворачивались при нажатии в любое место и забрать класс rotate у .call-back
-        $('.form-box').slideUp(300) && $('.call-back').removeClass('rotate');
-
-
-        if ($(event.target).closest(".menu-hide").length || $(event.target).closest(".slide").length) return; //Условие, что бы .menu-hide сворачивались при нажатии в любое место и забрать класс rotate у .slide
-        $('.menu-hide').slideUp(300) && $('.slide').removeClass('rotate');
-
-        if ($(event.target).closest(".search").length || $(event.target).closest(".lense").length) return; //Условие, что бы .search сворачивались при нажатии в любое место    
+        $('.form-box').slideUp(300);
+        $('.call-back').removeClass('rotate');
+        $('.menu-hide').slideUp(300);
+        $('.slide').removeClass('rotate');
         $('.search').slideUp(300);
-
-        event.stopPropagation(); //Остановить событие
+        $('.select-list').slideUp(300);
+        $('.answer').slideUp(300);
+        $(questTab).removeClass('green');
+        $('.faq-arrow').removeClass('rotate-faq');
     });
 
-    
+
+    /* $(document).click(function(event) {
+         if ($(event.target).closest(".form-box").length || $(event.target).closest(".call-back").length) return; //Условие, что бы .form-box сворачивались при нажатии в любое место и забрать класс rotate у .call-back
+         $('.form-box').slideUp(300) && $('.call-back').removeClass('rotate');
 
 
+         if ($(event.target).closest(".menu-hide").length || $(event.target).closest(".slide").length) return; //Условие, что бы .menu-hide сворачивались при нажатии в любое место и забрать класс rotate у .slide
+         $('.menu-hide').slideUp(300) && $('.slide').removeClass('rotate');
+
+         if ($(event.target).closest(".search").length || $(event.target).closest(".lense").length) return; //Условие, что бы .search сворачивались при нажатии в любое место    
+         $('.search').slideUp(300);
+
+         if ($(event.target).closest(".select-time").length || $(event.target).closest(".select-list").length) return; //Условие, что бы .search сворачивались при нажатии в любое место    
+         $('.select-list').slideUp(300);
+
+      
+     }); */
+
+    //customize select
+    $('.select-time').click(function() {
+        $('.select-list').slideToggle(300);
+        event.stopPropagation();
+    });
+    $('.select-list li').click(function() {
+        $('.select-time div').html($(this).html()); //Меняем контент текст в div, на текст в li, на который кликнули
+        $('#time').val($(this).html()); //Запишем в атрибут value текст из li, на который кликнули
+        $('.select-list').slideDown(); //Свернуть select
+
+    });
+
+    //collapse FAQ
+    var questTab = $('.quest')
+    $(questTab).click(function(){
+        var target = $(this).attr('data-number');
+        $(target + '+.answer').slideToggle();
+        console.log(target)
+        $(target).toggleClass('green')
+        $(target + ' .faq-arrow').toggleClass('rotate-faq')
+        event.stopPropagation();
+    });
 });
