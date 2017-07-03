@@ -99,28 +99,11 @@ $(document).ready(function() {
         $('.slide').removeClass('rotate');
         $('.search').slideUp(300);
         $('.select-list').slideUp(300);
-        $('.answer').slideUp(300);
-        $(questTab).removeClass('green');
-        $('.faq-arrow').removeClass('rotate-faq');
+        
     });
 
 
-    /* $(document).click(function(event) {
-         if ($(event.target).closest(".form-box").length || $(event.target).closest(".call-back").length) return; //Условие, что бы .form-box сворачивались при нажатии в любое место и забрать класс rotate у .call-back
-         $('.form-box').slideUp(300) && $('.call-back').removeClass('rotate');
 
-
-         if ($(event.target).closest(".menu-hide").length || $(event.target).closest(".slide").length) return; //Условие, что бы .menu-hide сворачивались при нажатии в любое место и забрать класс rotate у .slide
-         $('.menu-hide').slideUp(300) && $('.slide').removeClass('rotate');
-
-         if ($(event.target).closest(".search").length || $(event.target).closest(".lense").length) return; //Условие, что бы .search сворачивались при нажатии в любое место    
-         $('.search').slideUp(300);
-
-         if ($(event.target).closest(".select-time").length || $(event.target).closest(".select-list").length) return; //Условие, что бы .search сворачивались при нажатии в любое место    
-         $('.select-list').slideUp(300);
-
-      
-     }); */
 
     //customize select
     $('.select-time').click(function() {
@@ -135,13 +118,53 @@ $(document).ready(function() {
     });
 
     //collapse FAQ
+   
+
+    /*
     var questTab = $('.quest')
+    //collapse FAQ
     $(questTab).click(function(){
-        var target = $(this).attr('data-number');
-        $(target + '+.answer').slideToggle();
-        console.log(target)
-        $(target).toggleClass('green')
-        $(target + ' .faq-arrow').toggleClass('rotate-faq')
+        $('.answer').addClass('disabled');
+        if($(this).next().hasClass('disabled')){
+            $(this).next().removeClass('disabled');
+            event.preventDefault();
+        } else {
+            $(this).next().addClass('disabled');
+        }
+       
         event.stopPropagation();
-    });
+    });*\
+   
+   /*  $(questTab).click(function() {
+        $('.answer').addClass('disabled');
+        $(questTab).removeClass('green')
+        $('.faq-arrow').removeClass('rotate-faq')
+        var target = $(this).attr('data-number');
+
+        $(target + '+.answer').removeClass('disabled');
+        console.log(target)
+        $(target).addClass('green')
+        $(target + ' .faq-arrow').addClass('rotate-faq')
+        event.stopPropagation();
+    });*/
+
+
+
+    /* $(document).click(function(event) {
+        if ($(event.target).closest(".form-box").length || $(event.target).closest(".call-back").length) return; //Условие, что бы .form-box сворачивались при нажатии в любое место и забрать класс rotate у .call-back
+        $('.form-box').slideUp(300) && $('.call-back').removeClass('rotate');
+
+
+        if ($(event.target).closest(".menu-hide").length || $(event.target).closest(".slide").length) return; //Условие, что бы .menu-hide сворачивались при нажатии в любое место и забрать класс rotate у .slide
+        $('.menu-hide').slideUp(300) && $('.slide').removeClass('rotate');
+
+        if ($(event.target).closest(".search").length || $(event.target).closest(".lense").length) return; //Условие, что бы .search сворачивались при нажатии в любое место    
+        $('.search').slideUp(300);
+
+        if ($(event.target).closest(".select-time").length || $(event.target).closest(".select-list").length) return; //Условие, что бы .search сворачивались при нажатии в любое место    
+        $('.select-list').slideUp(300);
+
+     
+    }); */
 });
+

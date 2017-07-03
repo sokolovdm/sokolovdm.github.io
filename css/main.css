@@ -575,7 +575,14 @@ html {
         text-decoration: underline; }
   .main .advantage {
     margin-bottom: 17px; }
-    .main .advantage h4.h4 {
+    .main .advantage h4 {
+      margin: 0;
+      padding: 0;
+      margin-bottom: 20px;
+      font-weight: 500;
+      font-size: 24px;
+      color: #404040; }
+    .main .advantage .h4 {
       margin: 0;
       padding: 0;
       margin-bottom: 20px;
@@ -877,7 +884,7 @@ html {
     padding: 0; }
 
 /* ============= MAIN (ELEMENTS.HTML) =============== */
-.main-content h1.h1 {
+.main-content h1 {
   margin: 0;
   color: #404040;
   font-size: 40px;
@@ -886,21 +893,51 @@ html {
   line-height: 31px;
   margin-bottom: 32px; }
 
-.main-content h3.h3 {
+.main-content .h1 {
+  margin: 0;
+  color: #404040;
+  font-size: 40px;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 31px;
+  margin-bottom: 32px; }
+
+.main-content h3 {
   margin: 0;
   font-size: 30px;
   color: #404040;
   font-weight: normal;
-  margin-bottom: 24px; }
+  margin-bottom: 18px; }
 
-.main-content h4.h4 {
+.main-content .h3 {
+  margin: 0;
+  font-size: 30px;
+  color: #404040;
+  font-weight: normal;
+  margin-bottom: 18px; }
+
+.main-content h4 {
   margin: 0;
   font-size: 24px;
   color: #404040;
   font-weight: 500;
   margin-bottom: 24px; }
 
-.main-content h5.h5 {
+.main-content .h4 {
+  margin: 0;
+  font-size: 24px;
+  color: #404040;
+  font-weight: 500;
+  margin-bottom: 24px; }
+
+.main-content h5 {
+  margin: 0;
+  font-size: 18px;
+  color: #404040;
+  font-weight: 500;
+  margin-bottom: 10px; }
+
+.main-content .h5 {
   margin: 0;
   font-size: 18px;
   color: #404040;
@@ -926,12 +963,37 @@ html {
       list-style-image: none;
       list-style-type: disc; }
 
+.main .num-list {
+  padding: 0;
+  margin: 0;
+  counter-reset: myCounter;
+  margin-bottom: 28px; }
+  .main .num-list li {
+    font-family: 'Verdana', sans-serif;
+    font-size: 14px;
+    color: #858585;
+    text-align: justify;
+    line-height: 1.714;
+    list-style: none; }
+    .main .num-list li::before {
+      content: "" counter(myCounter) " - ";
+      counter-increment: myCounter;
+      font-style: bold; }
+
 /* ============= SECTION FORM (ELEMENTS.HTML) =============== */
 .form-section {
   padding-bottom: 51px; }
   .form-section-box {
     width: 72.06%; }
-    .form-section-box h2.h2 {
+    .form-section-box h2 {
+      font-weight: 500;
+      text-transform: uppercase;
+      color: #404040;
+      font-size: 30px;
+      margin: 0;
+      margin-bottom: 17px;
+      padding: 0; }
+    .form-section-box .h2 {
       font-weight: 500;
       text-transform: uppercase;
       color: #404040;
@@ -1000,7 +1062,7 @@ html {
           background-position: -143px -0px;
           position: absolute;
           left: 0;
-          top: 2px; }
+          top: 0; }
       .form-section-box form input[type="checkbox"]:checked + label:before {
         background-position: -162px 0; }
       .form-section-box form input[type="file"] {
@@ -1068,7 +1130,7 @@ html {
         .form-section-box form .form-select .select-time {
           display: inline-block;
           position: relative;
-          top: 7px;
+          top: 4px;
           vertical-align: top;
           margin-left: 23px; }
           .form-section-box form .form-select .select-time > div {
@@ -1147,10 +1209,24 @@ html {
   padding-bottom: 50px; }
   .table-section .table {
     width: 72.06%; }
+    .table-section .table tr {
+      -webkit-transition: all 0.4s;
+      -o-transition: all 0.4s;
+      transition: all 0.4s; }
+      .table-section .table tr:hover {
+        background-color: #ebebeb; }
     .table-section .table table {
       width: 100%;
       border-collapse: collapse; }
-    .table-section .table h2.h2 {
+    .table-section .table h2 {
+      font-weight: 500;
+      text-transform: uppercase;
+      color: #404040;
+      font-size: 30px;
+      margin: 0;
+      margin-bottom: 33px;
+      padding: 0; }
+    .table-section .table .h2 {
       font-weight: 500;
       text-transform: uppercase;
       color: #404040;
@@ -1166,7 +1242,7 @@ html {
       padding: 13px; }
       .table-section .table td .ruble {
         font-size: 14px; }
-    .table-section .table .th1 {
+    .table-section .table tr:first-child th:first-child {
       background-color: #EBEBEB;
       font-size: 24px;
       font-weight: 500;
@@ -1174,31 +1250,34 @@ html {
       padding-bottom: 9px;
       width: 37%;
       font-family: 'DIN'; }
-    .table-section .table .th2 {
+    .table-section .table tr:first-child th:last-child {
       background-color: #bdee39;
       font-size: 24px;
       font-weight: 500;
       padding: 2px;
       padding-bottom: 9px;
       font-family: 'DIN'; }
-    .table-section .table .col {
+    .table-section .table tr td:first-child {
       font-weight: bold; }
-    .table-section .table tbody tr td {
-      border-top: 1px dashed #ebebeb;
-      border-bottom: 1px dashed #ebebeb; }
-    .table-section .table tbody tr:first-child td {
-      border: 1px solid #ebebeb; }
-    .table-section .table tbody tr:last-child td {
-      border-bottom: 1px solid #ebebeb; }
-    .table-section .table tbody tr:nth-child(2) td {
-      border: 1px solid #ebebeb; }
 
 /* ============= REVIEWS (ELEMENTS.HTML) =============== */
 .reviews {
   padding-bottom: 27px; }
+  .reviews-avatar {
+    width: 80px;
+    height: 80px;
+    display: inline-block; }
   .reviews .advantage {
     margin-bottom: 17px; }
-    .reviews .advantage h2.h2 {
+    .reviews .advantage h2 {
+      font-weight: 500;
+      text-transform: uppercase;
+      color: #404040;
+      font-size: 30px;
+      margin: 0;
+      margin-bottom: 33px;
+      padding: 0; }
+    .reviews .advantage .h2 {
       font-weight: 500;
       text-transform: uppercase;
       color: #404040;
@@ -1234,7 +1313,15 @@ html {
 /* ============= FAQ (ELEMENTS.HTML) =============== */
 .faq {
   padding-bottom: 48px; }
-  .faq h2.h2 {
+  .faq h2 {
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #404040;
+    font-size: 30px;
+    margin: 0;
+    margin-bottom: 33px;
+    padding: 0; }
+  .faq .h2 {
     font-weight: 500;
     text-transform: uppercase;
     color: #404040;
@@ -1244,7 +1331,8 @@ html {
     padding: 0; }
   .faq .faq-item {
     margin-bottom: 2px;
-    width: 100%; }
+    width: 100%;
+    overflow: hidden; }
     .faq .faq-item .quest {
       background-color: #ececec;
       padding: 6px 75px 12px 13px;
@@ -1253,11 +1341,14 @@ html {
       -webkit-transition: all 0.4s;
       -o-transition: all 0.4s;
       transition: all 0.4s; }
+      .faq .faq-item .quest a {
+        width: 100%;
+        display: inline-block; }
       .faq .faq-item .quest span {
         font-size: 18px;
         color: #404040;
         border-bottom: 1px dashed #404040;
-        display: inline-block; }
+        display: inline; }
       .faq .faq-item .quest .faq-arrow {
         display: block;
         width: 14px;
@@ -1271,21 +1362,28 @@ html {
         -o-transition: all 0.4s;
         transition: all 0.4s; }
     .faq .faq-item .answer {
-      border: 2px solid #bdee39;
+      border: 0px solid #bdee39;
       border-top: none;
-      font-family: 'Verdana';
+      font-family: 'Verdana', sans-serif;
       color: #767676;
-      padding: 6px 11px 12px 11px;
-      line-height: 1.7;
-      display: none; }
+      padding: 0;
+      line-height: 0;
+      -webkit-transition: all 0.4s;
+      -o-transition: all 0.4s;
+      transition: all 0.4s; }
 
-.green {
+.quest:target {
   background-color: #bdee39 !important;
   -webkit-transition: all 0.4s;
   -o-transition: all 0.4s;
   transition: all 0.4s; }
 
-.rotate-faq {
+.quest:target + .answer {
+  border: 2px solid #bdee39;
+  padding: 6px 11px 12px 11px;
+  line-height: 1.7; }
+
+.quest:target .faq-arrow {
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
@@ -1294,7 +1392,15 @@ html {
 /* ============= QUOTE (ELEMENTS.HTML) =============== */
 .quote {
   padding-bottom: 59px; }
-  .quote h2.h2 {
+  .quote h2 {
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #404040;
+    font-size: 30px;
+    margin: 0;
+    margin-bottom: 27px;
+    padding: 0; }
+  .quote .h2 {
     font-weight: 500;
     text-transform: uppercase;
     color: #404040;
