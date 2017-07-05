@@ -196,6 +196,9 @@ header {
     -moz-text-align-last: justify;
          text-align-last: justify;
     width: 100%; }
+    header .menu-head .menu-slide .sub-menu {
+      z-index: 150;
+      top: 21px; }
     header .menu-head li {
       display: inline-block;
       border-bottom: 2px solid transparent;
@@ -975,12 +978,12 @@ footer {
   top: 0;
   left: 0;
   width: 100%;
-  -webkit-transform: translateY(-80px);
-      -ms-transform: translateY(-80px);
-          transform: translateY(-80px);
-  -webkit-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  transition: all 0.4s; }
+  -webkit-transform: translateY(-300px);
+      -ms-transform: translateY(-300px);
+          transform: translateY(-300px);
+  -webkit-transition: all 0.6s;
+  -o-transition: all 0.6s;
+  transition: all 0.6s; }
   .fix-menu .menu-head {
     display: inline-block;
     -moz-text-align-last: justify;
@@ -1036,7 +1039,40 @@ footer {
   -webkit-border-radius: 50%;
           border-radius: 50%;
   text-align: center;
-  line-height: 50px; }
+  line-height: 50px;
+  display: none; }
   .totop:hover {
-    color: #fe5c2e;
-    background-color: #fff; }
+    color: #fff;
+    -webkit-transform: scale(1.3);
+        -ms-transform: scale(1.3);
+            transform: scale(1.3); }
+
+.menu-slide {
+  position: relative; }
+  .menu-slide .sub-menu {
+    position: absolute;
+    display: inline-block;
+    top: 70px;
+    left: 0px;
+    width: 200px;
+    background-color: #FFF;
+    -webkit-box-shadow: 0 0 20px 10px rgba(241, 241, 241, 0.7);
+            box-shadow: 0 0 20px 10px rgba(241, 241, 241, 0.7);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: 2px solid #fe5c2e;
+    -moz-text-align-last: left;
+         text-align-last: left;
+    padding-left: 10px;
+    line-height: 1;
+    display: none; }
+    .menu-slide .sub-menu li {
+      display: block;
+      border: none;
+      line-height: 30px; }
+      .menu-slide .sub-menu li:hover {
+        border: none; }
+      .menu-slide .sub-menu li a {
+        text-transform: uppercase; }
+      .menu-slide .sub-menu li:hover a {
+        color: #fe5c2e; }

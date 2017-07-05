@@ -26,7 +26,6 @@ $(document).ready(function() {
     var tab = $('.work-system-tabs a'); //Создаём переменную tab
 
     $(tab).click(function() { //При клике на tab
-        console.log(tab);
         $(tab).removeClass('active-menu'); //У всех элементов с tab удаляем класс active-menu
         $(this).addClass('active-menu'); //Всем элементам с tab добавляем класс active-menu
         event.preventDefault();
@@ -113,5 +112,34 @@ $(document).ready(function() {
         $('body,html').animate({ scrollTop: top }, 1000);
     });
 
+    $(".sub-menu a").on("click", function(event) {
+        event.preventDefault();
+        var top = $('#work-sys').offset().top;
+        $('body,html').animate({ scrollTop: top }, 300);
+    });
 
+  
+    $('.menu-slide').mouseenter(function(){
+        $('.sub-menu').fadeIn();
+    });
+    $('.menu-slide').mouseleave(function(){
+        $('.sub-menu').fadeOut();
+    });
+
+    var menuTab = $('.sub-menu a');
+     $(menuTab).click(function() { //При клике на tab
+        var target = $(this).attr('href');
+        var targetSlide = '.work-system-tabs a[href=' + target + ']';
+        console.log(targetSlide);
+        console.log($(targetSlide));
+        $(tab).removeClass('active-menu'); //У всех элементов с tab удаляем класс active-menu
+        $(tar).addClass('active-menu'); //Всем элементам с tab добавляем класс active-menu
+        event.preventDefault();
+    });
+    menuTab.click(function() { //При клике на tab
+        var target = $(this).attr('href'); //Создаём переменную target, в которую запишем id
+        $('.system-tabs').fadeOut(); //Скрыть все элементы с классом .projects-content
+        $(target).fadeIn(); //Показать элемент с id = target
+        event.preventDefault();
+    });
 });
