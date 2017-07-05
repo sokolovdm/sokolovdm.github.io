@@ -149,12 +149,22 @@ $(document).ready(function() {
         $('.modal-form').fadeIn();
         $('.modal-wrap').addClass('modal-active');
         $('body').css('overflow', 'hidden');
+        event.stopPropagation();
     });
 
      $('.close').click(function(){
         $('.modal-form').fadeOut();
         $('.modal-wrap').removeClass('modal-active');
         $('body').css('overflow', 'auto');
+        event.stopPropagation();
     });
+     $('.modal-wrap').click(function(){
+        event.stopPropagation();
+     });
+    $(document).click(function(event){
+        $('.modal-form').fadeOut();
+        $('.modal-wrap').removeClass('modal-active');
+        $('body').css('overflow', 'auto');
+    }); 
 
 });
