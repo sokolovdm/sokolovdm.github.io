@@ -1009,8 +1009,18 @@ footer {
           color: #393945; }
       .fix-menu .menu-head li:hover {
         border-bottom: 2px solid #fe5c2e; }
-  .fix-menu .lense {
+  .fix-menu .head-phone {
+    font-family: 'Museo Sans';
+    font-weight: 900;
+    color: #393945;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+    font-size: 20px;
+    color: #393945;
     line-height: 70px; }
+    .fix-menu .head-phone:hover {
+      color: #fe5c2e; }
 
 .slide {
   -webkit-transform: translateY(0);
@@ -1054,7 +1064,7 @@ footer {
     display: inline-block;
     top: 70px;
     left: 0px;
-    width: 200px;
+    width: 140px;
     background-color: #FFF;
     -webkit-box-shadow: 0 0 20px 10px rgba(241, 241, 241, 0.7);
             box-shadow: 0 0 20px 10px rgba(241, 241, 241, 0.7);
@@ -1063,16 +1073,132 @@ footer {
     border-top: 2px solid #fe5c2e;
     -moz-text-align-last: left;
          text-align-last: left;
-    padding-left: 10px;
     line-height: 1;
     display: none; }
     .menu-slide .sub-menu li {
       display: block;
-      border: none;
-      line-height: 30px; }
+      border-left: 2px solid transparent;
+      border-bottom: none;
+      line-height: 30px;
+      width: 100%;
+      padding-left: 10px; }
       .menu-slide .sub-menu li:hover {
-        border: none; }
+        border-left: 2px solid #fe5c2e;
+        border-bottom: none; }
       .menu-slide .sub-menu li a {
         text-transform: uppercase; }
       .menu-slide .sub-menu li:hover a {
         color: #fe5c2e; }
+
+.modal-form {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10% 0;
+  display: none; }
+  .modal-form .modal-wrap {
+    background-color: #FFF;
+    position: absolute;
+    left: 50%;
+    top: 100px;
+    -webkit-box-shadow: 0 2px 40px 20px rgba(241, 241, 241, 0.7);
+            box-shadow: 0 2px 40px 20px rgba(241, 241, 241, 0.7);
+    z-index: 200;
+    width: 350px;
+    padding: 40px;
+    -webkit-transform: translatex(-50%) translateY(-100px);
+        -ms-transform: translatex(-50%) translateY(-100px);
+            transform: translatex(-50%) translateY(-100px);
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s; }
+    .modal-form .modal-wrap > span {
+      color: #393945;
+      font-size: 16px;
+      font-family: 'Museo Sans';
+      font-weight: 900;
+      text-transform: uppercase;
+      display: inline-block;
+      text-align: center;
+      margin-bottom: 10px; }
+    .modal-form .modal-wrap p {
+      color: #393945;
+      font-size: 14px;
+      text-align: center;
+      font-family: 'Museo Sans';
+      font-weight: 300;
+      margin-bottom: 20px; }
+    .modal-form .modal-wrap input {
+      display: block;
+      width: 100%;
+      background-color: #f5f5f5;
+      border: none;
+      font-size: 16px;
+      font-family: 'Museo Sans';
+      font-weight: 300;
+      color: #393945;
+      padding: 23px 27px 23px 27px;
+      -webkit-transition: all 0.4s;
+      -o-transition: all 0.4s;
+      transition: all 0.4s;
+      -webkit-box-shadow: 0 0 10px transparent;
+              box-shadow: 0 0 10px transparent;
+      margin-bottom: 10px; }
+      .modal-form .modal-wrap input:hover, .modal-form .modal-wrap input:focus, .modal-form .modal-wrap input:visited {
+        outline: none;
+        -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); }
+    .modal-form .modal-wrap input[type="email"] {
+      margin-bottom: 20px; }
+    .modal-form .modal-wrap button {
+      background-color: #fe5c2e;
+      width: 100%;
+      border: none;
+      font-family: 'Museo Sans';
+      font-weight: 700;
+      font-size: 16px;
+      color: #FFF;
+      padding: 19px 86px;
+      -webkit-border-radius: 5px;
+              border-radius: 5px;
+      -webkit-transition: all 0.4s;
+      -o-transition: all 0.4s;
+      transition: all 0.4s; }
+      .modal-form .modal-wrap button span {
+        font-family: 'Font Awesome';
+        font-size: 16px;
+        color: #fff;
+        margin-left: 10px;
+        position: relative;
+        left: 0;
+        -webkit-transition: all 0.4s;
+        -o-transition: all 0.4s;
+        transition: all 0.4s; }
+      .modal-form .modal-wrap button:hover {
+        -webkit-box-shadow: 0 5px 16px rgba(254, 92, 46, 0.34);
+                box-shadow: 0 5px 16px rgba(254, 92, 46, 0.34); }
+      .modal-form .modal-wrap button:hover span {
+        left: 50px; }
+
+.close {
+  font-family: 'Font Awesome';
+  opacity: 0.25;
+  color: #393945;
+  font-size: 20px;
+  display: block;
+  position: absolute;
+  top: 8px;
+  right: 15px;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s; }
+  .close:hover, .close:focus, .close:visited {
+    opacity: 1; }
+
+.modal-active {
+  -webkit-transform: translatex(-50%) translateY(0) !important;
+      -ms-transform: translatex(-50%) translateY(0) !important;
+          transform: translatex(-50%) translateY(0) !important; }

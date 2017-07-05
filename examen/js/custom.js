@@ -99,13 +99,13 @@ $(document).ready(function() {
         }
 
     });
-     $('.totop').click(function() {
+    $('.totop').click(function() {
         $('body,html').animate({ scrollTop: 0 }, 800);
     });
 
     //Плавный скрол
 
-    $(".menu-head a").on("click", function(event) {
+    $(".menu-head > li > a").on("click", function(event) {
         event.preventDefault();
         var id = $(this).attr('href'),
             top = $(id).offset().top;
@@ -115,31 +115,46 @@ $(document).ready(function() {
     $(".sub-menu a").on("click", function(event) {
         event.preventDefault();
         var top = $('#work-sys').offset().top;
-        $('body,html').animate({ scrollTop: top }, 300);
+        $('body,html').animate({ scrollTop: top }, 1000);
     });
 
-  
-    $('.menu-slide').mouseenter(function(){
+
+    $('.menu-slide').mouseenter(function() {
         $('.sub-menu').fadeIn();
     });
-    $('.menu-slide').mouseleave(function(){
+    $('.menu-slide').mouseleave(function() {
         $('.sub-menu').fadeOut();
     });
 
     var menuTab = $('.sub-menu a');
-     $(menuTab).click(function() { //При клике на tab
+    $(menuTab).click(function() { //При клике на tab
         var target = $(this).attr('href');
-        var targetSlide = '.work-system-tabs a[href=' + target + ']';
-        console.log(targetSlide);
-        console.log($(targetSlide));
         $(tab).removeClass('active-menu'); //У всех элементов с tab удаляем класс active-menu
-        $(tar).addClass('active-menu'); //Всем элементам с tab добавляем класс active-menu
+        $('.work-system-tabs a').each(function() {
+            if ($(this).attr('href') == target) {
+                var targetSlide = $(this)
+            }
+            $(targetSlide).addClass('active-menu');
+        });
         event.preventDefault();
     });
     menuTab.click(function() { //При клике на tab
         var target = $(this).attr('href'); //Создаём переменную target, в которую запишем id
+        console.log()
         $('.system-tabs').fadeOut(); //Скрыть все элементы с классом .projects-content
         $(target).fadeIn(); //Показать элемент с id = target
         event.preventDefault();
     });
+    $('.head-btn').click(function(){
+        $('.modal-form').fadeIn();
+        $('.modal-wrap').addClass('modal-active');
+        $('body').css('overflow', 'hidden');
+    });
+
+     $('.close').click(function(){
+        $('.modal-form').fadeOut();
+        $('.modal-wrap').removeClass('modal-active');
+        $('body').css('overflow', 'auto');
+    });
+
 });
