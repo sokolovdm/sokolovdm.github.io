@@ -965,3 +965,78 @@ footer {
     font-weight: 300; }
   footer .head-mail {
     line-height: 1.7; }
+
+.fix-menu {
+  -webkit-box-shadow: 0 0 20px 10px rgba(241, 241, 241, 0.7);
+          box-shadow: 0 0 20px 10px rgba(241, 241, 241, 0.7);
+  background-color: #FFF;
+  height: 70px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  -webkit-transform: translateY(-80px);
+      -ms-transform: translateY(-80px);
+          transform: translateY(-80px);
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s; }
+  .fix-menu .menu-head {
+    display: inline-block;
+    -moz-text-align-last: justify;
+         text-align-last: justify;
+    width: 100%;
+    line-height: 70px; }
+    .fix-menu .menu-head li {
+      display: inline-block;
+      border-bottom: 2px solid transparent;
+      -webkit-transition: all 0.4s;
+      -o-transition: all 0.4s;
+      transition: all 0.4s; }
+      .fix-menu .menu-head li a {
+        font-family: 'Museo Sans';
+        font-weight: 500;
+        color: #7b7b81;
+        font-size: 15px;
+        -webkit-transition: all 0.4s;
+        -o-transition: all 0.4s;
+        transition: all 0.4s;
+        display: block; }
+        .fix-menu .menu-head li a:hover {
+          color: #393945; }
+      .fix-menu .menu-head li:hover {
+        border-bottom: 2px solid #fe5c2e; }
+  .fix-menu .lense {
+    line-height: 70px; }
+
+.slide {
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s; }
+
+.totop {
+  width: 50px;
+  height: 50px;
+  font-family: 'Font Awesome';
+  color: #fff;
+  background-color: #fe5c2e;
+  display: block;
+  position: fixed;
+  right: 5%;
+  bottom: 5%;
+  -webkit-box-shadow: 0 0 20px 10px rgba(241, 241, 241, 0.7);
+          box-shadow: 0 0 20px 10px rgba(241, 241, 241, 0.7);
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+  font-size: 30px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  text-align: center;
+  line-height: 50px; }
+  .totop:hover {
+    color: #fe5c2e;
+    background-color: #fff; }

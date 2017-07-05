@@ -89,4 +89,29 @@ $(document).ready(function() {
         $(target).show(); //Показать элемент с id = target
         event.preventDefault();
     });
+
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > $(window).height()) {
+            $('.fix-menu').addClass('slide');
+            $('.totop').fadeIn();
+        } else {
+            $('.fix-menu').removeClass('slide');
+            $('.totop').fadeOut();
+        }
+
+    });
+     $('.totop').click(function() {
+        $('body,html').animate({ scrollTop: 0 }, 800);
+    });
+
+    //Плавный скрол
+
+    $(".menu-head a").on("click", function(event) {
+        event.preventDefault();
+        var id = $(this).attr('href'),
+            top = $(id).offset().top;
+        $('body,html').animate({ scrollTop: top }, 1000);
+    });
+
+
 });
