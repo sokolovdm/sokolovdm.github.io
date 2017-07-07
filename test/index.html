@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>About me</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- ================================ NAVIGATION ================================ -->
+    <div class="navigation">
+        <div class="wrapper">
+            <ul class="menu">
+                <li><a href="#information">Личная информация</a></li>
+                <li><a href="#experience">Опыт</a></li>
+                <li><a href="#js">JavaScript</a></li>
+                <li><a href="#about">О себе</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- ================================ ANKETA ================================ -->
+    <div class="main-caption">
+        <h1>Анкета</h1>
+    </div>
+    <!-- ================================ INFORMATION ================================ -->
+    <div class="information" id="information">
+        <div class="wrapper">
+            <picture>
+                <source type="image/svg+xml" srcset="img/information.svg">
+                <img src="img/information.png" alt="information" class="head-img">
+            </picture>
+            <h2>Личная информация</h2>
+            <div class="inform-box">
+                <input type="text" placeholder="Соколов Дмитрий Сергеевич">
+                <input type="hidden" value="1992" id="year">
+                <div class="select-year">
+                    <div>1992</div>
+                    <ul class="select-list">
+                        <li>1999</li>
+                        <li>1998</li>
+                        <li>1997</li>
+                        <li>1996</li>
+                        <li>1995</li>
+                        <li>1994</li>
+                        <li>1993</li>
+                        <li>1992</li>
+                        <li>1991</li>
+                        <li>1990</li>
+                        <li>1989</li>
+                        <li>1988</li>
+                        <li>1987</li>
+                        <li>1986</li>
+                        <li>1985</li>
+                        <li>1984</li>
+                        <li>1983</li>
+                        <li>1982</li>
+                        <li>1981</li>
+                        <li>1980</li>
+                        <li>1979</li>
+                        <li>1978</li>
+                    </ul>
+                </div>
+                <input type="text" placeholder="г. Волгоград">
+                <input type="text" placeholder="naraxiss">
+                <input type="email" placeholder="naraxiss@gmail.com">
+            </div>
+        </div>
+    </div>
+    <!-- ================================ EXPERIENCE ================================ -->
+    <div class="experience" id="experience">
+        <div class="wrapper">
+            <picture>
+                <source type="image/svg+xml" srcset="img/list.svg">
+                <img src="img/list.png" alt="list" class="head-img">
+            </picture>
+            <h2>Расскажите о своём опыте</h2>
+            <div class="experience-box">
+                <div class="experience-item">
+                    <div class="item-row">
+                        <label class="checkbox">
+                            <input type="checkbox" checked>
+                            <div class="box"></div>
+                            <span>БЭМ</span>/OOCSS
+                        </label>
+                    </div>
+                    <div class="item-row">
+                        <label class="checkbox">
+                            <input type="checkbox" checked>
+                            <div class="box"></div>
+                            Stylus/LESS/<span>SASS</span>
+                        </label>
+                    </div>
+                    <div class="item-row">
+                        <label class="checkbox">
+                            <input type="checkbox" checked>
+                            <div class="box"></div>
+                            Работаю с SVG
+                        </label>
+                    </div>
+                </div>
+                <div class="experience-item">
+                    <div class="item-row">
+                        <label class="checkbox">
+                            <input type="checkbox" checked>
+                            <div class="box"></div>
+                            Верстаю семантично
+                        </label>
+                    </div>
+                    <div class="item-row">
+                        <label class="checkbox">
+                            <input type="checkbox">
+                            <div class="box"></div>
+                            ES2015/ES2016
+                        </label>
+                    </div>
+                    <div class="item-row">
+                        <label class="checkbox">
+                            <input type="checkbox" checked>
+                            <div class="box"></div>
+                            <span>Gulp</span>/GRUNT
+                        </label>
+                    </div>
+                </div>
+                <div class="experience-item">
+                    <div class="item-row">
+                        <label class="checkbox">
+                            <input type="checkbox">
+                            <div class="box"></div>
+                            Webpack
+                        </label>
+                    </div>
+                    <div class="item-row">
+                        <label class="checkbox">
+                            <input type="checkbox" checked>
+                            <div class="box"></div>
+                            jQuery
+                        </label>
+                    </div>
+                    <div class="item-row">
+                        <label class="checkbox">
+                            <input type="checkbox">
+                            <div class="box"></div>
+                            Использую Git
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ================================ JAVASCRIPT ================================ -->
+    <div class="js" id="js">
+        <div class="wrapper">
+            <picture>
+                <source type="image/svg+xml" srcset="img/js.svg">
+                <img src="img/js.png" alt="js" class="head-img">
+            </picture>
+            <h2>Уровень владения JavaScript</h2>
+            <div class="slider-amount">
+            	<div class="step step-1">
+            		<p>Не владею</p>
+
+            	</div>
+            	<div class="step step-2">
+            		<p>Использую готовые<br> решения</p>
+            	</div>
+            	<div class="step step-3">
+            		<p>Использую готовые решения и умею их переделывать</p>
+            	</div>
+            	<div class="step step-4">
+            		<p>Пишу сложный JS с нуля</p>
+            	</div>
+            </div>
+            <div class="dots-box">
+            	<div class="dots dots-1"></div>
+            	<div class="dots dots-2"></div>
+            	<div class="dots dots-3"></div>
+            	<div class="dots dots-4"></div>
+            </div>
+            <div id="slider"></div>
+        </div>
+    </div>
+    <!-- ================================ ABOUT ================================ -->
+    <div class="about" id="about">
+        <div class="wrapper">
+            <picture>
+                <source type="image/svg+xml" srcset="img/text.svg">
+                <img src="img/text.png" alt="text" class="head-img">
+            </picture>
+            <h2>Расскажите о себе</h2>
+            <p>Напиши несколько предложений, чем привлекла наша вакансия и что вы ожидаете от работы у нас</p>
+            <textarea>Понравилась тем, что у вас есть возможность удаленной работы. Возможность поработать с профессионалам, что даст мне, как новичку в данной области быстрое развитие, как специалиста и изучение всегда что-то нового.</textarea>
+            <button>Готово</button>
+        </div>
+    </div>
+    <!-- ============================= SLIDE FROM TOP MENU ============================= -->
+    <div class="fixed-nav">
+        <div class="wrapper">
+            <ul class="fixed-menu">
+                <li><a href="#information">Личная информация</a></li>
+                <li><a href="#experience">Опыт</a></li>
+                <li><a href="#js">JavaScript</a></li>
+                <li><a href="#about">О себе</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- ================================ TOTOP BUTTON ================================ -->
+    <a href="#" class="totop">&#xf106;</a>
+    <!-- ================================ MODAL WINDOW ================================ -->
+    <div class="modal">
+        <span>Спасибо за внимание!</span>
+        <p>Надеюсь вам всё понравилось и вы возьмёте меня в свою команду.</p>
+        <div class="close">&#xf00d;</div>
+    </div>
+    <!-- ================================ MENU HAMBURGER ================================ -->
+    <a href="#menu" class="menu-ham">
+        <span></span>
+    </a>
+    <div class="small-menu">
+        <ul>
+            <li><a href="#information">Личная информация</a></li>
+            <li><a href="#experience">Опыт</a></li>
+            <li><a href="#js">JavaScript</a></li>
+            <li><a href="#about">О себе</a></li>
+        </ul>
+    </div>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+
+</html>

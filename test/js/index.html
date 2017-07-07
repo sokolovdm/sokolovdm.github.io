@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Slider - Snap to increments</title>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="http:/resources/demos/style.css">
+  <style> 
+  
+  #red .ui-slider-range { background-color: #ef2929;}
+  #red.ui-widget-content { background-color: #8c88c5!important;}
+  #red .ui-slider-handle { 
+  width: 23px;
+  height: 26px;
+  background: url(../img/Round.png) no-repeat center center;
+  top: 30px;
+  border: none;
+  cursor: pointer;
+}
+#red .ui-slider-handle:focus {
+  outline: none;
+}
+ 
+  </style>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#red" ).slider({
+      value:100,
+      min: 0,
+      max: 400,
+      step: 100,
+      slide: function( event, ui ) {
+        $( "#amount" ).val( "$" + ui.value );
+      }
+    });
+    $( "#amount" ).val( "$" + $( "#red" ).slider( "value" ) );
+  } );
+  </script>
+</head>
+<body>
+ 
+<p>
+  <label for="amount">Donation amount ($50 increments):</label>
+  
+</p>
+ 
+<div id="red"></div>
+ 
+ 
+</body>
+</html>
