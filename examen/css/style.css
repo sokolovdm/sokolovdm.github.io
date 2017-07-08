@@ -386,7 +386,7 @@ header {
             transform: scale(0); }
   .results-content {
     overflow: hidden;
-    height: 100px;
+    height: 99px;
     margin-bottom: 9px; }
     .results-content-item {
       padding-right: 35px;

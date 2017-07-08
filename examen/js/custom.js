@@ -31,19 +31,20 @@ $(document).ready(function() {
     $('.results-btn').click(function() {
         var rWidth = $('.rel-col').width();
         var circle = $(this).parent();
-        console.log(circle);
+        var circleId = $(circle).attr('id');
+        console.log(circleId);
         if (!$(this).hasClass('ok')) {
             $(this).addClass('ok');
             $(this).parent().addClass('open');
             $(this).parent().css({ 'width': +rWidth + 'px' });
             $(this).text('Свернуть');
-            $(circle + '.dark-circle').addClass('active-circle');
+            $('#' + circleId + ' .dark-circle').addClass('active-circle');
         } else {
             $(this).removeClass('ok');
             $(this).parent().removeClass('open');
             $(this).parent().css({ 'width': 'auto' });
             $(this).text('Развернуть');
-            $(circle + '.dark-circle').removeClass('active-circle');
+            $('#' + circleId + ' .dark-circle').removeClass('active-circle');
         }
     });
 
