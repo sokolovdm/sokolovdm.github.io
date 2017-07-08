@@ -211,6 +211,9 @@ header
 		display: inline-block
 		text-align-last: justify
 		width: 100%
+		.menu-slide	.sub-menu
+			z-index: 150
+			top: 21px
 		li
 			display: inline-block
 			border-bottom: 2px solid transparent
@@ -302,6 +305,11 @@ header
 			color: $red
 			+bold
 
+.text-custom
+	text-align: center
+.rel-col
+	position: relative
+
 .results
 	padding-bottom: 111px
 	.container
@@ -324,7 +332,6 @@ header
 		margin: 0 auto		
 		
 	&-item
-		position: relative
 		height: 242px
 		background-color: #FFF
 		padding: 35px 40px 65px 40px
@@ -382,11 +389,17 @@ header
 		color: $red
 		+reg
 		font-size: 12px
-		span
+		position: relative
+		cursor: pointer
+		display: inline-block
+		&::before
 			font-family: 'Font Awesome'
-			margin-left: 5px
 			font-size: 14px
-			display: inline-block
+			position: absolute
+			right: -15px
+			top: -1px
+			color: $red
+			content: '\f107'
 		&:hover, &:visited, &:focus
 			color: $red				
 .lense
@@ -405,7 +418,8 @@ header
 	width: 38px
 	height: 38px
 	background: url(../img/sprite.png) -179px -45px
-
+.results-btn.ok::before
+	content: '\f106' 
 .active
 	height: auto!important
 .active-circle
@@ -418,9 +432,39 @@ header
 	top: 0
 	left: 15px
 	height: auto!important
-	width: 360px
 .rotate
 	transform: rotate(180deg)	
+.results-item.open .results-content
+	height: auto
+
+.sm-btn-box
+	text-align: center
+	display: none
+	.sm-btn
+		background-color: $red
+		border: none
+		+bold
+		font-size: 16px
+		color: #FFF
+		padding: 19px 86px
+		border-radius: 5px
+		transition: all 0.4s
+		span
+			font-family: 'Font Awesome'
+			font-size: 16px
+			color: #fff
+			margin-left: 10px
+			position: relative
+			left: 0
+			transition: all 0.4s
+		&:hover
+			box-shadow: 0 5px 16px rgba(254,92,46, 0.34)
+
+.results-content-box .row
+	margin: 0			
+
+
+
 
 .work-system
 	padding-bottom: 142px
@@ -453,6 +497,7 @@ header
 	&-tabs
 		margin-bottom: 63px
 		.tab
+			display: inline-block
 			border: 1px solid $base
 			color: $base
 			font-size: 14px
@@ -532,6 +577,7 @@ header
 		position: relative
 		transition: all 0.4s
 		margin-bottom: 14px
+		min-height: 110px
 		&:hover span
 			background-color: $red
 			transition: all 0.4s
@@ -840,6 +886,10 @@ header
 					display: inline-block
 	&-lists-box
 		margin-bottom: 42px	
+	.float-right
+		float: right
+	
+
 footer
 	padding-top: 45px
 	padding-bottom: 45px
@@ -849,3 +899,605 @@ footer
 		+thin
 	.head-mail
 		line-height: 1.7				
+.footer-xs
+	display: none
+	text-align: center
+	padding: 20px 0
+	.head-phone
+		display: block
+		font-size: 14px
+		+black
+		color: $base
+		transition: all 0.4s
+		margin-left: 0
+		margin-bottom: 20px
+		&:hover
+			color: $red
+	.head-mail
+		display: block
+		font-size: 10px
+		+thin
+		color: $base		
+		transition: all 0.4s
+		margin-bottom: 20px
+		&:hover
+			color: $red
+	p
+		font-size: 12px
+		color: $base
+		+thin
+
+.fix-menu
+	box-shadow: 0 0 20px 10px rgba(241,241,241,0.7)
+	background-color: #FFF
+	height: 70px
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	transform: translateY(-300px)
+	transition: all 0.6s
+	.menu-head
+		display: inline-block
+		text-align-last: justify
+		width: 100%
+		line-height: 70px
+		li
+			display: inline-block
+			border-bottom: 2px solid transparent
+			transition: all 0.4s
+			a
+				+reg
+				color: $menu
+				font-size: 15px
+				transition: all 0.4s
+				display: block
+				&:hover
+					color: $base
+			&:hover
+				border-bottom: 2px solid $red
+	.head-phone
+		+black
+		color: $base
+		transition: all 0.4s
+		font-size: 20px
+		&:hover
+		color: $base	
+		line-height: 70px
+		&:hover
+			color: $red
+
+.slide
+	transform: translateY(0)
+	transition: all 0.4s				
+.totop
+	width: 50px
+	height: 50px
+	font-family: 'Font Awesome'
+	color: #fff
+	background-color: $red
+	display: block
+	position: fixed
+	right: 5%
+	bottom: 5%
+	box-shadow: 0 0 20px 10px rgba(241,241,241,0.7)
+	transition: all 0.4s
+	font-size: 30px
+	border-radius: 50%
+	text-align: center
+	line-height: 50px
+	display: none
+	&:hover
+		color: #fff
+		transform: scale(1.3)
+
+.menu-slide
+	position: relative
+	.sub-menu
+		position: absolute
+		display: inline-block
+		top: 70px
+		left: 0px
+		width: 140px
+		background-color: #FFF		
+		box-shadow: 0 0 20px 10px rgba(241,241,241,0.7)
+		padding-top: 10px
+		padding-bottom: 10px
+		border-top: 2px solid $red
+		text-align-last: left
+		line-height: 1
+		display: none
+		li
+			display: block
+			border-left: 2px solid transparent
+			border-bottom: none
+			line-height: 30px
+			width: 100%
+			padding-left: 10px
+			&:hover
+				border-left: 2px solid $red
+				border-bottom: none
+			a
+				text-transform: uppercase
+			&:hover a
+				color: $red	
+
+.modal-form
+	position: fixed
+	width: 100%
+	height: 100vh
+	top: 0
+	left: 0
+	background-color: rgba(255,255,255,0.8)
+	padding: 10% 0
+	display: none
+	.modal-wrap
+		background-color: #FFF
+		position: absolute
+		left: 50%
+		top: 100px
+		box-shadow: 0 2px 40px 20px rgba(241,241,241,0.7)
+		z-index: 200
+		width: 350px
+		padding: 40px
+		transform: translatex(-50%) translateY(-100px)
+		transition: all 0.4s
+		&>span
+			color: $base
+			font-size: 16px
+			+black
+			text-transform: uppercase
+			display: inline-block
+			text-align: center
+			margin-bottom: 10px
+		p
+			color: $base
+			font-size: 14px
+			text-align: center
+			+thin
+			margin-bottom: 20px	
+		input
+			display: block
+			width: 100%
+			background-color: #f5f5f5
+			border: none
+			font-size: 16px
+			+thin
+			color: $base
+			padding: 23px 27px 23px 27px
+			transition: all 0.4s
+			box-shadow: 0 0 10px rgba(0,0,0,0)
+			margin-bottom: 10px
+			&:hover, &:focus, &:visited
+				outline: none
+				box-shadow: 0 0 10px rgba(0,0,0,0.3)
+		input[type="email"]
+			margin-bottom: 20px		
+		button
+			background-color: $red
+			width: 100%
+			border: none
+			+bold
+			font-size: 16px
+			color: #FFF
+			padding: 19px 86px
+			border-radius: 5px
+			transition: all 0.4s
+			span
+				font-family: 'Font Awesome'
+				font-size: 16px
+				color: #fff
+				margin-left: 10px
+				position: relative
+				left: 0
+				transition: all 0.4s
+			&:hover
+				box-shadow: 0 5px 16px rgba(254,92,46, 0.34)
+			&:hover span
+				left: 50px
+.close
+	font-family: 'Font Awesome'
+	opacity: 0.25
+	color: $base
+	font-size: 20px
+	display: block
+	position: absolute
+	top: 8px
+	right: 15px
+	transition: all 0.4s
+	&:hover, &:focus, &:visited
+		opacity: 1
+
+.modal-active
+	transform: translatex(-50%) translateY(0)!important
+
+
+.hide-steps
+	display: none
+
+@media (min-width: 320px) and (max-width: 479px)
+	.xxs-size
+		width: 100%
+		margin-left: 0
+	.results-img-box
+		float: none
+		width: 38px
+		margin: 0 auto
+		margin-bottom: 10px	
+	.results-row-img
+		text-align: center
+	.results-item
+		height: 270px	
+	.trust-logo:nth-child(1), .trust-logo:nth-child(2) 
+		display: none
+	.trust-logo
+		width: 33.333%
+		margin-left: -4px
+		img
+			width: 90%	 
+.head-info-xs
+	display: none
+
+@media (max-width: 767px)
+	.fixed-btn span:first-child
+		width: 26px
+		height: 2px
+		position: absolute
+		top: 0
+		left: 0
+		background-color: $base
+		display: block
+		transition: all 0.4s
+	.fixed-btn span:last-child
+		width: 30px
+		height: 2px
+		position: absolute
+		bottom: 0
+		left: 0
+		background-color: $base
+		display: block
+		transition: all 0.4s
+	.fixed-btn
+		width: 30px
+		height: 20px
+		position: fixed
+		overflow: hidden
+		display: none
+		cursor: pointer
+		top: 38px
+		left: 15px
+		background-color: #FFF
+		&::before
+			width: 26px
+			height: 2px
+			position: absolute
+			bottom: 6px
+			left: 0
+			background-color: $base
+			display: block
+			content: ''
+			transition: all 0.4s
+		&::after
+			width: 30px
+			height: 2px
+			position: absolute
+			top: 6px
+			left: 0
+			background-color: $base
+			display: block
+			content: ''
+			transition: all 0.4s
+	.fixed-btn.toggle-close
+		&::after
+			left: 100%
+		&::before
+			left: -100%
+		span:first-child
+			transform: rotate(45deg)
+			top: 9px
+			width: 30px
+		span:last-child
+			transform: rotate(-45deg)
+			bottom: 9px
+	.head-info-xs
+		padding-top: 10px
+		padding-bottom: 10px
+		display: block
+		width: 100%
+		.menu-xs-box
+			position: relative
+			display: none
+		.menu-xs
+			background-color: #FFF
+			position: fixed
+			z-index: 10
+			list-style: none
+			width: 100%
+			box-shadow: 0 0 40px 10px rgba(241, 241, 241, 0.7)
+			padding: 30px 40px
+			left: 0
+			top: 80px
+			li
+				a
+					color: #7b7b81
+					font-size: 15px
+					+thin
+					display: inline-block
+					border-bottom: 2px solid transparent
+					transition: all 0.4s
+					&:hover
+						border-bottom: 2px solid $red
+			.menu-slide .sub-menu
+				top: 22px				
+		.head-phone
+			text-align: right
+			display: block
+		.head-xs-row
+			text-align-last: justify
+		.head-mail
+			font-size: 10px
+		.head-social a
+			font-size: 10px
+		.toggle-btn span:first-child
+			width: 26px
+			height: 2px
+			position: absolute
+			top: 0
+			left: 0
+			background-color: $base
+			display: block
+			transition: all 0.4s
+		.toggle-btn span:last-child
+			width: 30px
+			height: 2px
+			position: absolute
+			bottom: 0
+			left: 0
+			background-color: $base
+			display: block
+			transition: all 0.4s
+		.toggle-btn
+			width: 30px
+			height: 20px
+			position: relative
+			overflow: hidden
+			display: inline-block
+			cursor: pointer
+			&::before
+				width: 26px
+				height: 2px
+				position: absolute
+				bottom: 6px
+				left: 0
+				background-color: $base
+				display: block
+				content: ''
+				transition: all 0.4s
+			&::after
+				width: 30px
+				height: 2px
+				position: absolute
+				top: 6px
+				left: 0
+				background-color: $base
+				display: block
+				content: ''
+				transition: all 0.4s
+	.toggle-btn.toggle-close
+		&::after
+			left: 100%
+		&::before
+			left: -100%
+		span:first-child
+			transform: rotate(45deg)
+			top: 9px
+			width: 30px
+		span:last-child
+			transform: rotate(-45deg)
+			bottom: 9px
+	.head-info
+		display: none
+	header .container .shadow .row:nth-child(1)
+		display: none
+	header
+		.text-box
+			text-align: left
+			padding: 0 20px
+			margin-bottom: 20px
+			.h1
+				font-size: 30px
+				margin-bottom: 30px	
+			.h2
+				font-size: 14px
+				margin-bottom: 30px
+			.head-btn
+				padding: 19px 76px
+				margin: 0 auto
+				margin-bottom: 15px
+				display: block
+			&>span
+				margin-left: 0
+				width: 100%
+				text-align: center
+				display: inline-block
+	.fix-menu
+			display: none
+	header .sale-offer p
+		font-size: 14px
+	header .sale-offer span
+		font-size: 20px		
+	header .container img
+		padding-left: 0
+	.img-center
+		text-align: center
+	.xs-disable
+		display: none
+	footer
+		display: none
+	.footer-xs
+		display: block
+	.float-right
+		float: none
+	.work-system-tabs .tab
+		padding: 17px 20px 18px 20px
+		font-size: 10px!important
+		margin-bottom: 10px		
+	.results-head h2
+		font-size: 30px
+	.results-head p
+		font-size: 14px
+	.results-text
+		width: 100%	
+	.work-system-head h2
+		font-size: 30px
+	.work-system-head p
+		font-size: 14px
+	.work-system-text
+		width: 100%
+	.system-tabs h5
+		width: 100%
+		text-align: left
+	.system-tabs p
+		text-align: left
+	.work-system
+		padding-bottom: 20px	
+	.why-we-head h2
+		font-size: 30px
+	.why-we-head p			
+		font-size: 14px
+	.why-we .red-offer span
+		font-size: 16px
+	.steps-head h2
+		font-size: 30px
+	.trust-head h2
+		font-size: 30px
+	.we-wont .text-box .h1
+		font-size: 26px
+		padding-left: 15px
+	.we-wont-list ul li
+		font-size: 10px
+	.we-wont-list
+		width: 100%
+	.we-wont-list ul
+		padding-left: 15px
+	.we-wont .right-list
+		margin-left: 0px
+	.we-wont .text-box .head-btn
+		display: block
+		margin: 0 auto
+		margin-bottom: 10px
+	.we-wont .text-box > span
+		margin: 0
+		font-size: 14px	
+		text-align: center
+		display: block
+	.we-wont .container .shadow .row:nth-child(1)
+		margin-bottom: 25px
+	.text-box
+		width: 100%			
+	.steps-tab
+		width: 100%
+		text-align: left
+		padding-left: 20px
+	.steps-tabs-content
+		display: none
+	.hide-steps
+		position: absolute
+		background-color: #FFF
+		width: 100%
+		text-align: left
+		padding-left: 15px
+		display: none
+		left: 0
+		padding-left: 20px
+		text-align-last: justify
+		.steps-items
+			margin-bottom: 10px
+			display: inline-block
+			text-align: left
+			p
+				font-size: 14px
+			span
+				margin-bottom: 0px
+	.steps-tab
+		p
+			display: block
+			text-align: left
+		.support
+			margin-left: 20px
+			span
+				margin-bottom: 0			
+	.steps-img
+		display: inline-block		
+	.support
+		display: inline-block
+
+
+@media (max-width: 991px)
+	header .header-description .descr-item .img-box .red-circle
+		left: -14px			
+	header .header-description .descr-item:hover .img-box .red-circle
+		left: -14px
+	header .header-description .descr-item .img-box
+		width: 38px
+		margin: 0 auto
+	.why-we-img-box
+		width: 38px
+		margin: 0 auto	
+	.why-we-img-box .red-circle
+		left: -10px
+	.why-we-item:hover .red-circle
+		left: -10px	
+	.sm-btn-box
+		display: block
+	.value-list .value-item
+		min-height: auto
+	.work-system-tabs .tab
+		font-size: 12px			
+
+@media (min-width: 768px) and (max-width: 991px)
+	header .menu-head li a
+		font-size: 12px
+	.lense
+		font-size: 12px
+	.text-custom
+		text-align: left
+	.text-box
+		padding-left: 40px
+	.img-center
+		text-align: center
+	.fix-menu .menu-head li a
+		font-size: 12px
+	.fix-menu .head-phone
+		font-size: 14px
+		margin-left: 0
+	.results-content-box > div:last-child .marg-bot
+		margin: 0
+	footer
+		.head-phone
+			font-size: 16px
+		.head-mail
+			font-size: 14px
+		p
+			font-size: 13px			
+	.steps-tab
+		width: 140px
+	.steps-tabs-content .steps-items
+		width: 16.9%
+	.steps-tab p
+		font-size: 14px
+	.steps-tab span
+		font-size: 16px
+	.steps-tabs-content .steps-items p
+		font-size: 12px	
+
+
+@media (min-width: 992px) and (max-width: 1199px)
+	.fix-menu .head-phone
+		margin-left: 0
+	.value-list .value-item
+		min-height: 132px
+	.steps-tab
+		width: 175px				
+	.steps-tabs-content .steps-items
+		width: 18.9%	
