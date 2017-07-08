@@ -865,7 +865,8 @@ header {
 .active-tab {
   background-color: #FFF;
   -webkit-box-shadow: 0 0 20px 10px rgba(241, 241, 241, 0.7);
-          box-shadow: 0 0 20px 10px rgba(241, 241, 241, 0.7); }
+          box-shadow: 0 0 20px 10px rgba(241, 241, 241, 0.7);
+  padding-bottom: 333px; }
 
 .bgred {
   background-color: #fe5c2e !important; }
@@ -1350,8 +1351,7 @@ footer {
     display: none;
     cursor: pointer;
     top: 38px;
-    left: 15px;
-    background-color: #FFF; }
+    left: 15px; }
     .fixed-btn::before {
       width: 26px;
       height: 2px;
@@ -1604,7 +1604,8 @@ footer {
   .steps-tab {
     width: 100%;
     text-align: left;
-    padding-left: 20px; }
+    padding-left: 20px;
+    height: 177px; }
   .steps-tabs-content {
     display: none; }
   .hide-steps {
@@ -1615,17 +1616,44 @@ footer {
     padding-left: 15px;
     display: none;
     left: 0;
-    padding-left: 20px;
+    padding: 0 40px;
     -moz-text-align-last: justify;
          text-align-last: justify; }
     .hide-steps .steps-items {
       margin-bottom: 10px;
-      display: inline-block;
-      text-align: left; }
+      display: block;
+      text-align: left;
+      position: relative; }
       .hide-steps .steps-items p {
-        font-size: 14px; }
+        font-size: 14px;
+        -moz-text-align-last: left;
+             text-align-last: left; }
       .hide-steps .steps-items span {
         margin-bottom: 0px; }
+      .hide-steps .steps-items .red-circle {
+        display: block;
+        width: 28px;
+        height: 28px;
+        top: -3px;
+        left: -21px;
+        position: absolute;
+        -webkit-border-radius: 50%;
+                border-radius: 50%;
+        -webkit-transition: all 0.4s;
+        -o-transition: all 0.4s;
+        transition: all 0.4s;
+        background-color: #fe5c2e;
+        opacity: 0;
+        -webkit-transform: scale(0);
+            -ms-transform: scale(0);
+                transform: scale(0); }
+      .hide-steps .steps-items .head-step {
+        position: relative; }
+    .hide-steps .steps-items:hover .red-circle {
+      opacity: 1;
+      -webkit-transform: scale(1.1);
+          -ms-transform: scale(1.1);
+              transform: scale(1.1); }
   .steps-tab p {
     display: block;
     text-align: left; }
@@ -1636,7 +1664,15 @@ footer {
   .steps-img {
     display: inline-block; }
   .support {
-    display: inline-block; } }
+    display: inline-block; }
+  .showed {
+    display: block; }
+  .modal-form .modal-wrap input {
+    padding: 15px 27px; }
+  .modal-form .modal-wrap {
+    width: 290px; }
+  .modal-form .modal-wrap button {
+    padding: 19px 50px; } }
 
 @media (max-width: 991px) {
   header .header-description .descr-item .img-box .red-circle {

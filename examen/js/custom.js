@@ -72,6 +72,7 @@ $(document).ready(function() {
         console.log(targetbg);
         console.log(targetimg);
         $(stepsTab).removeClass('active-tab'); //У всех элементов с tab удаляем класс active-menu
+        $('.hide-steps').removeClass('showed');
         $('.steps-img').removeClass('bgred');
         $('.steps-icon').removeClass('icon-1c');
         $('.steps-icon').removeClass('icon-2c');
@@ -98,7 +99,7 @@ $(document).ready(function() {
                 }
             }
         }
-
+        $('#' + targetbg + ' .hide-steps').addClass('showed');
         $('#' + targetbg + ' .steps-img').addClass('bgred');
         $(this).addClass('active-tab'); //Всем элементам с tab добавляем класс active-menu
 

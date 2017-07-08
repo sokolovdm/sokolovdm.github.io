@@ -768,6 +768,7 @@ header
 .active-tab
 	background-color: #FFF
 	box-shadow: 0 0 20px 10px rgba(241,241,241,0.7)
+	padding-bottom: 333px
 .bgred
 	background-color: $red!important
 .icon-1c
@@ -1135,6 +1136,8 @@ footer
 		margin-left: -4px
 		img
 			width: 90%	 
+
+
 .head-info-xs
 	display: none
 
@@ -1166,7 +1169,6 @@ footer
 		cursor: pointer
 		top: 38px
 		left: 15px
-		background-color: #FFF
 		&::before
 			width: 26px
 			height: 2px
@@ -1399,6 +1401,7 @@ footer
 		width: 100%
 		text-align: left
 		padding-left: 20px
+		height: 177px
 	.steps-tabs-content
 		display: none
 	.hide-steps
@@ -1409,16 +1412,35 @@ footer
 		padding-left: 15px
 		display: none
 		left: 0
-		padding-left: 20px
+		padding: 0 40px
 		text-align-last: justify
 		.steps-items
 			margin-bottom: 10px
-			display: inline-block
+			display: block
 			text-align: left
+			position: relative
 			p
 				font-size: 14px
+				text-align-last: left
 			span
 				margin-bottom: 0px
+			.red-circle
+				display: block
+				width: 28px
+				height: 28px
+				top: -3px
+				left: -21px
+				position: absolute
+				border-radius: 50%
+				transition: all 0.4s
+				background-color: $red
+				opacity: 0
+				transform: scale(0)
+			.head-step
+				position: relative
+		.steps-items:hover .red-circle
+			opacity: 1
+			transform: scale(1.1)					
 	.steps-tab
 		p
 			display: block
@@ -1431,7 +1453,14 @@ footer
 		display: inline-block		
 	.support
 		display: inline-block
-
+	.showed
+		display: block
+	.modal-form .modal-wrap input
+		padding: 15px 27px
+	.modal-form .modal-wrap
+		width: 290px
+	.modal-form .modal-wrap button
+		padding: 19px 50px	
 
 @media (max-width: 991px)
 	header .header-description .descr-item .img-box .red-circle
