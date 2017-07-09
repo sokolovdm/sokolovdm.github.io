@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @font-face {
   font-family: 'Font Awesome';
   src: url("../fonts/fontawesome.eot");
@@ -66,12 +65,26 @@ ul, h1, h2, p {
   text-align: center;
   padding-bottom: 73px; }
 
-.inform-box {
-  -moz-placeholder-color: #c8c8c8;
-  -ms-input-placeholder-color: #c8c8c8; }
-  .inform-box input {
+.inform-box .input-wrap {
+  width: 67.7%;
+  position: relative;
+  margin: 0 auto 25px auto; }
+  .inform-box .input-wrap span {
+    position: absolute;
+    top: 7px;
+    left: 50%;
+    -webkit-transform: translateX(-50%) scale(0);
+        -ms-transform: translateX(-50%) scale(0);
+            transform: translateX(-50%) scale(0);
+    font-size: 14px;
+    font-weight: 400;
+    color: #adadad;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s; }
+  .inform-box .input-wrap input {
+    width: 100%;
     display: block;
-    width: 67.7%;
     margin: 0 auto;
     text-align: center;
     font-weight: 400;
@@ -83,21 +96,55 @@ ul, h1, h2, p {
     border: none;
     border: 1px solid #c8c8c8;
     color: #1c1c1c;
-    margin-bottom: 25px;
     -webkit-transition: all 0.4s;
     -o-transition: all 0.4s;
     transition: all 0.4s; }
-    .inform-box input:hover {
-      -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-              box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); }
-    .inform-box input:last-child {
+    .inform-box .input-wrap input:hover {
+      font-size: 20px;
+      padding: 27px 20px 8px 20px; }
+    .inform-box .input-wrap input:focus {
+      color: #1c1c1c;
+      border: 1px solid #435993;
+      font-size: 20px;
+      padding: 27px 20px 8px 20px; }
+    .inform-box .input-wrap input:last-child {
       margin-bottom: 0; }
-    .inform-box input:focus {
+    .inform-box .input-wrap input:focus {
       outline: none; }
-  .inform-box ::-webkit-input-placeholder {
+  .inform-box .input-wrap .input-gray::-webkit-input-placeholder {
     color: #c8c8c8; }
-  .inform-box ::-moz-placeholder {
+  .inform-box .input-wrap .input-gray::-moz-placeholder {
     color: #c8c8c8; }
+  .inform-box .input-wrap .input-gray:-moz-placeholder {
+    color: #c8c8c8; }
+  .inform-box .input-wrap .input-gray:-ms-input-placeholder {
+    color: #c8c8c8; }
+  .inform-box .input-wrap .input-black::-webkit-input-placeholder {
+    color: #1c1c1c; }
+  .inform-box .input-wrap .input-black::-moz-placeholder {
+    color: #1c1c1c; }
+  .inform-box .input-wrap .input-black:-moz-placeholder {
+    color: #1c1c1c; }
+  .inform-box .input-wrap .input-black:-ms-input-placeholder {
+    color: #1c1c1c; }
+  .inform-box .input-wrap .input-focus::-webkit-input-placeholder {
+    color: #1c1c1c; }
+  .inform-box .input-wrap .input-focus::-moz-placeholder {
+    color: #1c1c1c; }
+  .inform-box .input-wrap .input-focus:-moz-placeholder {
+    color: #1c1c1c; }
+  .inform-box .input-wrap .input-focus:-ms-input-placeholder {
+    color: #1c1c1c; }
+
+.inform-box .input-wrap input:hover + span {
+  -webkit-transform: translateX(-50%) scale(1);
+      -ms-transform: translateX(-50%) scale(1);
+          transform: translateX(-50%) scale(1); }
+
+.inform-box .input-wrap input:focus + span {
+  -webkit-transform: translateX(-50%) scale(1);
+      -ms-transform: translateX(-50%) scale(1);
+          transform: translateX(-50%) scale(1); }
 
 .head-img {
   margin-bottom: 19px; }
@@ -117,7 +164,7 @@ h2 {
   -o-transition: all 0.4s;
   transition: all 0.4s;
   z-index: 5; }
-  .select-year > div {
+  .select-year .current-select {
     display: inline-block;
     background-color: #FFF;
     padding: 16px 20px 15px 20px;
@@ -136,8 +183,11 @@ h2 {
     margin-bottom: 25px;
     -webkit-transition: all 0.4s;
     -o-transition: all 0.4s;
-    transition: all 0.4s; }
-    .select-year > div::after {
+    transition: all 0.4s;
+    z-index: 5; }
+    .select-year .current-select:hover {
+      border: 1px solid #435993; }
+    .select-year .current-select::after {
       content: '\f107';
       width: 25px;
       height: 25px;
@@ -147,11 +197,9 @@ h2 {
       top: 15px;
       display: block;
       color: #435993; }
-    .select-year > div:hover {
-      background-color: #c8c8c8;
-      color: #1c1c1c; }
 
 .select-list {
+  padding-top: 29px;
   list-style: none;
   border: 1px solid #c8c8c8;
   width: 100%;
@@ -160,38 +208,42 @@ h2 {
   left: 0px;
   background-color: #FFF;
   border-top: none;
-  height: 142px;
+  height: 307px;
   overflow: auto;
   display: none;
   -webkit-border-bottom-left-radius: 5px;
           border-bottom-left-radius: 5px;
   -webkit-border-bottom-right-radius: 5px;
           border-bottom-right-radius: 5px;
-  overflow: hidden; }
+  overflow: auto;
+  -webkit-box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.2); }
   .select-list li {
-    font-size: 24px;
-    color: #c8c8c8;
+    margin-bottom: -7px;
+    font-size: 20px;
+    color: #435993;
     padding: 10px 10px;
     -webkit-transition: all 0.4s;
     -o-transition: all 0.4s;
     transition: all 0.4s;
     cursor: pointer;
-    margin-left: -8px; }
+    padding-left: 17px; }
     .select-list li:hover {
       background-color: #c8c8c8;
       color: #1c1c1c; }
+    .select-list li:first-child {
+      margin-top: 29px; }
 
-/* хром, сафари */
-.select-list::-webkit-scrollbar {
-  width: 0; }
+.custom-scroll_bar-y {
+  background-color: #d9d9d9;
+  width: 4px;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  opacity: 1;
+  margin-right: 5px; }
 
-/* ie 10+ */
-.select-list {
-  -ms-overflow-style: none; }
-
-/* фф (свойство больше не работает, других способов тоже нет)*/
-.select-list {
-  overflow: -moz-scrollbars-none; }
+.select-year.ok .current-select::after {
+  content: '\f106'; }
 
 /* =========================== EXPERIENCE ===================================== */
 .experience {
@@ -231,7 +283,12 @@ h2 {
   .checkbox input {
     display: none; }
     .checkbox input:checked + .box {
-      background: url(../img/check.png) no-repeat center center; }
+      background: url(../img/check.png) no-repeat center center;
+      background-color: #435993; }
+    .checkbox input:hover + .box {
+      background-color: #e9efff; }
+    .checkbox input:hover:checked + .box {
+      background-color: #435993; }
   .checkbox .box {
     display: inline-block;
     width: 20px;
@@ -256,29 +313,20 @@ h2 {
 
 #slider.ui-widget-content {
   background: #ffffff;
-  /* Old browsers */
-  /* FF3.6-15 */
   background: -webkit-linear-gradient(left, #ffffff 1%, #e8e8e8 100%);
-  /* Chrome10-25,Safari5.1-6 */
   background: -webkit-gradient(linear, left top, right top, color-stop(1%, #ffffff), to(#e8e8e8));
   background: -o-linear-gradient(left, #ffffff 1%, #e8e8e8 100%);
   background: linear-gradient(to right, #ffffff 1%, #e8e8e8 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e8e8e8',GradientType=1 );
-  /* IE6-9 */
   position: relative;
   height: 20px; }
   #slider.ui-widget-content .ui-slider-range {
     height: 18px;
     background: #cbb1f1;
-    /* Old browsers */
-    /* FF3.6-15 */
     background: -webkit-linear-gradient(left, #cbb1f1 0%, #435993 100%);
-    /* Chrome10-25,Safari5.1-6 */
     background: -webkit-gradient(linear, left top, right top, from(#cbb1f1), to(#435993));
     background: -o-linear-gradient(left, #cbb1f1 0%, #435993 100%);
     background: linear-gradient(to right, #cbb1f1 0%, #435993 100%);
-    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cbb1f1', endColorstr='#435993',GradientType=1 );
     border: none; }
 
@@ -466,7 +514,7 @@ button {
   top: 0;
   left: 0;
   background-color: rgba(255, 255, 255, 0.9);
-  padding: 10% 0;
+  padding-top: 15%;
   z-index: 600;
   text-align: center;
   display: none; }
@@ -600,7 +648,7 @@ button {
     font-size: 40px; }
   .inform-box input {
     font-size: 16px; }
-  .select-year > div {
+  .select-year .current-select {
     font-size: 16px; }
   .select-list {
     top: 45px; }
@@ -608,6 +656,8 @@ button {
       font-size: 16px; }
   .about textarea {
     font-size: 16px; }
+  .about p {
+    font-size: 14px; }
   .modal span {
     font-size: 30px; }
   .modal p {
@@ -618,13 +668,27 @@ button {
     font-size: 9.5px; } }
 
 @media (min-width: 320px) and (max-width: 479px) {
-  .inform-box input {
+  .inform-box .input-wrap input {
     font-size: 12px; }
-  .select-year > div {
-    font-size: 12px; }
+    .inform-box .input-wrap input:hover {
+      font-size: 12px;
+      padding: 23px 20px 8px 20px; }
+    .inform-box .input-wrap input:focus {
+      font-size: 12px;
+      padding: 23px 20px 8px 20px; }
+  .inform-box .input-wrap span {
+    font-size: 10px; }
+    .inform-box .input-wrap span:hover {
+      font-size: 10px; }
+  .select-year .current-select {
+    font-size: 11px; }
   .select-list {
     top: 42px; }
     .select-list li {
       font-size: 12px; }
   .slider-amount .step p {
-    font-size: 7px; } }
+    font-size: 7px; }
+  .about p {
+    font-size: 12px; }
+  .about textarea {
+    font-size: 14px; } }

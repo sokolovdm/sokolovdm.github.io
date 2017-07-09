@@ -81,35 +81,78 @@ $gray: #c8c8c8
 	text-align: center
 	padding-bottom: 73px
 .inform-box
-	input
-		display: block
+	.input-wrap
 		width: 67.7%
-		margin: 0 auto
-		text-align: center
-		+reg
-		font-size: 24px
-		font-family: 'Roboto'
-		padding: 16px 20px 15px 20px
-		border-radius: 5px
-		border: none
-		border: 1px solid $gray
-		color: $black
-		margin-bottom: 25px
-		transition: all 0.4s
-		&:hover
-			box-shadow: 0 0 10px rgba(0,0,0,0.4)
-		&:last-child
-			margin-bottom: 0
-		&:focus
-			outline: none		
-	::-webkit-input-placeholder
-		color: $gray 
-	::-moz-placeholder
-		color: $gray          
-	:-moz-placeholder
-		color: $gray           
-	:-ms-input-placeholder
-		color: $gray      
+		position: relative
+		margin: 0 auto 25px auto
+		span
+			position: absolute
+			top: 7px
+			left: 50%
+			transform: translateX(-50%) scale(0)
+			font-size: 14px
+			+reg
+			color: #adadad
+			transition: all 0.4s	
+		input
+			width: 100%
+			display: block
+			margin: 0 auto
+			text-align: center
+			+reg
+			font-size: 24px
+			font-family: 'Roboto'
+			padding: 16px 20px 15px 20px
+			border-radius: 5px
+			border: none
+			border: 1px solid $gray
+			color: $black
+			transition: all 0.4s
+			&:hover
+				font-size: 20px
+				padding: 27px 20px 8px 20px
+			&:focus
+				color: $black
+				border: 1px solid $blue
+				font-size: 20px
+				padding: 27px 20px 8px 20px
+			&:last-child
+				margin-bottom: 0
+			&:focus
+				outline: none
+		.input-gray				
+			&::-webkit-input-placeholder
+				color: $gray
+			&::-moz-placeholder
+				color: $gray
+			&:-moz-placeholder
+				color: $gray
+			&:-ms-input-placeholder
+				color: $gray
+		.input-black				
+			&::-webkit-input-placeholder
+				color: $black
+			&::-moz-placeholder
+				color: $black
+			&:-moz-placeholder
+				color: $black
+			&:-ms-input-placeholder
+				color: $black		 
+		.input-focus
+			&::-webkit-input-placeholder
+				color: $black
+			&::-moz-placeholder
+				color: $black
+			&:-moz-placeholder
+				color: $black
+			&:-ms-input-placeholder
+				color: $black	
+
+.inform-box .input-wrap input:hover + span
+	transform: translateX(-50%) scale(1) 	 
+.inform-box .input-wrap input:focus + span
+	transform: translateX(-50%) scale(1) 
+	  
 .head-img
 	margin-bottom: 19px
 h2
@@ -124,7 +167,7 @@ h2
 	margin: 0 auto
 	transition: all 0.4s
 	z-index: 5
-	&>div
+	.current-select
 		display: inline-block
 		background-color: #FFF
 		padding: 16px 20px 15px 20px
@@ -141,6 +184,9 @@ h2
 		font-size: 24px
 		margin-bottom: 25px
 		transition: all 0.4s
+		z-index: 5
+		&:hover
+			border: 1px solid $blue
 		&::after
 			content: '\f107'
 			width: 25px
@@ -151,10 +197,12 @@ h2
 			top: 15px
 			display: block
 			color: $blue
-		&:hover
-			background-color: $gray
-			color: $black	
+
+
+
+
 .select-list
+	padding-top: 29px
 	list-style: none
 	border: 1px solid $gray
 	width: 100%
@@ -163,34 +211,38 @@ h2
 	left: 0px
 	background-color: #FFF
 	border-top: none
-	height: 142px
+	height: 307px
 	overflow: auto
 	display: none
 	border-bottom-left-radius: 5px
 	border-bottom-right-radius: 5px
-	overflow: hidden
+	overflow: auto
+	box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.2)
 	li
-		font-size: 24px
-		color: $gray
+		margin-bottom: -7px
+		font-size: 20px
+		color: $blue
 		padding: 10px 10px
 		transition: all 0.4s
 		cursor: pointer
-		margin-left: -8px
+		padding-left: 17px
 		&:hover
 			background-color: $gray
 			color: $black
+		&:first-child
+			margin-top: 29px
+	
+.custom-scroll_bar-y
+	background-color: #d9d9d9
+	width: 4px
+	border-radius: 5px
+	opacity: 1
+	margin-right: 5px		
 
-/* хром, сафари */
-.select-list::-webkit-scrollbar  
-	width: 0
+		
+.select-year.ok .current-select::after
+	content: '\f106'				
 
-/* ie 10+ */
-.select-list
-	-ms-overflow-style: none
-
-/* фф (свойство больше не работает, других способов тоже нет)*/
-.select-list
-	overflow: -moz-scrollbars-none
 
 
 /* =========================== EXPERIENCE ===================================== */
@@ -232,6 +284,11 @@ h2
 		display: none
 		&:checked + .box 
 			background: url(../img/check.png) no-repeat center center
+			background-color: $blue
+		&:hover + .box
+			background-color: #e9efff
+		&:hover:checked + .box
+			background-color: $blue	
 	.box
 		display: inline-block
 		width: 20px
@@ -256,20 +313,20 @@ h2
 	margin-bottom: 95px
 
 #slider.ui-widget-content
-	background: #ffffff; /* Old browsers */
-	background: -moz-linear-gradient(left,  #ffffff 1%, #e8e8e8 100%); /* FF3.6-15 */
-	background: -webkit-linear-gradient(left,  #ffffff 1%,#e8e8e8 100%); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(to right,  #ffffff 1%,#e8e8e8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e8e8e8',GradientType=1 ); /* IE6-9 */
+	background: #ffffff /* Old browsers */
+	background: -moz-linear-gradient(left,  #ffffff 1%, #e8e8e8 100%) /* FF3.6-15 */
+	background: -webkit-linear-gradient(left,  #ffffff 1%,#e8e8e8 100%) /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right,  #ffffff 1%,#e8e8e8 100%) /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e8e8e8',GradientType=1 ) /* IE6-9 */
 	position: relative
 	height: 20px
 	.ui-slider-range
 		height: 18px
-		background: #cbb1f1; /* Old browsers */
-		background: -moz-linear-gradient(left,  #cbb1f1 0%, #435993 100%); /* FF3.6-15 */
-		background: -webkit-linear-gradient(left,  #cbb1f1 0%,#435993 100%); /* Chrome10-25,Safari5.1-6 */
-		background: linear-gradient(to right,  #cbb1f1 0%,#435993 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cbb1f1', endColorstr='#435993',GradientType=1 );
+		background: #cbb1f1 /* Old browsers */
+		background: -moz-linear-gradient(left,  #cbb1f1 0%, #435993 100%) /* FF3.6-15 */
+		background: -webkit-linear-gradient(left,  #cbb1f1 0%,#435993 100%) /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to right,  #cbb1f1 0%,#435993 100%) /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cbb1f1', endColorstr='#435993',GradientType=1 )
 		border: none
 #slider .ui-slider-handle
 	width: 23px
@@ -436,7 +493,7 @@ button
 	top: 0
 	left: 0
 	background-color: rgba(255,255,255,0.9)
-	padding: 10% 0
+	padding-top: 15%
 	z-index: 600
 	text-align: center
 	display: none
@@ -553,14 +610,16 @@ button
 			font-size: 40px				
 	.inform-box input
 		font-size: 16px
-	.select-year > div
+	.select-year .current-select
 		font-size: 16px
 	.select-list 
 		top: 45px
 		li
 			font-size:  16px
 	.about textarea
-		font-size: 16px	
+		font-size: 16px
+	.about p
+		font-size: 14px		
 	.modal
 		span
 			font-size: 30px
@@ -571,12 +630,23 @@ button
 	.slider-amount
 		.step
 			p
-				font-size: 9.5px		
+				font-size: 9.5px
+
 @media (min-width: 320px) and (max-width: 479px)
-	.inform-box input
+	.inform-box .input-wrap input
 		font-size: 12px
-	.select-year > div
-		font-size: 12px
+		&:hover
+			font-size: 12px
+			padding: 23px 20px 8px 20px
+		&:focus
+			font-size: 12px
+			padding: 23px 20px 8px 20px	
+	.inform-box .input-wrap span
+		font-size: 10px
+		&:hover
+				font-size: 10px	
+	.select-year .current-select
+		font-size: 11px
 	.select-list 
 		top: 42px
 		li
@@ -585,3 +655,7 @@ button
 		.step
 			p
 				font-size: 7px					
+	.about p
+		font-size: 12px
+	.about textarea
+		font-size: 14px			
