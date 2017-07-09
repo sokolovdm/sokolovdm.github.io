@@ -65,6 +65,9 @@ ul, h1, h2, p {
   text-align: center;
   padding-bottom: 73px; }
 
+.inform-box .input-wrap:last-child {
+  margin: 0 auto; }
+
 .inform-box .input-wrap {
   width: 67.7%;
   position: relative;
@@ -199,7 +202,7 @@ h2 {
       color: #435993; }
 
 .select-list {
-  padding-top: 29px;
+  padding-bottom: 29px !important;
   list-style: none;
   border: 1px solid #c8c8c8;
   width: 100%;
@@ -240,7 +243,7 @@ h2 {
   -webkit-border-radius: 5px;
           border-radius: 5px;
   opacity: 1;
-  margin-right: 5px; }
+  margin-right: 1px; }
 
 .select-year.ok .current-select::after {
   content: '\f106'; }
@@ -302,14 +305,12 @@ h2 {
 
 /* ============================== JAVASCRIPT ================================== */
 .js {
+  padding-bottom: 94px;
   text-align: center; }
   .js .head-img {
     margin-bottom: 21px; }
   .js h2 {
     margin-bottom: 96px; }
-
-#slider {
-  margin-bottom: 95px; }
 
 #slider.ui-widget-content {
   background: #ffffff;
@@ -426,7 +427,7 @@ button {
   border: none;
   font-family: 'Roboto';
   font-weight: 300;
-  padding: 15px 31px;
+  padding: 16px 31px;
   font-size: 16px;
   -webkit-transition: all 0.4s;
   -o-transition: all 0.4s;
@@ -665,7 +666,10 @@ button {
   .modal .close {
     font-size: 30px; }
   .slider-amount .step p {
-    font-size: 9.5px; } }
+    font-size: 9.5px; }
+  .main-caption {
+    padding-top: 55px;
+    padding-bottom: 55px; } }
 
 @media (min-width: 320px) and (max-width: 479px) {
   .inform-box .input-wrap input {
@@ -685,10 +689,14 @@ button {
   .select-list {
     top: 42px; }
     .select-list li {
-      font-size: 12px; }
+      font-size: 13px; }
   .slider-amount .step p {
     font-size: 7px; }
   .about p {
     font-size: 12px; }
   .about textarea {
-    font-size: 14px; } }
+    font-size: 14px; }
+  .information, .experience {
+    padding-bottom: 55px; }
+  .modal {
+    padding-top: 30%; } }
