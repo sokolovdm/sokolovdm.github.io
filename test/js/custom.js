@@ -2,7 +2,7 @@ $(document).ready(function() {
 
     //Кастомный select
 
-    $('.select-year').click(function() {
+    $('.select-year').click(function(event) {
         $('.select-list').slideToggle(300);
         event.stopPropagation();
     })
