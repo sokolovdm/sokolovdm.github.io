@@ -2,24 +2,56 @@ $(document).ready(function() {
 
     //Кастомный select
 
-    $('.select-year').click(function(event) {
+    $('.current-select').click(function(event) {
         $('.select-list').slideToggle(300);
-        $(this).toggleClass('ok');
+        $('.select-year').toggleClass('ok');
+        var inner = $('#year').val();
+        console.log(inner);
+        $('.current-select').addClass('clicked')
+        $('.current-select').html(inner + '<div class="current-top">Год рождения</div>');
+        $('.current-top').addClass('current-focus');
         event.stopPropagation();
     })
+
     $(document).click(function() {
         $('.select-list').slideUp();
         $('.select-year').removeClass('ok');
+        $('.current-select').removeClass('clicked');
+        $('.current-select').html('Год рождения');
+        $('.current-select').removeClass('currenthov');
+        $('.current-top').removeClass('current-focus');
+
     });
 
     //Запись выбраного года в html select
-
+    $('body').click(function(event) {
+        console.log(event.target);
+    });
     $('.select-list li').click(function() {
-        $('.select-year > div').html($(this).html());
+        $('.current-select').html($(this).html());
         $('#year').val($(this).html());
         $('.select-list').slideDown();
+        $('.current-select').removeClass('clicked');
+        $('.current-top').removeClass('current-focus');
+    });
+
+
+
+    $('.current-select').mouseenter(function() {
+        var inner = $('#year').val();
+        console.log(inner);
+        $(this).html(inner + '<div class="current-top">Год рождения</div>');
+        $(this).addClass('currenthov');
+    });
+    
+    $('.current-select').mouseleave(function() {
+        if (!$(this).hasClass('clicked')) {
+            $(this).html('Год рождения<div class="current-top">Год рождения</div>');
+            $(this).removeClass('currenthov');
+        };
 
     });
+
 
     //Плавный скролл меню
 
@@ -181,9 +213,8 @@ $(document).ready(function() {
                 $(this).attr('placeholder', 'E-mail');
             };
         });
-
-
-
     });
+
+
 
 });

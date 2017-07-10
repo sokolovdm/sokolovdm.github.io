@@ -188,9 +188,21 @@ h2 {
     -webkit-transition: all 0.4s;
     -o-transition: all 0.4s;
     transition: all 0.4s;
-    z-index: 5; }
-    .select-year .current-select:hover {
-      border: 1px solid #435993; }
+    z-index: 5;
+    height: 60px; }
+    .select-year .current-select .current-top {
+      position: absolute;
+      top: 7px;
+      left: 50%;
+      -webkit-transform: translateX(-50%) scale(0);
+          -ms-transform: translateX(-50%) scale(0);
+              transform: translateX(-50%) scale(0);
+      font-size: 14px;
+      color: #c8c8c8; }
+    .select-year .current-select .current-focus {
+      -webkit-transform: translateX(-50%) scale(1);
+          -ms-transform: translateX(-50%) scale(1);
+              transform: translateX(-50%) scale(1); }
     .select-year .current-select::after {
       content: '\f107';
       width: 25px;
@@ -200,7 +212,17 @@ h2 {
       right: 11px;
       top: 15px;
       display: block;
-      color: #435993; }
+      color: #435993;
+      font-size: 24px; }
+  .select-year .currenthov {
+    font-size: 20px;
+    color: #1c1c1c;
+    padding: 27px 20px 15px 20px; }
+
+.select-year .current-select:hover .current-top {
+  -webkit-transform: translateX(-50%) scale(1);
+      -ms-transform: translateX(-50%) scale(1);
+          transform: translateX(-50%) scale(1); }
 
 .select-list {
   padding-bottom: 29px !important;

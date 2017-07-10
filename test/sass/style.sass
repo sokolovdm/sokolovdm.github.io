@@ -188,8 +188,16 @@ h2
 		margin-bottom: 25px
 		transition: all 0.4s
 		z-index: 5
-		&:hover
-			border: 1px solid $blue
+		height: 60px
+		.current-top
+			position: absolute
+			top: 7px
+			left: 50%
+			transform: translateX(-50%) scale(0)
+			font-size: 14px
+			color: $gray
+		.current-focus
+			transform: translateX(-50%) scale(1) 
 		&::after
 			content: '\f107'
 			width: 25px
@@ -200,7 +208,15 @@ h2
 			top: 15px
 			display: block
 			color: $blue
-
+			font-size: 24px
+	.currenthov
+		font-size: 20px
+		color: $black
+		padding: 27px 20px 15px 20px
+	
+.select-year .current-select:hover .current-top
+	transform: translateX(-50%) scale(1) 
+	
 
 .select-list
 	padding-bottom: 29px!important /* перекрывание стиля от фреймоврка в html */
