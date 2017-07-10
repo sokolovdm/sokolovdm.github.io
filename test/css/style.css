@@ -101,7 +101,8 @@ ul, h1, h2, p {
     color: #1c1c1c;
     -webkit-transition: all 0.4s;
     -o-transition: all 0.4s;
-    transition: all 0.4s; }
+    transition: all 0.4s;
+    height: 60px; }
     .inform-box .input-wrap input:hover {
       font-size: 20px;
       padding: 27px 20px 8px 20px; }
