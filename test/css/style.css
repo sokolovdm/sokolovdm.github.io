@@ -218,6 +218,8 @@ h2 {
     font-size: 20px;
     color: #1c1c1c;
     padding: 27px 20px 15px 20px; }
+  .select-year .clicked {
+    border: 1px solid #435993; }
 
 .select-year .current-select:hover .current-top {
   -webkit-transform: translateX(-50%) scale(1);

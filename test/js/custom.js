@@ -7,11 +7,12 @@ $(document).ready(function() {
         $('.select-year').toggleClass('ok');
         var inner = $('#year').val();
         console.log(inner);
-        $('.current-select').addClass('clicked')
+        $('.current-select').toggleClass('clicked')
         $('.current-select').html(inner + '<div class="current-top">Год рождения</div>');
-        $('.current-top').addClass('current-focus');
+        $('.current-top').toggleClass('current-focus');
         event.stopPropagation();
     })
+
 
     $(document).click(function() {
         $('.select-list').slideUp();
@@ -24,9 +25,7 @@ $(document).ready(function() {
     });
 
     //Запись выбраного года в html select
-    $('body').click(function(event) {
-        console.log(event.target);
-    });
+   
     $('.select-list li').click(function() {
         $('.current-select').html($(this).html());
         $('#year').val($(this).html());
@@ -43,7 +42,7 @@ $(document).ready(function() {
         $(this).html(inner + '<div class="current-top">Год рождения</div>');
         $(this).addClass('currenthov');
     });
-    
+
     $('.current-select').mouseleave(function() {
         if (!$(this).hasClass('clicked')) {
             $(this).html('Год рождения<div class="current-top">Год рождения</div>');
