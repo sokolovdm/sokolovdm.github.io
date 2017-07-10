@@ -674,8 +674,13 @@ button {
     font-size: 40px; }
   .inform-box input {
     font-size: 16px; }
+  .select-year .current-select.currenthov {
+    font-size: 20px;
+    color: #1c1c1c;
+    padding: 30px 20px 15px 20px; }
   .select-year .current-select {
-    font-size: 16px; }
+    font-size: 16px;
+    padding: 20px 20px 15px 20px; }
   .select-list {
     top: 45px; }
     .select-list li {
@@ -714,9 +719,17 @@ button {
     .inform-box .input-wrap span:hover {
       font-size: 10px; }
   .select-year .current-select {
-    font-size: 11px; }
+    font-size: 10px;
+    padding: 23px 20px 15px 20px; }
+    .select-year .current-select .current-top {
+      font-size: 10px; }
+  .select-year .current-select.currenthov {
+    font-size: 12px;
+    color: #1c1c1c;
+    padding: 33px 20px 15px 20px; }
   .select-list {
-    top: 42px; }
+    top: 54px;
+    padding-bottom: 10px !important; }
     .select-list li {
       font-size: 13px; }
   .slider-amount .step p {
@@ -731,5 +744,7 @@ button {
     padding-top: 30%; }
   .select-list li:first-child {
     margin-top: 4px; }
-  .select-list {
-    padding-bottom: 10px !important; } }
+  .select-year .current-select::after {
+    font-size: 18px;
+    right: 6px;
+    top: 19px; } }
