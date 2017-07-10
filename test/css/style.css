@@ -670,7 +670,11 @@ button {
     font-size: 9.5px; }
   .main-caption {
     padding-top: 55px;
-    padding-bottom: 55px; } }
+    padding-bottom: 55px; }
+  .select-list li:first-child {
+    margin-top: 14px; }
+  .select-list {
+    padding-bottom: 11px !important; } }
 
 @media (min-width: 320px) and (max-width: 479px) {
   .inform-box .input-wrap input {
@@ -700,4 +704,8 @@ button {
   .information, .experience {
     padding-bottom: 55px; }
   .modal {
-    padding-top: 30%; } }
+    padding-top: 30%; }
+  .select-list li:first-child {
+    margin-top: 4px; }
+  .select-list {
+    padding-bottom: 10px !important; } }
