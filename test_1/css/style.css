@@ -53,7 +53,13 @@ ul, h1, h2, p {
   left: 0;
   width: 100%;
   z-index: 500;
-  background-color: #FFF; }
+  background-color: #FFF;
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s; }
   .navigation .menu {
     width: 100%;
     -moz-text-align-last: center;
@@ -76,9 +82,12 @@ ul, h1, h2, p {
         .navigation .menu li a:hover {
           color: #1c1c1c; }
 
-.small .menu li a {
-  padding-top: 22px;
-  padding-bottom: 18px; }
+.small {
+  -webkit-transform: translateY(-22px);
+      -ms-transform: translateY(-22px);
+          transform: translateY(-22px); }
+  .small .menu li a {
+    padding-bottom: 18px; }
 
 /* =============================== ANKETA ================================= */
 .main-caption {
@@ -605,8 +614,8 @@ button {
   width: 50px;
   height: 50px;
   background-color: #435993;
-  -webkit-border-radius: 50%;
-          border-radius: 50%;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
   -webkit-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
           box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
   position: fixed;
