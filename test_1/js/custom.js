@@ -104,7 +104,30 @@ $(document).ready(function() {
 
     //custom scroll
 
-    $('.select-list').customScroll();
+    $('.select-list').customScroll({
+  prefix: 'custom-scroll_',
+
+  /* vertical */
+  barMinHeight: 10,
+  offsetTop: 0,
+  offsetBottom: 0,
+  /* will be added to offsetBottom in case of horizontal scroll */
+  trackWidth: 10,
+
+  /* horizontal */
+  barMinWidth: 0,
+  offsetLeft: 0,
+  offsetRight: 0,
+  /* will be added to offsetRight in case of vertical scroll */
+  trackHeight: 0,
+
+  /* each bar will have custom-scroll_bar-x or y class */
+  barHtml: '<div />',
+
+  /* both vertical or horizontal bar can be disabled */
+  vertical: true,
+  horizontal: false
+});
 
 
     //Slider
@@ -160,5 +183,5 @@ $(document).ready(function() {
         attributes: true
     });
 
-   
+
 });
