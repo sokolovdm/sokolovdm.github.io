@@ -1,0 +1,112 @@
++b.services--main
+	+e.UL.nav
+		+e.LI.nav-link.to-anchor.is-active(href="#provider")
+			span Поставщикам
+		+e.LI.nav-link.to-anchor(href="#buyer")
+			span Закупщикам
+	+e.container.container
+		+b#provider.ARTICLE.service--main.--provider
+			+e.SECTION.about
+				+e.pic--provider.parallax.parallax-2(data-start="0",data-y="80")
+					img(src="/img/leaf.svg")
+				+e.text--provider.text--provider.waypoint--next
+					h2 Мы заинтересованы в сотрудничестве 
+						nobr с крупными 
+						| производителями и поставщиками орехов и сухофруктов
+					p Компания «Грин Лайн» более 5 лет работает на FMCG рынке Российской Федерации. Наша основная специализация – 
+						b переработка
+						| , 
+						b фасовка
+						|  и 
+						b оптовые продажи орехов
+						| , 
+						b фруктов 
+						| и 
+						b сухофруктов
+						|  как в потребительских, так и в промышленных упаковках.
+					p Наши производственные мощности, состоящие из тоннельных печей и упаковочных линий для различных видов упаковки, позволяют производить до 500 000 кг готовой продукции в месяц.
+					+b.UL.benefits--provider
+						- var benefits = ['sterility','product','temperature']
+						each val, index in ['Поддержание стерильности в цеху', 'Производство готовой продукции до 500 000 кг в месяц','Температурный режим на производстве']
+							+e.LI
+								img(src="/img/index/"+benefits[index]+".svg")
+								span= val
+				+e.card.card--provider.waypoint
+					img(src="/img/index/manufacture.jpg")
+					p.card__text.card__text--provider Современный складской комплекс с поддержанием заданной температуры и влажности воздуха позволяет хранить сырье и готовую продукцию в соответствии с требованиями международных стандартов ISO 9001:2015 и FSSC 22000:2010.
+			+e.SECTION.order.order__
+				.text
+					h3.title.title--provider-info На сегодняшний день мы заинтересованы в сотрудничестве с производителями следующих товаров:
+				+e.UL.table--nuts._tableSlick.waypoint
+					- var names = ['pistachio','cashew','almond','hazelnut','peanut','kiwi','pineapple','papaya']
+					each val, index in ['Фисташки сырые', 'Кешью сырой','Миндаль очищенный', 'Фундук', 'Арахис', 'Киви свежие', 'Цукаты ананаса', 'Цукаты папайи']
+						+e.LI.card.card--nut
+							.card__pic.card__pic--nut
+								img(src="/img/nuts/grid/"+names[index]+".png",class="pp pp--"+(index+1))
+							p.card__title.card__title--nut= val
+							p.card__sub-title.card__sub-title--nut= val
+					+e.LI.card.card--another
+						div.card__text.text.text--white.card__text--another.text--min
+							.likeh3 Поставляете что-то другое?
+							p Напишите нам, возможно мы ищем именно вас!
+			+b.FORM.form--recall.--service.ajax.waypoint(action="/send")
+				+e.letter 
+					include ../G.svg
+				+e.body
+					+e.LABEL.line--header.text
+						p.likeh2 Обратный звонок
+						p Не нашли на сайте то, что интересует? Напишите нам сообщение и в скором времени мы ответим
+					+e.LABEL.line--input.input.check
+						+e.input-error
+						input(name="name",placeholder="Ваше ФИО")
+					+e.LABEL.line--input.input.check
+						+e.input-error
+						input(name="company",placeholder="Название вашей компании")
+					+e.LABEL.line--input.input.check.check-email
+						+e.input-error
+						input(name="email",placeholder="Контактный E-mail")
+					+e.LABEL.line--textarea.textarea
+						+e.input-error
+						textarea(name="name",placeholder="Ваше сообщение")
+					+e.line--submit
+						+e.BUTTON.button.button--submit.--s-def.--c-clear-green.submit(type="button") Отправить
+				+e.response.text
+					p.likeh2 Ваша заявка принята!
+					p Наш специалист свяжется с вами в ближайшее время для уточнения интересующей вас информации.
+					p Оперативно связаться с нами можно по телефону:
+					p.up +7 (499) 670-07-07
+		+b#buyer.ARTICLE.service--main.--buyer
+			+e.pic--1.--buyer
+				img.parallax.parallax-2(src="/img/index/produce.jpg",data-start="0",data-y="120")
+			+e.text--1.--buyer.text.parallax.parallax-2(data-start="0",data-y="20")
+				h2 Увеличение прибыли при сотрудничестве на 15-30% от оборота по снековой группе
+				p Наша компания специализируется на производстве ореховой продукции, семечек и сухофруктов. Мы самостоятельно импортируем сырье из регионов произрастания от крупнейших производителей, что позволяет сделать лучшие предложения на рынке, гарантируя стабильно высокое качество продукции
+				+b.UL.benefits--buyer
+					- var nums = ['5','500','>40']
+					- var texts = [' лет',' млн. руб.',' SKU']
+					each val, index in ['на рынке', 'Оборот за 2016 г.','На 7 видов орехов']
+						+e.LI
+							p
+								span= nums[index]
+								span.min-max= texts[index]
+							p= val
+			+e.pic--leaf.--leaf-buyer.parallax.parallax-2(data-start="0",data-y="150",data-x="20")
+				img(src="/img/leaf.svg")
+			+e.section--index
+				+e.pic--2.--buyer
+					img.parallax.parallax-2(src="/img/index/sort.jpg",data-start="0",data-y="-50")
+				+e.text--2.--buyer.text.parallax.parallax-2(data-start="0",data-y="-30")
+					p Мы располагаем собственным парком современного оборудования, позволяющим осуществлять качественную переработку любой сложности и фасовку во все популярные типы пакетов.
+			+e.section--index
+				+e.pic--3.--buyer
+					img.parallax.parallax-2(src="/img/index/logistic.jpg",data-start="0",data-y="100")
+				+e.text--3.--buyer.text.parallax.parallax-2(data-start="0",data-y="-50")
+					p Наличие собственного логистического комплекса и больших производственных мощностей позволяет осуществлять выполнение и доставку крупных заказов точно в срок. В удобное время Вы можете посетить наше производство и лично убедиться в качестве используемого сырья, отточенности технологических процессов, квалификации персонала и состоянии производства в целом.
+
+
+
+
+
+
+
+
