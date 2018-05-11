@@ -1,0 +1,30 @@
++b.send
+    +e.container.container
+        +e.text.text--send
+            h2
+                span.underlined.underlined--second Почему сложно
+                |  выбирать картину в дом
+            ul
+                li Хорошая картина стоит слишком дорого.
+                li Картина разонравится — деньги на ветер.
+                li Не уверенности, что нужна именно живопись.
+                li Картина не подойдет к интерьеру
+                li Непонятно, как правильно оформить картину.
+                li Лень браться за молоток и вбивать гвозди.
+        +e.form.form__.--main
+            +e.body--main
+                +e.title--main Помочь с выбором?
+                +e.input--main.input--dark
+                    input(name="name" placeholder="Ваш e-mail")
+                +e.textarea--main.textarea--dark
+                    textarea(name="text" placeholder="Какую картину ищете?")
+                +e.BUTTON(type="button").button--submite-main.button--red Отправить
+                +e.privacy--main Нажимая кнопку «Отправить», вы даете согласие на обработку персональных данных
+            +e.response--main
+                +e.text--response-main.text--response-main
+                    h4 Спасибо за обращение!
+                    p Я отвечу на указанный e-mail
+                +e.BUTTON(type="button").button--back-main.button--border-red Назад
+            +e.preloader
+            +e.img
+                img(src="/img/paper_planes.svg")

@@ -253,9 +253,6 @@ a {
                 margin-left: 10px;
             }
         }
-        &__photos{
-            text-align: center;
-        }
         &__photos-descr{
             text-align: left;
             display: inline-block;
@@ -361,20 +358,6 @@ a {
             font-size: 18px;
             line-height: 24px;
         }
-        span{
-            position: relative;
-            &::before{
-                position: absolute;
-                width: 100%;
-                height: 12px;
-                left: 0;
-                bottom: 0;
-                content: '';
-                display: block;
-                background: url(/img/stroke1.svg) no-repeat center center;
-                background-size: 100%;
-            }
-        }
     }
     @media (min-width: 1240px){
         h2{
@@ -385,13 +368,42 @@ a {
             line-height: 34px;
             margin-bottom: 53px;
         }
-        span{
+        .underlined{
             &::before{
                 bottom: 5px;
             }
         }
     }
 }
+
+@media (min-width: 768px){
+    .underlined{
+        position: relative;
+        &::before{
+            position: absolute;
+            width: 100%;
+            height: 12px;
+            left: 0;
+            bottom: 0;
+            content: '';
+            display: block;
+            background-size: 100%;
+        }
+        &--first{
+            &::before{
+                background: url(/img/stroke1.svg) no-repeat center center;
+            }
+
+        }
+        &--second{
+            &::before{
+                background: url(/img/stroke2.svg) no-repeat center center;
+            }
+        }
+    }
+}
+
+
 
 .list{
     &__item--why{
@@ -413,22 +425,25 @@ a {
         & + .list__item{
             margin-top: 0;
         }
-        span{
-            display: inline-block;
-            vertical-align: middle;
-            font-family:ats;
-            font-size: 90px;
-            height: 60px;
-            width: 45px;
-            color: #ced4d8;
-            margin-right: 10px;
+        &__item--why{
+            span{
+                display: inline-block;
+                vertical-align: middle;
+                font-family:ats;
+                font-size: 90px;
+                height: 60px;
+                width: 45px;
+                color: #ced4d8;
+                margin-right: 10px;
+            }
+            p{
+                display: inline-block;
+                vertical-align: middle;
+                font-size: 16px;
+                width: 210px;
+            }
         }
-        p{
-            display: inline-block;
-            vertical-align: middle;
-            font-size: 16px;
-            width: 210px;
-        }
+
         &__col{
             display: inline-block;
             vertical-align: top;

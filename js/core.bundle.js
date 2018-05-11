@@ -13,6 +13,14 @@ $('document').ready(function () {
     }
 
 
+    $('.form__button--submite-main').on('click', function(){
+        $(this).closest('.form').addClass('ok');
+    })
+
+    $('.form__button--back-main').on('click', function(){
+        $(this).closest('.form').removeClass('ok');
+    })
+
 });
 
 
