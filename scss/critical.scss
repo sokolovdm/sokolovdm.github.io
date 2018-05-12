@@ -400,6 +400,11 @@ a {
                 background: url(/img/stroke2.svg) no-repeat center center;
             }
         }
+        &--four{
+            &::before{
+                background: url(/img/stroke4.svg) no-repeat center center;
+            }
+        }
     }
 }
 
