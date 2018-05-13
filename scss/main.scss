@@ -8,9 +8,9 @@ $susy: (
 );
 
 .send {
-    padding-top: 42px;
+    padding-top: 39px;
     &__text {
-        margin-bottom: 107px;
+        margin-bottom: 105px;
     }
     &__form {
         background-color: #524570;
@@ -21,12 +21,13 @@ $susy: (
         font-size: 0;
     }
     @media (min-width: 768px) {
-        padding-top: 140px;
+        padding-top: 137px;
         &__text {
             margin-bottom: 0;
             display: inline-block;
             vertical-align: top;
             width: span(6 of 12);
+            padding-top: 13px;
         }
         &__form {
             display: inline-block;
@@ -42,13 +43,13 @@ $susy: (
         padding-top: 207px;
         &__text {
             width: span(5.5 of 12);
-            vertical-align: middle;
+            padding-top: 5px;
+
         }
         &__form {
             width: span(4 of 12);
             max-width: 375px;
             margin-left: span(0.5 of 12);
-            vertical-align: middle;
             padding: 29px 50px 43px 30px;
         }
     }
@@ -89,6 +90,7 @@ $susy: (
         font-family: reg;
         padding-left: 17px;
         border: none;
+        border-radius: 0;
         &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
             color: inherit;
             font-size: inherit;
@@ -166,34 +168,39 @@ $susy: (
     h2 {
         color: #0d283c;
         font-size: 21px;
+        line-height: 24px;
         font-family: sp;
-        margin-bottom: 25px;
+        margin-bottom: 22px;
     }
     li {
         color: #505769;
         font-size: 14px;
+        line-height: 17px;
         & + li {
-            margin-top: 18px;
+            margin-top: 14px;
         }
 
     }
     @media (min-width: 768px) {
         h2 {
             font-size: 36px;
+            line-height: 44px;
+            margin-bottom: 12px;
         }
         li {
             font-size: 18px;
+            line-height: 21px;
             position: relative;
             padding-left: 16px;
             box-sizing: border-box;
             width: span(4.8 of 6);
             & + li {
-                margin-top: 15px;
+                margin-top: 10px;
             }
             &::before {
                 content: '';
                 position: absolute;
-                top: 5px;
+                top: 8px;
                 left: 0;
                 width: 7px;
                 height: 7px;
@@ -210,7 +217,8 @@ $susy: (
     @media (min-width: 1240px) {
         h2 {
             font-size: 48px;
-            margin-bottom: 59px;
+            margin-bottom: 50px;
+            line-height: 57px;
         }
         li {
             font-size: 24px;
@@ -251,7 +259,7 @@ $susy: (
         margin-top: 15px;
     }
     &__title--main {
-        font-size: 30px;
+        font-size: 18px;
         margin-bottom: 27px;
         font-family: sp;
         color: #fff;
@@ -285,8 +293,9 @@ $susy: (
     }
     &__img {
         position: absolute;
-        bottom: 100%;
+        bottom: 97.4%;
         left: 11px;
+        z-index: -1;
         width: 266px;
     }
     &__text--response-main {
@@ -318,6 +327,20 @@ $susy: (
         bottom: 32px;
         left: 32px;
     }
+    &__preloader{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        img{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 30%;
+        }
+    }
     @media (min-width: 768px) {
         &__title--main {
             font-size: 24px;
@@ -328,14 +351,24 @@ $susy: (
         &__privacy--main {
             max-width: 215px;
         }
+        &__img{
+            position: absolute;
+            bottom: 96.8%;
+            left: 17px;
+            z-index: -1;
+            width: 299px;
+        }
     }
     @media (min-width: 1240px) {
         &__title--main {
             font-size: 30px;
             white-space: nowrap;
+            margin-bottom: 22px;
         }
         &__img {
             width: 360px;
+            bottom: 95.9%;
+            left: 9px;
         }
     }
 }
@@ -355,7 +388,7 @@ $susy: (
     &__body {
         border-top: 1px solid #c4c4c4;
         border-bottom: 1px solid #c4c4c4;
-        padding: 52px 0 20px;
+        padding: 49px 0 20px;
     }
     &__text {
         padding-left: span(1 of 12);
@@ -398,7 +431,7 @@ $susy: (
             display: inline-block;
             img {
                 width: 81px;
-                margin-bottom: 19px;
+                margin-bottom: 16px;
             }
             p {
                 font-size: 18px;
@@ -487,21 +520,21 @@ $susy: (
         max-width: 400px;
     }
     @media (min-width: 768px) {
-        padding: 43px 0 42px;
+        padding: 39px 0 42px;
         &__title {
             font-size: 36px;
-            margin-bottom: 24px;
+            margin-bottom: 19px;
         }
         &__list {
             max-width: none;
-            width: span(7.6 of 12);
+            width: 64.33333%;
         }
     }
     @media (min-width: 1240px) {
-        padding: 61px 0 113px;
+        padding: 56px 0 67px;
         &__title {
             font-size: 48px;
-            margin-bottom: 64px;
+            margin-bottom: 52px;
         }
         &__list {
             width: 101%;
@@ -533,7 +566,7 @@ $susy: (
                 line-height: 21px;
             }
             & + .list__item {
-                margin-top: 30px;
+                margin-top: 27px;
             }
         }
 
@@ -543,7 +576,7 @@ $susy: (
             display: inline-block;
             max-width: 457px;
             margin-right: 104px;
-            margin-bottom: 43px;
+            margin-bottom: 46px;
             vertical-align: top;
             p {
                 font-size: 21px;
@@ -576,8 +609,9 @@ $susy: (
         &--inline {
             display: inline-block;
             & + .footer__link {
+                margin-left: 9px;
                 &:before {
-                    content: '/';
+                    content: ' / ';
 
                 }
             }
@@ -600,6 +634,11 @@ $susy: (
             & + .footer__link {
                 margin-top: 40px;
             }
+            &--inline {
+                & + .footer__link {
+                    margin-left: 18px;
+                }
+            }
         }
         &__bottom {
             padding: 20px 0 17px;
@@ -610,12 +649,17 @@ $susy: (
     }
     @media (min-width: 1240px) {
         &__body {
-            padding: 66px 0 60px;
+            padding: 58px 0 60px;
         }
         &__link {
             font-size: 72px;
             & + .footer__link {
                 margin-top: 50px;
+            }
+            &--inline {
+                & + .footer__link {
+                    margin-left: 26px;
+                }
             }
         }
         &__bottom {
@@ -625,9 +669,9 @@ $susy: (
 }
 
 .exp {
-    padding: 50px 0 33px;
+    padding: 48px 0 33px;
     &__title {
-        margin-bottom: 35px;
+        margin-bottom: 32px;
         font-family: sp;
         font-size: 21px;
         line-height: 24px;
@@ -657,9 +701,12 @@ $susy: (
     @media (min-width: 768px) {
         padding: 71px 0 62px;
         &__title {
-            margin-bottom: 55px;
+            margin-bottom: 52px;
             font-size: 36px;
             line-height: 36px;
+            span::before{
+                bottom: 6px;
+            }
         }
         &__container {
             font-size: 0;
@@ -691,7 +738,7 @@ $susy: (
         }
     }
     @media (min-width: 1240px) {
-        padding: 102px 0 105px;
+        padding: 94px 0 105px;
         &__aside {
             display: block;
             position: absolute;
@@ -715,9 +762,9 @@ $susy: (
         }
         &__title {
             width: span(7 of 12);
-            margin-bottom: 61px;
+            margin-bottom: 55px;
             font-size: 48px;
-            line-height: 54px;
+            line-height: 57px;
         }
         &__img {
             img {
@@ -742,7 +789,7 @@ $susy: (
         color: #0d283c;
         font-size: 16px;
         line-height: 18px;
-        margin-bottom: 10px;
+        margin-bottom: 9px;
         font-family: bold;
     }
     p {
@@ -760,6 +807,7 @@ $susy: (
         h5 {
             font-size: 18px;
             line-height: 21px;
+            margin-bottom: 14px;
         }
         p {
             font-size: 16px;
@@ -780,15 +828,15 @@ $susy: (
             line-height: 24px;
         }
         & + .list__item {
-            margin-top: 48px;
+            margin-top: 42px;
         }
     }
 }
 
 .principles {
-    padding: 39px 0 44px;
+    padding: 39px 0 45px;
     &__title {
-        margin-bottom: 30px;
+        margin-bottom: 22px;
         font-size: 21px;
         font-family: sp;
         line-height: 24px;
@@ -798,9 +846,9 @@ $susy: (
         max-width: 400px;
     }
     @media (min-width: 768px) {
-        padding: 79px 0 56px;
+        padding: 79px 0 43px;
         &__title {
-            margin-bottom: 63px;
+            margin-bottom: 60px;
             font-size: 36px;
             line-height: 36px;
             span {
@@ -817,7 +865,7 @@ $susy: (
         }
     }
     @media (min-width: 1240px) {
-        padding: 123px 0 78px;
+        padding: 123px 0 89px;
         &__title {
             margin-bottom: 36px;
             font-size: 48px;
@@ -832,7 +880,10 @@ $susy: (
 }
 
 .list__item--principles + .list__item {
-    margin-top: 50px;
+    margin-top: 31px;
+    @media (min-width: 1240px){
+        margin-top: 49px;
+    }
 }
 
 .principe {
@@ -841,16 +892,16 @@ $susy: (
         font-size: 16px;
         line-height: 18px;
         font-family: bold;
-        margin-bottom: 22px;
+        margin-bottom: 17px;
     }
     &__text {
-        margin-bottom: 26px;
+        margin-bottom: 14px;
     }
     &__aside {
         img {
-            width: span(6 of 12);
+            width: 49.1%;
             & + p {
-                margin-top: 9px;
+                margin-top: 7px;
             }
 
         }
@@ -876,7 +927,7 @@ $susy: (
         &__title {
             font-size: 21px;
             line-height: 24px;
-            margin-bottom: 12px;
+            margin-bottom: 16px;
         }
         &__body {
             position: relative;
@@ -886,9 +937,9 @@ $susy: (
             top: 0;
             left: 114%;
             img {
-                width: 117%;
+                width: 118.3%;
                 & + p {
-                    margin-top: 10px;
+                    margin-top: 13px;
                 }
 
             }
@@ -956,14 +1007,14 @@ $susy: (
 
 .text--principe {
     font-size: 14px;
-    line-height: 16px;
+    line-height: 17px;
     color: #505769;
     * + * {
-        margin-top: 19px;
+        margin-top: 17px;
     }
     @media (min-width: 768px) {
         font-size: 16px;
-        line-height: 18px;
+        line-height: 19px;
     }
     @media (min-width: 1240px) {
         font-size: 20px;
@@ -983,7 +1034,7 @@ $susy: (
             width: 100%;
         }
         &--first {
-            margin-bottom: 50px;
+            margin-bottom: 46px;
         }
         &--second {
             margin-bottom: 20px;
@@ -1005,7 +1056,7 @@ $susy: (
     }
     &__aside {
         text-align: center;
-        margin-bottom: 40px;
+        margin-bottom: 36px;
         span {
             font-family: ats;
             font-size: 144px;
@@ -1074,7 +1125,7 @@ $susy: (
         }
     }
     @media (min-width: 1240px) {
-        padding: 94px 0 62px;
+        padding: 89px 0 92px;
         &__title {
             font-size: 48px;
             margin-bottom: 45px;
@@ -1138,6 +1189,10 @@ $susy: (
     }
     &__textarea--example {
         margin-bottom: 20px;
+        textarea{
+            height: 195px;
+            padding-top: 19px;
+        }
     }
     &__button--submite-example {
         width: 100%;
@@ -1160,14 +1215,8 @@ $susy: (
         &__privacy--example {
             max-width: 215px;
         }
-        &__textarea--example {
-            textarea {
-                height: 195px;
-            }
-
-        }
     }
-    @media (min-width: 768px) {
+    @media (min-width: 1240px) {
         &__title--example {
             font-size: 30px;
             margin-bottom: 22px;

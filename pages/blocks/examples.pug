@@ -14,14 +14,14 @@
         +e.right
             +e.img--four
                 img(src="/img/3.jpg")
-            +e.FORM.form.form__
+            +e.FORM(method="POST" action="send.php" ).form.form__
                 +e.body--example
-                    +e.title--example Помочь с выбором?
+                    +e.title--example Помочь с выбором?1
                     +e.input--example.input--white
-                        input(name="name" placeholder="Ваш e-mail")
+                        input(name="email" placeholder="Ваш e-mail")
                     +e.textarea--example.textarea--white
                         textarea(name="text" placeholder="Какую картину ищете?")
-                    +e.BUTTON(type="button").button--submite-example.button--red Отправить
+                    +e.BUTTON(type="button").button--submite-example.button--red._submite Отправить
                     +e.privacy--example Нажимая кнопку «Отправить», вы даете согласие на обработку персональных данных
                 +e.response--main
                     +e.text--response-example.text--response-main
@@ -29,3 +29,4 @@
                         p Я отвечу на указанный e-mail
                     +e.BUTTON(type="button").button--back-main.button--border-red Назад
                 +e.preloader
+                    img(src="/img/preloader.svg")
