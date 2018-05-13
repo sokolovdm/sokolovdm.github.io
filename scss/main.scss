@@ -764,7 +764,7 @@ $susy: (
             margin-left: span(1 of 12);
         }
     }
-    @media (min-width: 1240px) {
+    @media (min-width: 1024px) {
         padding: 94px 0 105px;
         &__aside {
             display: block;
@@ -789,9 +789,6 @@ $susy: (
         }
         &__title {
             width: span(7 of 12);
-            margin-bottom: 55px;
-            font-size: 48px;
-            line-height: 57px;
         }
         &__img {
             img {
@@ -807,6 +804,13 @@ $susy: (
                 width: 71.7%;
                 position: relative;
             }
+        }
+    }
+    @media (min-width: 1240px){
+        &__title{
+            margin-bottom: 55px;
+            font-size: 48px;
+            line-height: 57px;
         }
     }
 }
@@ -844,7 +848,7 @@ $susy: (
             margin-top: 38px;
         }
     }
-    @media (min-width: 1240px) {
+    @media (min-width: 1024px) {
         h5 {
             font-size: 21px;
             line-height: 24px;
@@ -1154,10 +1158,6 @@ $susy: (
     }
     @media (min-width: 1024px) {
         padding: 89px 0 92px;
-        &__title {
-            font-size: 48px;
-            margin-bottom: 45px;
-        }
         &__left {
             display: inline-block;
             vertical-align: top;
@@ -1201,6 +1201,12 @@ $susy: (
             width: 100%;
             margin-left: 0;
             max-width: 280px;
+        }
+    }
+    @media (min-width: 1240px){
+        &__title {
+            font-size: 48px;
+            margin-bottom: 45px;
         }
     }
 }
