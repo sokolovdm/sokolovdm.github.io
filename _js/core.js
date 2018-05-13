@@ -12,7 +12,7 @@ $('document').ready(function () {
     }
 
 
-    $('.form__button--submite-main').on('click', function(){
+    $('.form__button--submite-main, .form__button--submite-example').on('click', function(){
         $(this).closest('.form').addClass('ok');
     })
 
