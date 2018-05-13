@@ -29,7 +29,7 @@ $('document').ready(function () {
 
        if(!input.closest('.input').hasClass('error')){
 
-
+           form.addClass('loading');
            $.ajax({
                type: "POST",
                url: form.attr('action'),
