@@ -422,6 +422,7 @@ a {
             content: '';
             display: block;
             background-size: 100%;
+            z-index: -1;
         }
         &--first{
             &::before{
