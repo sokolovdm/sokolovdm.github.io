@@ -1,0 +1,9 @@
+node_modules/
+build/
+app/js/*.js
+app/css/*.css
+.DS_Store
+.idea/
+gulpfile.js
+package-lock.json
+package.json

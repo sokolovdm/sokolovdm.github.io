@@ -1,48 +1,20 @@
-@font-face {
-  font-family: 'bold';
-  src: url('/fonts/PTSans-Bold.eot');
-  src: url('/fonts/PTSans-Bold.eot?#iefix') format('embedded-opentype'),
-  url('/fonts/PTSans-Bold.woff2') format('woff2'),
-  url('/fonts/PTSans-Bold.woff') format('woff'),
-  url('/fonts/PTSans-Bold.ttf') format('truetype'),
-  url('/fonts/PTSans-Bold.svg#PTSans-Bold') format('svg');
-  font-weight: bold;
-  font-style: normal;
+@mixin newFont($family,$pathName) {
+	@font-face {
+		font-family: '#{$family}';
+		src: url('/fonts/#{$pathName}.eot');
+		src: url('/fonts/#{$pathName}.eot?iefix') format('emdded-opentype'),
+		url('/fonts/#{$pathName}.woff2') format('woff2'),
+		url('/fonts/#{$pathName}.woff') format('woff'),
+		url('/fonts/#{$pathName}.ttf') format('truetype'),
+		url('/fonts/#{$pathName}.svg##{$pathName}') format('svg');
+		font-weight: normal;
+		font-style: normal;
+	}
 }
 
-@font-face {
-  font-family: 'sp';
-  src: url('/fonts/Spectral-ExtraBold.eot');
-  src: url('/fonts/Spectral-ExtraBold.eot?#iefix') format('embedded-opentype'),
-  url('/fonts/Spectral-ExtraBold.woff2') format('woff2'),
-  url('/fonts/Spectral-ExtraBold.woff') format('woff'),
-  url('/fonts/Spectral-ExtraBold.ttf') format('truetype'),
-  url('/fonts/Spectral-ExtraBold.svg#Spectral-ExtraBold') format('svg');
-  font-weight: 800;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'reg';
-  src: url('/fonts/PTSans-Regular.eot');
-  src: url('/fonts/PTSans-Regular.eot?#iefix') format('embedded-opentype'),
-  url('/fonts/PTSans-Regular.woff2') format('woff2'),
-  url('/fonts/PTSans-Regular.woff') format('woff'),
-  url('/fonts/PTSans-Regular.ttf') format('truetype'),
-  url('/fonts/PTSans-Regular.svg#PTSans-Regular') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'ats';
-  src: url('/fonts/ATS-Script.eot');
-  src: url('/fonts/ATS-Script.eot?#iefix') format('embedded-opentype'),
-  url('/fonts/ATS-Script.woff2') format('woff2'),
-  url('/fonts/ATS-Script.woff') format('woff'),
-  url('/fonts/ATS-Script.ttf') format('truetype'),
-  url('/fonts/ATS-Script.svg#ATS-Script') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
+@include newFont('sansProReg','SourceSansPro-Regular');
+@include newFont('firaSansReg','FiraSans-Regular');
+@include newFont('firaSansBold','FiraSans-SemiBold');
+@include newFont('garReg','EBGaramond-Regular');
+@include newFont('garMed','EBGaramond-Medium');
+@include newFont('garIt','EBGaramond-Italic');
