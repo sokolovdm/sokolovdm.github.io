@@ -209,6 +209,9 @@ a {
         img{
             width: 100%;
         }
+        &--desktop{
+            display: none;
+        }
     }
     &__text{
         display: inline-block;
@@ -239,6 +242,9 @@ a {
             }
             img{
                 width: 100%;
+            }
+            &--mobile{
+                display: none;
             }
         }
         &__text{

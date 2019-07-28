@@ -19,7 +19,9 @@ include ../bemto/bemto.pug
                 p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, debitis distinctio dolore eligendi esse magnam magni nulla numquam rerum voluptates. Adipisci aliquam amet architecto commodi consectetur consequatur dicta distinctio dolores doloribus ea ex facere facilis fuga fugiat hic in iste magni molestias mollitia nesciunt non, nostrum numquam odio perferendis quam quia ratione recusandae repellat repellendus reprehenderit saepe sit sunt tempora tenetur ut veritatis voluptatibus. Ducimus ea earum id, minus, molestias nam nisi numquam obcaecati, odio praesentium quasi reiciendis tenetur veritatis!
             +e.qrs
                 +e.qr--blockchain.qr__
-                    +e.image
+                    +e.A(href="#").image--mobile
+                        img(src="/images/qr-icon.svg")
+                    +e.A(href="#").image--desktop
                         img(src="/images/qr.png")
                     +e.text--mobile
                         p Published on: #[span 18 Sept 2019]
@@ -27,7 +29,9 @@ include ../bemto/bemto.pug
                         p Date of publication #[span]in NEM2.0 blockchain
                     +e.name--blockchain #[b B]lockchain #[b C]opyright
                 +e.qr--ipfs.qr__
-                    +e.image--float
+                    +e.A(href="#").image--mobile
+                        img(src="/images/qr-icon.svg")
+                    +e.A(href="#").image--float.--desktop
                         img(src="/images/qr.png")
                     +e.text--mobile
                         p Artwork #[span in IPFS]
