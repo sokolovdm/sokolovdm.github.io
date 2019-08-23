@@ -1,6 +1,8 @@
 @import '_vars.scss';
-
-
-
-
 @import '_fonts.scss';
+
+@import 'sections/header/_header--main';
+@import 'sections/authorship/_authorship--main';
+@import 'sections/main/_main--main';
+@import 'sections/footer/_footer--main';
+@import 'sections/qrs/_qrs--main';

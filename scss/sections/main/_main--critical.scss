@@ -1,0 +1,95 @@
+.main{
+	position: relative;
+	z-index: 1;
+	&__text{
+		background-color: #fff;
+		padding: 20px 10px 40px;
+		& > *{
+			margin-bottom: 0!important;
+		}
+		img{
+			width: 106px;
+			display: block;
+			margin: 0 auto 10px;
+		}
+		a{
+			font-family: garItMed;
+			font-size: 20px;
+			color: inherit;
+		}
+		b{
+			color: $blue;
+			font-family: garItMed;
+			font-size: 20px;
+			line-height: 22px;
+		}
+		i{
+			font-family: garIt;
+			vertical-align: top;
+			font-size: 13px;
+			position: relative;
+			display: inline-block;
+			&::before{
+				content:'';
+				width: 100%;
+				height: 3px;
+				background-color: rgba($blue,0.75);
+				top: 70%;
+				left: 0;
+				position: absolute;
+			}
+		}
+		p{
+			font-family: sansProReg;
+			font-size: 18px;
+			line-height: 1.3;
+			margin: 10px 0;
+		}
+	}
+	@media (min-width: 1152px) {
+		&__text{
+			padding: 40px 50px;
+			margin: 0 -50px;
+			img{
+				width: 148px;
+				margin-bottom: 20px;
+			}
+			p{
+				font-size: 24px;
+				line-height: 1.4;
+				margin: 20px 0;
+			}
+			a{
+				font-size: 28px;
+			}
+			i{
+				font-size: 17px;
+			}
+			b{
+				font-size: 28px;
+				line-height: 37px;
+			}
+		}
+		&__content{
+			position: relative;
+		}
+	}
+}
+
+
+.bordered{
+	position: relative;
+	&::before{
+		content: '';
+		width: 100%;
+		height: 3px;
+		position: absolute;
+		top: 70%;
+		left: 0;
+	}
+	&--blue{
+		&::before{
+			background-color: rgba($blue,0.75);
+		}
+	}
+}

@@ -1,0 +1,94 @@
+.footer{
+	padding-bottom: 20px;
+	&__top{
+		padding-top: 35px;
+		font-size: 14px;
+		line-height: 18px;
+		p{
+			& + p{
+				margin-top: 15px;
+			}
+		}
+	}
+	&__bottom{
+		padding-top: 40px;
+		font-family: garIt;
+		font-size: 14px;
+		line-height: 18px;
+		position: relative;
+	}
+	&__left{
+		text-align: center;
+	}
+	&__logo{
+		width: 50px;
+		margin: 40px auto 0;
+	}
+	&__right{
+		p{
+			position: absolute;
+			bottom: 7px;
+			&:first-child{
+				left: 0;
+			}
+			&:last-child{
+				right: 0;
+			}
+		}
+	}
+	@media (min-width: 1152px){
+		&__top{
+			padding-top: 0;
+			border: none;
+			text-align: center;
+			max-width: 724px;
+			margin: 0 auto 30px;
+			font-family: garReg;
+			p + p{
+				margin-top: 10px;
+			}
+		}
+		&__bottom{
+			padding-top: 0;
+
+			position: relative;
+			font-size: 0;
+		}
+		&__left{
+			display: inline-block;
+			vertical-align: middle;
+			width: 30%;
+			font-size: 14px;
+			line-height: 18px;
+			text-align: left;
+		}
+		&__logo{
+			width: 40%;
+			margin: 0;
+			text-align: center;
+			display: inline-block;
+			vertical-align: middle;
+			img{
+				width:86px;
+			}
+		}
+		&__right{
+			font-size: 14px;
+			line-height: 18px;
+			width: 30%;
+			display: inline-block;
+			vertical-align: middle;
+			text-align: right;
+			p{
+				position: static;
+				bottom: auto;
+				&:first-child{
+					left: auto;
+				}
+				&:last-child{
+					right: auto;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,25 @@
+include ../bemto/bemto.pug
+- set_bemto_settings({ modifier: '--' })
+
++b.qrs
+    +e.container.container--tranparent
+        +e.qr--blockchain.qr__
+            +e.A(href="#").image--mobile
+                img(src="/images/qr-icon.svg")
+            +e.A(href="#").image--desktop
+                img(src="/images/qr.png")
+            +e.text--mobile
+                p Published on: #[span 18 Sept 2019]
+            +e.text--desktop
+                p Time of creation is recorded#[span] in NEM2.0 blockchain
+            +e.name--blockchain #[b B]lockchain #[b C]opyright
+        +e.qr--ipfs.qr__
+            +e.A(href="#").image--mobile.--float
+                img(src="/images/qr-icon.svg")
+            +e.A(href="#").image--desktop
+                img(src="/images/qr.png")
+            +e.text--mobile
+                p Artwork #[span in IPFS]
+            +e.text--desktop
+                p Original artwork is fully#[span] captured in IPFS
+            +e.name--ipfs The artwork reproducing is being monitored by AI 24/7: please, refer its source and author when quoting
