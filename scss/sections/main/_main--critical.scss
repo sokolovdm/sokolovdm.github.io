@@ -86,6 +86,7 @@
 		position: absolute;
 		top: 70%;
 		left: 0;
+		z-index: -1;
 	}
 	&--blue{
 		&::before{

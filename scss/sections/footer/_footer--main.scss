@@ -1,5 +1,7 @@
 .footer{
-	padding-bottom: 20px;
+	&__container{
+		padding-bottom: 70px;
+	}
 	&__top{
 		padding-top: 35px;
 		font-size: 14px;
@@ -37,12 +39,14 @@
 		}
 	}
 	@media (min-width: 1152px){
+		&__container{
+			padding-bottom: 50px;
+		}
 		&__top{
 			padding-top: 0;
 			border: none;
 			text-align: center;
-			max-width: 724px;
-			margin: 0 auto 30px;
+			margin: 0 -50px 30px;
 			font-family: garReg;
 			p + p{
 				margin-top: 10px;
@@ -50,7 +54,7 @@
 		}
 		&__bottom{
 			padding-top: 0;
-
+			margin: 0 -50px;
 			position: relative;
 			font-size: 0;
 		}
