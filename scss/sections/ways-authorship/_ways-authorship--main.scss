@@ -3,11 +3,6 @@
 	&__container{
 		padding-top: 40px;
 	}
-	&__title{
-		@media (max-width: 1151px) {
-			display: none;
-		}
-	}
 	&__text{
 		ol{
 			p{
@@ -141,17 +136,6 @@
 			}
 			ul{
 				margin-left: -30px;
-				li{
-					font-size: 21px;
-					line-height: 26px;
-					&::before{
-						line-height: 30px;
-					}
-					& + li{
-						margin-top: 20px;
-					}
-
-				}
 			}
 			i{
 				font-family: garIt;

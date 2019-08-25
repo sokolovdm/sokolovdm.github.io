@@ -1,0 +1,47 @@
+.users{
+	&__container{
+		padding-top: 40px;
+	}
+	&__lists{
+		font-size: 0;
+		text-align: center;
+		padding-bottom: 65px;
+	}
+	&__list{
+		width: 50%;
+		display: inline-block;
+		vertical-align: top;
+		padding-left: 20px;
+		box-sizing: border-box;
+		text-align: left;
+		b{
+			color: $blue;
+			font-family: garItMed;
+			font-size: 20px;
+			line-height: 22px;
+		}
+		ul li + li{
+			margin-top: 0;
+		}
+		&:last-child{
+			margin-top: 20px;
+			padding-left: 0;
+			width: 57%;
+		}
+	}
+	@media (min-width: 1152px){
+		&__list{
+			padding-left: 0;
+			padding-right: 10px;
+			b{
+				font-size: 28px;
+				line-height: 37px;
+			}
+			&:last-child{
+				padding-right: 0;
+				width: 59%;
+				margin-left: 10%;
+			}
+		}
+	}
+}
