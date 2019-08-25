@@ -13,6 +13,7 @@
 }
 
 @include newFont('sansProReg','SourceSansPro-Regular');
+@include newFont('sansProBold','SourceSansPro-SemiBold');
 @include newFont('firaSansReg','FiraSans-Regular');
 @include newFont('firaSansBold','FiraSans-SemiBold');
 @include newFont('garReg','EBGaramond-Regular');
