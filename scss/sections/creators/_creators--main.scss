@@ -3,6 +3,7 @@
 	&__container{
 		padding-top: 40px;
 		padding-bottom: 100px;
+		overflow: hidden;
 	}
 	&__text{
 		font-family: sansProReg;
@@ -74,9 +75,6 @@
 				margin-top: 40px;
 			}
 		}
-		&__container{
-			overflow: hidden;
-		}
 		&__wrapper{
 			padding: 15px 0 25px;
 			max-width: 410px;
@@ -144,24 +142,16 @@
 	&__image{
 		position: relative;
 		margin-bottom: 21.875vw;
+		@media (min-width: 620px){
+			margin-bottom: 136px;
+		}
 	}
 	&__mark{
 		position: absolute;
-		width: 52.5%;
+		width: 40%;
 		z-index: 1;
-		top: 36vw;
-		&--1{
-			transform: translate(-50%,0);
-		}
-		&--2{
-			transform: translate(-50%,0) rotate(45deg);
-		}
-		&--3{
-			transform: translate(-50%,0) rotate(90deg);
-		}
-		&--4{
-			transform: translate(-50%,0) rotate(135deg);
-		}
+		transform: translate(-50%,50%);
+		bottom: 0;
 	}
 	&__text{
 		font-family: sansProReg;
@@ -177,7 +167,7 @@
 				text-align: right;
 			}
 			&__mark{
-				right: 22.5%;
+				right: 35%;
 
 			}
 		}
@@ -189,6 +179,9 @@
 			}
 			&__mark{
 				left: 75%;
+				&.profile__mark--2{
+					left: 83%;
+				}
 			}
 		}
 	}
@@ -232,19 +225,6 @@
 		}
 		&__mark{
 			width: 145px;
-			top: 110px;
-			&--1{
-				transform: none;
-			}
-			&--2{
-				transform: rotate(45deg);
-			}
-			&--3{
-				transform: rotate(90deg);
-			}
-			&--4{
-				transform: rotate(135deg);
-			}
 		}
 		&__text{
 			font-size: 21px;
@@ -254,7 +234,13 @@
 		&--right-left{
 			.profile{
 				&__mark{
-					right: 93px;
+					left: 0;
+					right: auto;
+					&.profile__mark--3{
+						left: -47px;
+						transform: none;
+						bottom: -93px;
+					}
 				}
 				&__text{
 					margin-left: 25%;
@@ -266,9 +252,21 @@
 		}
 		&--left-right{
 			text-align: right;
+
+
 			.profile{
 				&__mark{
-					left: 93px;
+					transform: none;
+					left: auto;
+					&.profile__mark--2{
+						left: auto;
+						right: -65px;
+						bottom: -62px;
+					}
+					&.profile__mark--4{
+						right: -69px;
+						bottom: -50px;
+					}
 				}
 				&__image{
 					right: 0;

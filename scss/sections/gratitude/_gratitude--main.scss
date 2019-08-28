@@ -4,6 +4,21 @@
 		font-family: garItMed;
 		text-align: center;
 		margin-bottom: 20px;
+		@media (max-width: 1151px){
+			position: relative;
+			z-index: 1;
+			&::before{
+				bottom: -2px;
+				width: 100%;
+				left:0;
+				height: 10px;
+				background-color: $lightBlue;
+				position: absolute;
+				content: '';
+				z-index: -1;
+			}
+		}
+
 	}
 	&__container{
 		padding-bottom: 40px;
