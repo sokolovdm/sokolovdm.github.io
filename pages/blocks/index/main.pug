@@ -4,7 +4,11 @@ include ../bemto/bemto.pug
     +e.container.container
         +e.content
             +e.text
-                img(src="/images/logo.svg")
-                p SharpShark is a #[a(href="#") blockchain-powered#[i 1]]  timestamping service that helps to protect copyright and to transfer intellectual property.
-                p It’s designed for #[a(href="#") creators#[i 2]:] writers, academics and journalists, photographers and designers. It already can record texts and images in blockchain with the author, making them immune — in other words, #[b timestamp, save in full and, thus, tokenize intellectual property.]
-                p #[a(href="#") Now #[i 3]] we are teaching AI to seek plagiarism 24/7, accelerating in Statup Chilie and refining the product to meet new European lawsuit.
+                +e.images
+                    +e.img--left
+                        img(src="/images/logo.svg")
+                    +e.img--right
+                        img(src="/images/chillie.png")
+                p SharpShark is a #[a(href="#how-works") blockchain-powered#[i 1]] timestamping service that helps to protect copyright and to transfer intellectual property.
+                p It’s designed for #[a(href="#users") creators#[i 2]:] writers, academics & journalists, and photographers & designers. It can already record texts and images in blockchain, as well as the author’s name, making them immune — in other words, #[b it can timestamp, save in full and tokenize intellectual property.]
+                p #[a(href="#plans") Now #[i 3]] we are teaching AI to look for plagiarism 24/7, accelerating in Start-Up Chilie and refining the product to meet new European laws.

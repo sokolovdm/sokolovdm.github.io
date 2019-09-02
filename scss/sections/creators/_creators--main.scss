@@ -51,6 +51,16 @@
 			font-size: 21px;
 			line-height: 1.25;
 			font-family: sansProReg;
+			&.desktop{
+				@media (max-width: 1151px){
+					display: none;
+				}
+			}
+			&.mobile{
+				@media (min-width: 1152px){
+					display: none;
+				}
+			}
 		}
 	}
 	&__wrapper{

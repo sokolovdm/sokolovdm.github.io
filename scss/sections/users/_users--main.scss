@@ -8,11 +8,7 @@
 		padding-bottom: 65px;
 	}
 	&__list{
-		width: 50%;
-		display: inline-block;
-		vertical-align: top;
 		padding-left: 20px;
-		box-sizing: border-box;
 		text-align: left;
 		b{
 			color: $blue;
@@ -23,24 +19,36 @@
 		ul li + li{
 			margin-top: 0;
 		}
-		&:last-child{
-			margin-top: 20px;
-			padding-left: 0;
-			width: 57%;
+		& + .users__list{
+			margin-top: 10px;
 		}
+
 	}
-	@media (min-width: 1152px){
+	@media (min-width: 600px){
 		&__list{
-			padding-left: 0;
-			padding-right: 10px;
-			b{
-				font-size: 28px;
-				line-height: 37px;
+			width: 50%;
+			display: inline-block;
+			vertical-align: top;
+			box-sizing: border-box;
+			& + .users__list{
+				margin-top: 0;
 			}
 			&:last-child{
 				padding-right: 0;
 				width: 59%;
 				margin-left: 10%;
+				margin-top: 20px;
+			}
+
+		}
+	}
+	@media (min-width: 1152px){
+		&__list{
+			padding-right: 10px;
+			padding-left: 0;
+			b{
+				font-size: 28px;
+				line-height: 37px;
 			}
 		}
 	}

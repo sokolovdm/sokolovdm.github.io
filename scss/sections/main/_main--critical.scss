@@ -1,17 +1,33 @@
 .main{
 	position: relative;
 	z-index: 1;
+	&__images{
+		font-size: 0;
+		margin-bottom: 10px;
+	}
+	&__img{
+		width: 50%;
+		display: inline-block;
+		vertical-align: middle;
+		&--left{
+			img{
+				width: 106px;
+			}
+		}
+		&--right{
+			text-align: right;
+			img{
+				width: 120px;
+			}
+		}
+	}
 	&__text{
 		background-color: #fff;
 		padding: 20px 10px 40px;
 		& > *{
 			margin-bottom: 0!important;
 		}
-		img{
-			width: 106px;
-			display: block;
-			margin: 0 auto 10px;
-		}
+
 		a{
 			font-family: garItMed;
 			font-size: 20px;
@@ -47,13 +63,12 @@
 		}
 	}
 	@media (min-width: 1152px) {
+		&__images{
+			display: none;
+		}
 		&__text{
 			padding: 40px 50px;
 			margin: 0 -50px;
-			img{
-				width: 148px;
-				margin-bottom: 20px;
-			}
 			p{
 				font-size: 24px;
 				line-height: 1.4;
