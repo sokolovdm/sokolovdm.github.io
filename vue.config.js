@@ -1,3 +1,5 @@
 module.exports = {
-    publicPath: '<sokolovdm>'
+    publicPath: process.env.NODE_ENV === 'production'
+        ? '/sharp=shark/'
+        : '/'
 };
